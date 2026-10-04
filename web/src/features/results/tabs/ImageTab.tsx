@@ -2,14 +2,21 @@ import { useState } from 'react';
 import BoxOverlay from '../../../components/BoxOverlay';
 import type { ResultVM } from '../../../types/vm';
 
+const isImageUrl = (u?: string): u is string =>
+  Boolean(u) && !u!.split('?')[0].toLowerCase().endsWith('.json');
+
 export default function ImageTab({ result }: { result: ResultVM }) {
   const [mode, setMode] = useState<'original' | 'heatmap' | 'side'>('original');
   const [opacity, setOpacity] = useState(0.65);
   const [active, setActive] = useState<string>();
-  const original = result.imageResults[0]?.url;
-  const heatmap =
-    result.artifacts.heatmap ??
-    result.imageResults.find((x) => x.label.toLowerCase().includes('heat'))?.url;
+  const original =
+    result.imageResults.map((x) => x.url).find(isImageUrl) ??
+    result.artifacts.previews?.find(isImageUrl);
+  const heatmap = [
+    result.artifacts.heatmap,
+    result.artifacts.overlay,
+    result.imageResults.find((x) => x.label.toLowerCase().includes('heat'))?.url,
+  ].find(isImageUrl);
   if (!original && !heatmap) return <div className="card p-8 text-sm text-muted">Not analysed</div>;
   return (
     <div className="card p-5">
@@ -39,18 +46,26 @@ export default function ImageTab({ result }: { result: ResultVM }) {
       <div className="relative mt-5 overflow-hidden rounded-xl bg-slate-900 p-2">
         <div className={mode === 'side' ? 'grid grid-cols-2 gap-2' : ''}>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black">
-            {original && (
+            {(original ?? heatmap) && (
               <img
-                src={original}
+                src={original ?? heatmap}
                 alt="Original submitted image"
                 className="h-full w-full object-contain"
+              />
+            )}
+            {mode === 'heatmap' && (heatmap ?? original) && (
+              <img
+                src={heatmap ?? original}
+                alt="Analysis heatmap"
+                className="pointer-events-none absolute inset-0 h-full w-full object-contain"
+                style={{ opacity }}
               />
             )}
             {mode !== 'original' && (
               <BoxOverlay evidence={result.evidence} onHover={setActive} activeId={active} />
             )}
           </div>
-          {mode !== 'original' && (
+          {mode === 'side' && (
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black">
               <img
                 src={heatmap ?? original}

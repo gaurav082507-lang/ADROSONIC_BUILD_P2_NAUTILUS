@@ -80,14 +80,20 @@ const num = (v: unknown): number | undefined =>
       ? Number(v)
       : undefined;
 const str = (v: unknown): string | undefined => (typeof v === 'string' && v ? v : undefined);
+const isImgUrl = (u?: string): u is string =>
+  Boolean(u) && !u!.split('?')[0].toLowerCase().endsWith('.json');
+const imgStr = (v: unknown): string | undefined => {
+  const s = str(v);
+  return isImgUrl(s) ? s : undefined;
+};
 const rec = (v: unknown): Record<string, unknown> =>
   v && typeof v === 'object' && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
 
-/** Depth-first search for the first string URL whose key matches. */
+/** Depth-first search for the first string image URL whose key matches. */
 function findUrl(obj: unknown, keyTest: (key: string) => boolean, depth = 0): string | undefined {
   if (!obj || typeof obj !== 'object' || depth > 3) return undefined;
   for (const [k, v] of Object.entries(obj as Record<string, unknown>)) {
-    if (typeof v === 'string' && keyTest(k.toLowerCase())) return v;
+    if (typeof v === 'string' && isImgUrl(v) && keyTest(k.toLowerCase())) return v;
   }
   for (const v of Object.values(obj as Record<string, unknown>)) {
     const hit = findUrl(v, keyTest, depth + 1);
@@ -203,12 +209,32 @@ function adaptArtifacts(a: Record<string, unknown> = {}): ResultVM['artifacts'] 
     };
   });
   const face = a.identity_face_comparison;
-  const previews = Array.isArray(a.previews)
-    ? (a.previews as unknown[]).filter((x): x is string => typeof x === 'string')
-    : undefined;
+  const previewList: string[] = Array.isArray(a.previews)
+    ? (a.previews as unknown[]).filter((x): x is string => isImgUrl(str(x)))
+    : [];
+  if (previewList.length === 0) {
+    const p0 = imgStr(a.preview_image);
+    if (p0) previewList.push(p0);
+    for (const [k, v] of Object.entries(a)) {
+      if (/^preview_img_\d+$/i.test(k)) {
+        const u = imgStr(v);
+        if (u && !previewList.includes(u)) previewList.push(u);
+      }
+    }
+  }
+  const previews = previewList.length > 0 ? previewList : undefined;
   return {
-    heatmap: str(a.heatmap) ?? str(a.image_heatmap) ?? findUrl(a, (k) => k.includes('heatmap')),
-    overlay: str(a.overlay) ?? str(a.image_overlay) ?? findUrl(a, (k) => k.includes('overlay')),
+    heatmap:
+      imgStr(a.image_heatmap) ??
+      imgStr(a.overlay) ??
+      imgStr(a.ela_heatmap) ??
+      imgStr(a.heatmap) ??
+      findUrl(a, (k) => k.includes('heatmap')),
+    overlay:
+      imgStr(a.overlay) ??
+      imgStr(a.image_overlay) ??
+      imgStr(a.ela_heatmap) ??
+      findUrl(a, (k) => k.includes('overlay')),
     pages: pages.filter((p) => p.imageUrl),
     previews,
     identityFaceComparison:
@@ -453,15 +479,31 @@ export function adaptResult(raw: ResultRaw): ResultVM {
       typeof q === 'string' ? q : q.message,
     ),
     evidence,
-    imageResults: (raw.image_results ?? []).map((r, i) => {
-      const o = rec(r);
-      return {
-        label:
+    imageResults: (() => {
+      const arts = rec(raw.artifacts);
+      const fromPipeline = (raw.image_results ?? []).map((r: unknown, i: number) => {
+        const o = rec(r);
+        const label =
           str(o.label) ??
-          `Image ${i + 1}${num(o.risk) !== undefined ? ` · ${Math.round(Number(o.risk) * 100)}%` : ''}`,
-        url: str(o.url),
-      };
-    }),
+          `Image ${i + 1}${num(o.risk) !== undefined ? ` · ${Math.round(Number(o.risk) * 100)}%` : ''}`;
+        const url =
+          imgStr(o.url) ??
+          imgStr(arts[`preview_img_${i + 1}`]) ??
+          (i === 0 ? imgStr(arts.preview_image) : undefined);
+        return { label, url };
+      });
+      if (fromPipeline.some((x) => x.url)) return fromPipeline;
+      const previews: { label: string; url?: string }[] = [];
+      const seen = new Set<string>();
+      for (const k of ['preview_image', 'preview_img_1', 'preview_img_2', 'preview_img_3', 'preview_img_4']) {
+        const u = imgStr(arts[k]);
+        if (u && !seen.has(u)) {
+          seen.add(u);
+          previews.push({ label: `Image ${previews.length + 1}`, url: u });
+        }
+      }
+      return previews.length > 0 ? previews : fromPipeline;
+    })(),
     artifacts: adaptArtifacts(raw.artifacts),
     whyThisScore: why.rows,
     whyDetail: why.detail,

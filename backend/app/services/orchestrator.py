@@ -56,14 +56,31 @@ def _artifact_url(res_id: str, filename: str) -> str:
     except Exception:
         return f"/api/v1/artifacts/{res_id}/{filename}"
 
+def _normalize_heatmap_artifact(artifacts: Dict[str, Any]) -> None:
+    if not isinstance(artifacts, dict):
+        return
+    hm = artifacts.get("heatmap")
+    real_hm = (
+        artifacts.get("image_heatmap")
+        or artifacts.get("overlay")
+        or artifacts.get("ela_heatmap")
+    )
+    if real_hm and (not hm or str(hm).split("?")[0].lower().endswith(".json")):
+        artifacts["heatmap"] = real_hm
+
 def get_result(result_id: str) -> Optional[AnalysisResult]:
     if result_id in RESULTS_DB:
-        return RESULTS_DB[result_id]
+        res = RESULTS_DB[result_id]
+        if res.artifacts:
+            _normalize_heatmap_artifact(res.artifacts)
+        return res
 
     try:
         row = repository.get_result(result_id)
         if row and row.get("json"):
             data = json.loads(row["json"])
+            if isinstance(data.get("artifacts"), dict):
+                _normalize_heatmap_artifact(data["artifacts"])
             res = AnalysisResult(**data)
             RESULTS_DB[result_id] = res
             return res
@@ -848,11 +865,19 @@ async def _execute_analysis_job(job_id: str, mode: str, file_paths: Optional[Any
         # 9. Final Artifacts Assembly
         if pages_metadata:
             result_artifacts["pages"] = [p.model_dump() for p in pages_metadata]
-        elif not result_artifacts.get("heatmap"):
-            placeholder_path = os.path.join(result_artifacts_dir, "heatmap.json")
-            with open(placeholder_path, "w", encoding="utf-8") as f:
-                json.dump({"type": "heatmap", "resolution": [512, 512], "channels": 1}, f)
-            result_artifacts["heatmap"] = _artifact_url(res_id, "heatmap.json")
+        if not result_artifacts.get("heatmap"):
+            existing_heatmap = (
+                result_artifacts.get("image_heatmap")
+                or result_artifacts.get("overlay")
+                or result_artifacts.get("ela_heatmap")
+            )
+            if existing_heatmap:
+                result_artifacts["heatmap"] = existing_heatmap
+            elif not pages_metadata:
+                placeholder_path = os.path.join(result_artifacts_dir, "heatmap.json")
+                with open(placeholder_path, "w", encoding="utf-8") as f:
+                    json.dump({"type": "heatmap", "resolution": [512, 512], "channels": 1}, f)
+                result_artifacts["heatmap"] = _artifact_url(res_id, "heatmap.json")
 
         now_iso = datetime.datetime.utcnow().isoformat()
         cid = meta.get("claim_id") or (file_paths.get("claim_id") if isinstance(file_paths, dict) else None)
