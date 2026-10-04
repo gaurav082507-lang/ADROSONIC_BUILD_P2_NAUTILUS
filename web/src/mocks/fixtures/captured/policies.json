@@ -1,0 +1,42 @@
+[
+  {
+    "policy_number": "POL-MOT-8821",
+    "claim_type": "motor",
+    "sum_insured": 500000.0,
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "vehicle_or_asset": "KA-01-MJ-5521 (Hyundai Creta)",
+    "details": {
+      "vehicle_number": "KA-01-MJ-5521",
+      "model": "Hyundai Creta",
+      "year": 2023
+    }
+  },
+  {
+    "policy_number": "POL-HLT-4402",
+    "claim_type": "health",
+    "sum_insured": 1000000.0,
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "vehicle_or_asset": "Family Floater",
+    "details": {
+      "members": [
+        "Ravi Kumar",
+        "Priya Kumar"
+      ],
+      "hospital_tier": "Tier-1 Cashless"
+    }
+  },
+  {
+    "policy_number": "POL-PRP-1093",
+    "claim_type": "property",
+    "sum_insured": 2500000.0,
+    "start_date": "2025-06-01",
+    "end_date": "2027-05-31",
+    "vehicle_or_asset": "42 Indiranagar 100ft Rd, Bengaluru",
+    "details": {
+      "address": "42 Indiranagar 100ft Rd, Bengaluru 560038",
+      "structure_type": "Apartment"
+    }
+  }
+]

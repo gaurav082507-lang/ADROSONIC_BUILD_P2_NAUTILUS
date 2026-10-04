@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0065_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1065,
+  "created_at": "2026-10-03T12:35:35.050757",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-3018",
+    "date": "13/09/2026",
+    "due_date": "26/10/2026",
+    "seller": "Dasgupta, Pingle and Hora Pvt Ltd",
+    "buyer": "Peter Tara",
+    "subtotal": 330673.47,
+    "tax_rate": 0.18,
+    "tax_amount": 59521.22,
+    "total_amount": 390194.69,
+    "amount_in_words": "Three Lakh Ninety Thousand One Hundred Ninety Five Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 3,
+      "rate": 23541.46,
+      "amount": 70624.38
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 10,
+      "rate": 22392.81,
+      "amount": 223928.1
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 3,
+      "rate": 12040.33,
+      "amount": 36120.99
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0065_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0065_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0065_gst_invoice_corp.json"
+}

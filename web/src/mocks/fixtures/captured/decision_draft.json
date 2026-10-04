@@ -1,0 +1,13 @@
+{
+  "claimant_message_en": "We could not clearly verify the vehicle damage from the photos provided. Please upload clear, well-lit photos taken with your mobile camera showing the entire damaged area.",
+  "claimant_message_hi": "प्रदान किए गए फ़ोटो से वाहन के नुकसान की स्पष्ट पुष्टि नहीं हो सकी। कृपया अपने मोबाइल कैमरे से ली गई स्पष्ट और अच्छी रोशनी वाली फ़ोटो अपलोड करें जिसमें पूरा क्षतिग्रस्त क्षेत्र दिखे।",
+  "next_steps": [
+    "Take new photos in daylight",
+    "Use the in-app camera if prompted",
+    "Upload replacement damage photos"
+  ],
+  "slots_to_resubmit": [
+    "damage_closeup"
+  ],
+  "source": "template"
+}

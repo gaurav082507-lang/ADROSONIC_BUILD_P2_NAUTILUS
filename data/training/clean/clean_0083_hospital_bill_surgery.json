@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0083_hospital_bill_surgery",
+  "template": "hospital_bill_surgery",
+  "split": "val",
+  "seed": 1083,
+  "created_at": "2026-10-03T12:35:36.149604",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-407322",
+    "patient_name": "Tanveer Ganesh",
+    "uhid": "UHID-6834888",
+    "admission_date": "24/12/2025",
+    "discharge_date": "29/12/2025",
+    "hospital_name": "Sridhar-Pall Multi-Speciality Hospital",
+    "subtotal": 107397.9,
+    "total_amount": 107397.9,
+    "amount_in_words": "One Lakh Seven Thousand Three Hundred Ninety Eight Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0083_hospital_bill_surgery.pdf",
+  "png_path": "data\\training\\clean\\clean_0083_hospital_bill_surgery.png",
+  "json_path": "data\\training\\clean\\clean_0083_hospital_bill_surgery.json"
+}

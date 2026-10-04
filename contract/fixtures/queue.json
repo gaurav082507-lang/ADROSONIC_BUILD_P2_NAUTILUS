@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "claim_id": "c_8756434c",
+      "result_id": "7b4784bd-4fa4-43bd-9104-dff6f68155e7",
+      "claimant_name": "Lucen C.",
+      "type": "motor",
+      "submitted_at": "2026-10-03T22:00:24.873633",
+      "band": "LOW",
+      "overall_risk": 0.05,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation.",
+      "status": "under_review",
+      "can_fast_track": true
+    },
+    {
+      "claim_id": "claim_demo_01",
+      "result_id": "92e3ea2e-c4d6-432f-b29d-803ade4dc41b",
+      "claimant_name": "Ravi K.",
+      "type": "motor",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "MEDIUM",
+      "overall_risk": 0.529,
+      "top_reason": "The document total (INR 53,100.00) differs from the amount claimed (INR 12,500.00).",
+      "status": "approved",
+      "can_fast_track": false
+    },
+    {
+      "claim_id": "claim_demo_02",
+      "result_id": "2fc3a960-72c8-4cfc-9c89-314cbfefa959",
+      "claimant_name": "Ravi K.",
+      "type": "motor",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "HIGH",
+      "overall_risk": 0.8638,
+      "top_reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00.",
+      "status": "under_review",
+      "can_fast_track": false
+    },
+    {
+      "claim_id": "claim_demo_03",
+      "result_id": "4768ad9a-20d9-45ad-b326-d370a954e1c4",
+      "claimant_name": "Ravi K.",
+      "type": "property",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "HIGH",
+      "overall_risk": 0.7615,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (100% likelihood after calibration).",
+      "status": "needs_evidence",
+      "can_fast_track": false
+    },
+    {
+      "claim_id": "claim_demo_04",
+      "result_id": "56880b97-2c77-4575-92f9-1c48beecfc83",
+      "claimant_name": "Sunita S.",
+      "type": "health",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "HIGH",
+      "overall_risk": 0.7435,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (100% likelihood after calibration).",
+      "status": "under_review",
+      "can_fast_track": false
+    },
+    {
+      "claim_id": "claim_demo_05",
+      "result_id": "res_claim_demo_05",
+      "claimant_name": "Sunita S.",
+      "type": "motor",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "LOW",
+      "overall_risk": 0.08,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation.",
+      "status": "under_review",
+      "can_fast_track": true
+    },
+    {
+      "claim_id": "claim_demo_06",
+      "result_id": "res_claim_demo_06",
+      "claimant_name": "Sunita S.",
+      "type": "health",
+      "submitted_at": "2026-10-03T21:59:29.929545",
+      "band": "LOW",
+      "overall_risk": 0.08,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation.",
+      "status": "approved",
+      "can_fast_track": false
+    }
+  ],
+  "total": 7,
+  "limit": 20,
+  "offset": 0
+}

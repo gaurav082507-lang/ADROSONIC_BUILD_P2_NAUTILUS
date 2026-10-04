@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0000_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1000,
+  "created_at": "2026-10-03T12:35:31.005522",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-8028",
+    "date": "30/07/2026",
+    "due_date": "07/09/2026",
+    "seller": "Chaudhary-Ramesh Pvt Ltd",
+    "buyer": "Dev Sidhu",
+    "subtotal": 296221.19,
+    "tax_rate": 0.18,
+    "tax_amount": 53319.81,
+    "total_amount": 349541.0,
+    "amount_in_words": "Three Lakh Forty Nine Thousand Five Hundred Forty One Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 8,
+      "rate": 4561.1,
+      "amount": 36488.8
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 7,
+      "rate": 3692.73,
+      "amount": 25849.11
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 4,
+      "rate": 9423.62,
+      "amount": 37694.48
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 8,
+      "rate": 24523.6,
+      "amount": 196188.8
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0000_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0000_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0000_gst_invoice_corp.json"
+}

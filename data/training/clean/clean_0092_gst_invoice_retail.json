@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0092_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "seed": 1092,
+  "created_at": "2026-10-03T12:35:36.681813",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-9224",
+    "date": "23/05/2026",
+    "due_date": "26/06/2026",
+    "seller": "Som, Kumar and Kapur Pvt Ltd",
+    "buyer": "Advika Mukherjee",
+    "subtotal": 236827.21,
+    "tax_rate": 0.18,
+    "tax_amount": 42628.9,
+    "total_amount": 279456.11,
+    "amount_in_words": "Two Lakh Seventy Nine Thousand Four Hundred Fifty Six Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 5,
+      "rate": 24913.24,
+      "amount": 124566.2
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 5,
+      "rate": 18221.93,
+      "amount": 91109.65
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 2,
+      "rate": 10575.68,
+      "amount": 21151.36
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0092_gst_invoice_retail.pdf",
+  "png_path": "data\\training\\clean\\clean_0092_gst_invoice_retail.png",
+  "json_path": "data\\training\\clean\\clean_0092_gst_invoice_retail.json"
+}

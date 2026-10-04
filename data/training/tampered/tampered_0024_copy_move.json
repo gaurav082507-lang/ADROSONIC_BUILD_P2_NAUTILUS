@@ -1,0 +1,25 @@
+{
+  "recipe": "copy_move",
+  "held_out": false,
+  "before_text": "original_background",
+  "after_text": "cloned_patch",
+  "region": {
+    "x": 744,
+    "y": 964,
+    "w": 310,
+    "h": 70
+  },
+  "normalized_bbox": [
+    0.5995,
+    0.5496,
+    0.2498,
+    0.0399
+  ],
+  "sample_id": "tampered_0024_copy_move",
+  "clean_id": "clean_0024_hard_neg_mixed_fonts",
+  "template": "hard_neg_mixed_fonts",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0024_copy_move.png",
+  "mask_path": "data\\training\\tampered\\tampered_0024_copy_move_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0024_copy_move.json"
+}

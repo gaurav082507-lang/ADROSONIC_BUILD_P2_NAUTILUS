@@ -1,0 +1,378 @@
+{
+  "id": "3a65b305-c428-4b61-be1d-1a4e8380a5a7",
+  "claim_id": null,
+  "mode": "image",
+  "created_at": "2026-10-03T20:18:38.242336",
+  "image": {
+    "pipeline": "image",
+    "risk": 0.1309,
+    "authenticity": 0.8691,
+    "band": "LOW",
+    "confidence": "high",
+    "evidence_ids": [
+      "IMG-EXIF-01",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ]
+  },
+  "document": null,
+  "identity": null,
+  "claim": null,
+  "overall": {
+    "risk": 0.1309,
+    "band": "LOW",
+    "confidence": "high",
+    "summary": "LOW fraud likelihood (13%). Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. The file lacks expected camera metadata. Recommended action: Proceed with standard claim processing."
+  },
+  "evidence": [
+    {
+      "id": "IMG-NOISE-01",
+      "kind": "risk",
+      "raw_score": 0.568,
+      "calibrated_score": 0.568,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "medium",
+      "title": "Inconsistent Noise",
+      "reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "noise_dispersion": 0.8957,
+        "blocks_analyzed": 108,
+        "flat_blocks_excluded": 0,
+        "fft_periodicity_ratio": 5.4,
+        "contribution": 0.0836
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0836,
+      "contribution_pct": 63.9,
+      "rank": 1,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-01",
+      "kind": "risk",
+      "raw_score": 0.5,
+      "calibrated_score": 0.5,
+      "weight": 0.1,
+      "effective_weight": 0.1,
+      "severity": "low",
+      "title": "Missing Camera EXIF",
+      "reason": "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "present_tags": [],
+        "contribution": 0.0473
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0473,
+      "contribution_pct": 36.1,
+      "rank": 2,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-AI-01",
+      "kind": "risk",
+      "raw_score": 0.0002,
+      "calibrated_score": 0.0002,
+      "weight": 0.65,
+      "effective_weight": 0.65,
+      "severity": "low",
+      "title": "AI Generated",
+      "reason": "The image shows patterns typical of AI-generated pictures (0% likelihood after calibration).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "p_ai_raw": 0.0002,
+        "raw_logits": [
+          -2.6094,
+          6.0042
+        ],
+        "p_ai_tta_q85": 0.0002,
+        "p_ai_crop": null,
+        "tta_disagreement": false,
+        "crop_evaluated": false,
+        "temperature": 1.0,
+        "uncalibrated": false,
+        "model": "Ateeqq/ai-vs-human-image-detector",
+        "p": 0.0002,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": 3,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-ELA-01",
+      "kind": "info",
+      "raw_score": 0.4856,
+      "calibrated_score": 0.4856,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "ELA Compression Anomaly",
+      "reason": "One region of the photo was compressed differently from the rest (supporting context — low discriminative AUC).",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.349,
+        "y": 0.0,
+        "w": 0.255,
+        "h": 0.108
+      },
+      "bboxes": null,
+      "details": {
+        "anomaly_fraction": 0.0738,
+        "anomalous_pixels": 35408,
+        "threshold": 38.5,
+        "largest_region_area": 4954,
+        "auc": 0.4667,
+        "auc_rule": "AUC < 0.60 → info-only, not scored",
+        "contribution": 0.0
+      },
+      "artifact": "ela_heatmap.png",
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "image",
+      "page": 1
+    }
+  ],
+  "detector_status": [
+    {
+      "detector": "preprocess",
+      "status": "ok",
+      "duration_ms": 9,
+      "error": null
+    },
+    {
+      "detector": "metadata",
+      "status": "ok",
+      "duration_ms": 2,
+      "error": null
+    },
+    {
+      "detector": "ai_detector",
+      "status": "ok",
+      "duration_ms": 432,
+      "error": null
+    },
+    {
+      "detector": "ela",
+      "status": "ok",
+      "duration_ms": 59,
+      "error": null
+    },
+    {
+      "detector": "noise",
+      "status": "ok",
+      "duration_ms": 16,
+      "error": null
+    },
+    {
+      "detector": "localization",
+      "status": "ok",
+      "duration_ms": 45,
+      "error": null
+    }
+  ],
+  "quality_warnings": [],
+  "artifacts": {
+    "preview_img_1": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/preview_img_1.jpg?exp=1791145117&sig=8c730d23871faf653e3d469ce1f43f28dd386ed37c715948c819ccbbe81fc857",
+    "preview_image": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/preview_img_1.jpg?exp=1791145117&sig=8c730d23871faf653e3d469ce1f43f28dd386ed37c715948c819ccbbe81fc857",
+    "ela_heatmap": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/ela_heatmap.png?exp=1791145118&sig=3cb7e7b273b8b35339205d41877f376f3a7c1f40d3349308abf43c1aa02bc230",
+    "overlay": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/overlay.png?exp=1791145118&sig=59baa002df97f859ecfb248637fc4f9b38bae10b5a0fcbe852fae66ba0b52217",
+    "image_heatmap": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/image_heatmap.png?exp=1791145118&sig=cb5260edc80ec200fecfeaf03d3d9bd26c798ed330b58304e203f1a4458fe269",
+    "heatmap": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/heatmap.json?exp=1791145118&sig=5fad40fe7aa20229b549fcec6737c4467c10c86fa3b0155d93e0b65de767f67c"
+  },
+  "versions": {
+    "detector": "Ateeqq/ai-vs-human-image-detector",
+    "face_engine": "sface",
+    "calibration_date": "2026-10-02",
+    "git_commit": "e8d47bf",
+    "engine": "lucen-2.0"
+  },
+  "location": null,
+  "voice": null,
+  "voice_details": null,
+  "liveness": null,
+  "aadhaar_qr": null,
+  "story": null,
+  "links": null,
+  "decision": null,
+  "image_results": [
+    {
+      "pipeline": "image",
+      "risk": 0.1309,
+      "authenticity": 0.8691,
+      "band": "LOW",
+      "confidence": "high",
+      "evidence_ids": [
+        "IMG-EXIF-01",
+        "IMG-AI-01",
+        "IMG-ELA-01",
+        "IMG-NOISE-01"
+      ]
+    }
+  ],
+  "why_this_score": {
+    "image": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "IMG-EXIF-01",
+          "title": "Missing Camera EXIF",
+          "w": 0.1,
+          "p": 0.5,
+          "push": 0.05,
+          "contribution_pct": 36.1
+        },
+        {
+          "evidence_id": "IMG-AI-01",
+          "title": "AI Generated",
+          "w": 0.65,
+          "p": 0.0002,
+          "push": 0.0001,
+          "contribution_pct": 0.0
+        },
+        {
+          "evidence_id": "IMG-NOISE-01",
+          "title": "Inconsistent Noise",
+          "w": 0.15,
+          "p": 0.568,
+          "push": 0.0852,
+          "contribution_pct": 63.9
+        }
+      ],
+      "formula": "1 - (1 - 0.050) * (1 - 0.085) = 0.131",
+      "overrides_applied": [],
+      "quality_gates_applied": []
+    },
+    "document": null,
+    "identity": null,
+    "voice": null,
+    "claim": null,
+    "overall": {
+      "formula": "Single active pipeline (image) = 0.131",
+      "pipeline_risks": {
+        "image": 0.1309
+      },
+      "overrides_applied": []
+    },
+    "items": [
+      {
+        "evidence_id": "IMG-NOISE-01",
+        "title": "Inconsistent Noise",
+        "w": 0.15,
+        "p": 0.568,
+        "push": 0.0852,
+        "contribution_pct": 63.9
+      },
+      {
+        "evidence_id": "IMG-EXIF-01",
+        "title": "Missing Camera EXIF",
+        "w": 0.1,
+        "p": 0.5,
+        "push": 0.05,
+        "contribution_pct": 36.1
+      },
+      {
+        "evidence_id": "IMG-AI-01",
+        "title": "AI Generated",
+        "w": 0.65,
+        "p": 0.0002,
+        "push": 0.0001,
+        "contribution_pct": 0.0
+      }
+    ]
+  },
+  "why_this_score_items": [
+    {
+      "evidence_id": "IMG-NOISE-01",
+      "title": "Inconsistent Noise",
+      "w": 0.15,
+      "p": 0.568,
+      "push": 0.0852,
+      "contribution_pct": 63.9
+    },
+    {
+      "evidence_id": "IMG-EXIF-01",
+      "title": "Missing Camera EXIF",
+      "w": 0.1,
+      "p": 0.5,
+      "push": 0.05,
+      "contribution_pct": 36.1
+    },
+    {
+      "evidence_id": "IMG-AI-01",
+      "title": "AI Generated",
+      "w": 0.65,
+      "p": 0.0002,
+      "push": 0.0001,
+      "contribution_pct": 0.0
+    }
+  ],
+  "checks_run": [
+    {
+      "detector": "preprocess",
+      "status": "ok",
+      "duration_ms": 9,
+      "reason": null
+    },
+    {
+      "detector": "metadata",
+      "status": "ok",
+      "duration_ms": 2,
+      "reason": null
+    },
+    {
+      "detector": "ai_detector",
+      "status": "ok",
+      "duration_ms": 432,
+      "reason": null
+    },
+    {
+      "detector": "ela",
+      "status": "ok",
+      "duration_ms": 59,
+      "reason": null
+    },
+    {
+      "detector": "noise",
+      "status": "ok",
+      "duration_ms": 16,
+      "reason": null
+    },
+    {
+      "detector": "localization",
+      "status": "ok",
+      "duration_ms": 45,
+      "reason": null
+    }
+  ],
+  "top_reasons": [
+    "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+    "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+    "The image shows patterns typical of AI-generated pictures (0% likelihood after calibration)."
+  ],
+  "recommended_action": "Approve claim for automated Straight-Through Processing (STP).",
+  "summary_source": "template"
+}

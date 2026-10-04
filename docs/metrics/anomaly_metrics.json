@@ -1,0 +1,23 @@
+{
+  "model": "IsolationForest",
+  "n_estimators": 200,
+  "clean_words_trained": 3887,
+  "feature_names": [
+    "height",
+    "width",
+    "aspect",
+    "baseline_offset",
+    "char_spacing",
+    "stroke_width",
+    "ink_intensity",
+    "ocr_conf",
+    "font_size",
+    "font_id"
+  ],
+  "evaluation": {
+    "test_samples_evaluated": 0,
+    "median_anomaly_rank": null,
+    "top_5_hit_rate": null,
+    "status": "NOT MEASURED"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "recipe": "digit_replacement",
+  "held_out": false,
+  "before_text": "65,000.00",
+  "after_text": "2,06,926.58",
+  "region": {
+    "x": 893,
+    "y": 945,
+    "w": 248,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.5388,
+    0.1998,
+    0.0348
+  ],
+  "sample_id": "tampered_0035_digit_replacement",
+  "clean_id": "clean_0035_claim_form_motor",
+  "template": "claim_form_motor",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0035_digit_replacement.png",
+  "mask_path": "data\\training\\tampered\\tampered_0035_digit_replacement_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0035_digit_replacement.json"
+}

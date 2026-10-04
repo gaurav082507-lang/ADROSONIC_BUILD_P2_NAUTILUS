@@ -1,0 +1,25 @@
+{
+  "recipe": "inpaint_retype",
+  "held_out": false,
+  "before_text": "2,18,000.00",
+  "after_text": "4,68,789.42",
+  "region": {
+    "x": 868,
+    "y": 796,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4538,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0051_inpaint_retype",
+  "clean_id": "clean_0051_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0051_inpaint_retype.png",
+  "mask_path": "data\\training\\tampered\\tampered_0051_inpaint_retype_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0051_inpaint_retype.json"
+}

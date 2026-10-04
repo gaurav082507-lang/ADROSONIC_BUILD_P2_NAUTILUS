@@ -1,0 +1,22 @@
+{
+  "sample_id": "clean_0073_motor_repair_parts",
+  "template": "motor_repair_parts",
+  "split": "val",
+  "seed": 1073,
+  "created_at": "2026-10-03T12:35:35.546133",
+  "fields": {
+    "document_type": "Motor Repair Estimate",
+    "estimate_number": "REP-EST-10424",
+    "vehicle_reg": "MH 24 IK 2168",
+    "policy_number": "POL-MOT-82905237",
+    "date": "03/02/2026",
+    "subtotal": 48900.0,
+    "tax_amount": 8802.0,
+    "total_amount": 57702.0,
+    "amount_in_words": "Fifty Seven Thousand Seven Hundred Two Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0073_motor_repair_parts.pdf",
+  "png_path": "data\\training\\clean\\clean_0073_motor_repair_parts.png",
+  "json_path": "data\\training\\clean\\clean_0073_motor_repair_parts.json"
+}

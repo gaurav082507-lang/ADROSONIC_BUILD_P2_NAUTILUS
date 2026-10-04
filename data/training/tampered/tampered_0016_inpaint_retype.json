@@ -1,0 +1,25 @@
+{
+  "recipe": "inpaint_retype",
+  "held_out": false,
+  "before_text": "4,16,655.49",
+  "after_text": "12,72,662.76",
+  "region": {
+    "x": 868,
+    "y": 780,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4447,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0016_inpaint_retype",
+  "clean_id": "clean_0016_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0016_inpaint_retype.png",
+  "mask_path": "data\\training\\tampered\\tampered_0016_inpaint_retype_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0016_inpaint_retype.json"
+}

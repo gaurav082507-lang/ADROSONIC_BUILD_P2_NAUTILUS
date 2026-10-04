@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0053_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "seed": 1053,
+  "created_at": "2026-10-03T12:35:34.333586",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-6737",
+    "date": "21/07/2026",
+    "due_date": "29/08/2026",
+    "seller": "Pant-Patel Pvt Ltd",
+    "buyer": "Ikshita Sahota",
+    "subtotal": 240724.06,
+    "tax_rate": 0.18,
+    "tax_amount": 43330.33,
+    "total_amount": 284054.39,
+    "amount_in_words": "Two Lakh Eighty Four Thousand Fifty Four Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 6,
+      "rate": 21674.03,
+      "amount": 130044.18
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 10,
+      "rate": 8499.66,
+      "amount": 84996.6
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 2,
+      "rate": 12841.64,
+      "amount": 25683.28
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0053_gst_invoice_retail.pdf",
+  "png_path": "data\\training\\clean\\clean_0053_gst_invoice_retail.png",
+  "json_path": "data\\training\\clean\\clean_0053_gst_invoice_retail.json"
+}

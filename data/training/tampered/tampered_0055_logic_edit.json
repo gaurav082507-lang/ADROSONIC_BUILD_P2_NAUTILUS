@@ -1,0 +1,25 @@
+{
+  "recipe": "logic_edit",
+  "held_out": false,
+  "before_text": "3,51,557.52",
+  "after_text": "7,34,696.74",
+  "region": {
+    "x": 893,
+    "y": 754,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.4299,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0055_logic_edit",
+  "clean_id": "clean_0055_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0055_logic_edit.png",
+  "mask_path": "data\\training\\tampered\\tampered_0055_logic_edit_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0055_logic_edit.json"
+}

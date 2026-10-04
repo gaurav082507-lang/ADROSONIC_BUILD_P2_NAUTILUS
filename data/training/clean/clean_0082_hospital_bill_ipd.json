@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0082_hospital_bill_ipd",
+  "template": "hospital_bill_ipd",
+  "split": "train",
+  "seed": 1082,
+  "created_at": "2026-10-03T12:35:36.085783",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-983518",
+    "patient_name": "Anjali Batta",
+    "uhid": "UHID-1754644",
+    "admission_date": "14/12/2025",
+    "discharge_date": "20/12/2025",
+    "hospital_name": "Yogi, Bath and Shukla Multi-Speciality Hospital",
+    "subtotal": 109111.22,
+    "total_amount": 109111.22,
+    "amount_in_words": "One Lakh Nine Thousand One Hundred Eleven Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0082_hospital_bill_ipd.pdf",
+  "png_path": "data\\training\\clean\\clean_0082_hospital_bill_ipd.png",
+  "json_path": "data\\training\\clean\\clean_0082_hospital_bill_ipd.json"
+}

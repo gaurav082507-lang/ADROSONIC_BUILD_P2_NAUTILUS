@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0062_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "seed": 1062,
+  "created_at": "2026-10-03T12:35:34.869200",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-332735",
+    "policy_number": "POL-57367810",
+    "claimant": "Ira Uppal",
+    "aadhaar_id": "270270904185",
+    "date": "16/11/2025",
+    "total_amount": 166000.0,
+    "amount_in_words": "One Lakh Sixty Six Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0062_claim_form_health.pdf",
+  "png_path": "data\\training\\clean\\clean_0062_claim_form_health.png",
+  "json_path": "data\\training\\clean\\clean_0062_claim_form_health.json"
+}

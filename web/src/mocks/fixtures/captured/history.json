@@ -1,0 +1,207 @@
+{
+  "items": [
+    {
+      "id": "59458d10-0dd0-43dc-bb6e-e0138fd41fa8",
+      "created_at": "2026-10-03T20:19:07.022288",
+      "mode": "claim",
+      "overall_risk": 0.115,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/59458d10-0dd0-43dc-bb6e-e0138fd41fa8/preview_img_1.jpg?exp=1791145142&sig=8cf662df51b3282d080a7b793d9047fd137ed43a9a8e7b9c1562b33708f0b353",
+      "evidence_count": 7,
+      "top_reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions."
+    },
+    {
+      "id": "7a768d59-95d3-483f-be35-617e1a77f298",
+      "created_at": "2026-10-03T20:19:02.049105",
+      "mode": "claim",
+      "overall_risk": 0.5171,
+      "overall_band": "MEDIUM",
+      "thumbnail_url": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/preview_img_1.jpg?exp=1791145134&sig=184fdbfaf6058b85e7cf65fe296c620772ad66ccd7deb3a2800f27720a7bc078",
+      "evidence_count": 6,
+      "top_reason": "The invoice number INV-2024-8842 from vendor was previously submitted in claim CLM-CLEAN-01."
+    },
+    {
+      "id": "1ab02024-e510-4ea9-913f-9d8c7696ad81",
+      "created_at": "2026-10-03T20:18:53.936866",
+      "mode": "claim",
+      "overall_risk": 0.8886,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/preview_img_1.jpg?exp=1791145126&sig=0dbb77df44b17ddf080340825053cde93fad7497c6fb2a1905c63e24f2245fd3",
+      "evidence_count": 15,
+      "top_reason": "The invoice number INV-2024-9912 from vendor was previously submitted in claim full_claim_live_eval."
+    },
+    {
+      "id": "bbc89397-6b6e-40cd-aa44-03b2755dcddd",
+      "created_at": "2026-10-03T20:18:45.528971",
+      "mode": "document",
+      "overall_risk": 0.9501,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1_boxes.png?exp=1791145125&sig=5e62aeb958d664f9566858856a5bfaed3ee0338d3c06e8ac5ca4f41c748431c2",
+      "evidence_count": 8,
+      "top_reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00."
+    },
+    {
+      "id": "3a65b305-c428-4b61-be1d-1a4e8380a5a7",
+      "created_at": "2026-10-03T20:18:38.242336",
+      "mode": "image",
+      "overall_risk": 0.1309,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/3a65b305-c428-4b61-be1d-1a4e8380a5a7/preview_img_1.jpg?exp=1791145117&sig=8c730d23871faf653e3d469ce1f43f28dd386ed37c715948c819ccbbe81fc857",
+      "evidence_count": 4,
+      "top_reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions."
+    },
+    {
+      "id": "70fcf0bf-9428-475b-96ac-38c6ca6d4ca9",
+      "created_at": "2026-10-03T20:18:35.869803",
+      "mode": "image",
+      "overall_risk": 0.6552,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/preview_img_1.jpg?exp=1791145114&sig=8c0b79043098e15f5ec0e5771c726ab62cbec9c6de6c7f74a22052a4a5c7ece5",
+      "evidence_count": 6,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration)."
+    },
+    {
+      "id": "3e6109c5-82ce-47b8-b1df-943874d3919d",
+      "created_at": "2026-10-03T20:16:52.056693",
+      "mode": "claim",
+      "overall_risk": 0.5171,
+      "overall_band": "MEDIUM",
+      "thumbnail_url": "/api/v1/artifacts/3e6109c5-82ce-47b8-b1df-943874d3919d/preview_img_1.jpg?exp=1791145004&sig=f11d7cd67edf37afa7f1b7631d7b01fda33bb008cdbed3ffcbe5112f12769b58",
+      "evidence_count": 6,
+      "top_reason": "The invoice number INV-2024-8842 from vendor was previously submitted in claim CLM-CLEAN-01."
+    },
+    {
+      "id": "32553e0f-b415-4ffe-8586-fcf547ba500e",
+      "created_at": "2026-10-03T20:16:43.882663",
+      "mode": "claim",
+      "overall_risk": 0.8886,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/32553e0f-b415-4ffe-8586-fcf547ba500e/preview_img_1.jpg?exp=1791144996&sig=49aa15e06da6e3e09667ea56d7160cc5ec231c2a01d533e4139c0672eea6a1c9",
+      "evidence_count": 15,
+      "top_reason": "The invoice number INV-2024-9912 from vendor was previously submitted in claim full_claim_live_eval."
+    },
+    {
+      "id": "f203822e-bafd-47fa-88d3-d5b1fb2ec8c9",
+      "created_at": "2026-10-03T20:16:36.421801",
+      "mode": "document",
+      "overall_risk": 0.9501,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/f203822e-bafd-47fa-88d3-d5b1fb2ec8c9/page_1_boxes.png?exp=1791144996&sig=56d5a33f1f1037b477bca6d16e98fcfe3fb0389555f72374d2339cc0b7315a5c",
+      "evidence_count": 8,
+      "top_reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00."
+    },
+    {
+      "id": "d9f149b2-afbe-4954-8e28-0a318526d554",
+      "created_at": "2026-10-03T20:16:28.761527",
+      "mode": "image",
+      "overall_risk": 0.1309,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/d9f149b2-afbe-4954-8e28-0a318526d554/preview_img_1.jpg?exp=1791144987&sig=0ebe5ab56f7b966a12abcdf72ad1b5496eb9eb504e8eaea64aa2053df60e3770",
+      "evidence_count": 4,
+      "top_reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions."
+    },
+    {
+      "id": "dd6623a9-c822-485f-9fe0-67fa9c27a9b0",
+      "created_at": "2026-10-03T20:16:26.456080",
+      "mode": "image",
+      "overall_risk": 0.6552,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/dd6623a9-c822-485f-9fe0-67fa9c27a9b0/preview_img_1.jpg?exp=1791144985&sig=6227f5ad319a7771efe57af0d149e15a18901594860f6092b8ac308d45296146",
+      "evidence_count": 6,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration)."
+    },
+    {
+      "id": "f8aea914-0ac3-48a1-b5e3-0819c9003607",
+      "created_at": "2026-10-03T20:12:48.591335",
+      "mode": "claim",
+      "overall_risk": 0.95,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/f8aea914-0ac3-48a1-b5e3-0819c9003607/preview_img_1.jpg?exp=1791144765&sig=96f2b0ec80a030affdfe14dc52d7cb4bdfdb98a4713ddeab93fcbe87b107b97d",
+      "evidence_count": 9,
+      "top_reason": "C2PA Content Credentials declare that this image was generated by an AI model."
+    },
+    {
+      "id": "67127552-bbbe-43c8-87e7-2bb44aa6fbaf",
+      "created_at": "2026-10-03T20:12:28.762542",
+      "mode": "claim",
+      "overall_risk": 0.05,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/67127552-bbbe-43c8-87e7-2bb44aa6fbaf/heatmap.json?exp=1791144748&sig=30e5d6b1fa40039c548c71323511d749aa2b2df1fcbc664a745480e549585b61",
+      "evidence_count": 0,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    },
+    {
+      "id": "23a15a1b-4b06-4c40-9b60-265b80af1d81",
+      "created_at": "2026-10-03T20:12:25.665641",
+      "mode": "claim",
+      "overall_risk": 0.0462,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/23a15a1b-4b06-4c40-9b60-265b80af1d81/preview_img_1.jpg?exp=1791144738&sig=9c09ca440930dc085cac55441c8baacc153a2e038c0860ac3b34452125779ed7",
+      "evidence_count": 10,
+      "top_reason": "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps."
+    },
+    {
+      "id": "b31ef5cf-9433-4ad3-9585-abfbacb52632",
+      "created_at": "2026-10-03T20:12:18.677805",
+      "mode": "claim",
+      "overall_risk": 0.05,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/b31ef5cf-9433-4ad3-9585-abfbacb52632/heatmap.json?exp=1791144738&sig=28d18682c2a47a9eb10ccee439f4c2118936d000be7a749147826ca744bddd5a",
+      "evidence_count": 0,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    },
+    {
+      "id": "4d294322-734d-4bdf-97f5-0f3e7fff255d",
+      "created_at": "2026-10-03T20:12:18.296245",
+      "mode": "claim",
+      "overall_risk": 0.85,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/4d294322-734d-4bdf-97f5-0f3e7fff255d/heatmap.json?exp=1791144738&sig=85f6731e348e931331be74ea79f359d661f2f541f79f68e98d4da90aabb67cf4",
+      "evidence_count": 4,
+      "top_reason": "The QR code on the ID card failed its digital signature check (verified with TEST key – demo only), so its contents cannot be trusted."
+    },
+    {
+      "id": "962940b1-9515-4d0b-81fb-e8aacb4b7bd6",
+      "created_at": "2026-10-03T20:12:14.675571",
+      "mode": "claim",
+      "overall_risk": 0.5655,
+      "overall_band": "MEDIUM",
+      "thumbnail_url": "/api/v1/artifacts/962940b1-9515-4d0b-81fb-e8aacb4b7bd6/heatmap.json?exp=1791144734&sig=ba36cebadbf9d66d9c4314b3032173cedea71ee4276488660812fe634e9fa18b",
+      "evidence_count": 3,
+      "top_reason": "Printed details on ID card do not match signed QR data: Name (printed: 'Rajesh Sharma', QR: 'Ravi Kumar')."
+    },
+    {
+      "id": "7284f683-72b1-448a-bc12-b407356f4c61",
+      "created_at": "2026-10-03T20:12:09.974989",
+      "mode": "claim",
+      "overall_risk": 0.0521,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/7284f683-72b1-448a-bc12-b407356f4c61/heatmap.json?exp=1791144729&sig=f4833fb043de21fdcc69ffed23bd16f72afebdc1ef86227a07ea08044efa2656",
+      "evidence_count": 3,
+      "top_reason": "Live camera check was not performed; static selfie uploaded instead."
+    },
+    {
+      "id": "f75a31e2-7058-4534-bb9f-431eeddd4407",
+      "created_at": "2026-10-03T20:12:03.931680",
+      "mode": "document",
+      "overall_risk": 0.0,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/f75a31e2-7058-4534-bb9f-431eeddd4407/page_1_boxes.png?exp=1791144723&sig=734d619b256954a4a825d7222df4a6e3bba704e4a8bf73874eebbeaef0989048",
+      "evidence_count": 1,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    },
+    {
+      "id": "f7e39e19-9922-483b-bf57-706e6acaf336",
+      "created_at": "2026-10-03T20:11:59.476126",
+      "mode": "document",
+      "overall_risk": 0.0,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/f7e39e19-9922-483b-bf57-706e6acaf336/page_1_boxes.png?exp=1791144719&sig=7f3a6eda9f26aa6fd61bd656152d38b91cb2552321a6eeb8bd0677fda8a49e53",
+      "evidence_count": 1,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    }
+  ],
+  "total": 703,
+  "page": 1,
+  "page_size": 20
+}

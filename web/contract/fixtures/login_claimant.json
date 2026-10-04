@@ -1,0 +1,10 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyX3JhdmkiLCJyb2xlIjoiY2xhaW1hbnQiLCJlbWFpbCI6InJhdmlAZGVtby5pbiIsImV4cCI6MTc5MTA4NzUxNH0.RTaV2PJHvSllwp-2NagVkX8FBjIYt2jP78FWqsSWNew",
+  "user": {
+    "id": "user_ravi",
+    "name": "Ravi Kumar",
+    "email": "ravi@demo.in",
+    "role": "claimant",
+    "preferred_lang": "en"
+  }
+}

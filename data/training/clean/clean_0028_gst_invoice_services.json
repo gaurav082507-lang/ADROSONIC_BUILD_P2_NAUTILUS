@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0028_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1028,
+  "created_at": "2026-10-03T12:35:32.844676",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-7448",
+    "date": "30/03/2026",
+    "due_date": "28/04/2026",
+    "seller": "Ramesh, Krishnan and Hegde Pvt Ltd",
+    "buyer": "Hemani Rajan",
+    "subtotal": 171717.21,
+    "tax_rate": 0.18,
+    "tax_amount": 30909.1,
+    "total_amount": 202626.31,
+    "amount_in_words": "Two Lakh Two Thousand Six Hundred Twenty Six Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 9,
+      "rate": 9934.79,
+      "amount": 89413.11
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 4,
+      "rate": 1103.67,
+      "amount": 4414.68
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 2,
+      "rate": 17052.72,
+      "amount": 34105.44
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 2,
+      "rate": 21891.99,
+      "amount": 43783.98
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0028_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0028_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0028_gst_invoice_services.json"
+}

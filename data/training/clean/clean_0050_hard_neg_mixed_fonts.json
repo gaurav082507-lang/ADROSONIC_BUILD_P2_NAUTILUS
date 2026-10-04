@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0050_hard_neg_mixed_fonts",
+  "template": "hard_neg_mixed_fonts",
+  "split": "train",
+  "seed": 1050,
+  "created_at": "2026-10-03T12:35:34.155296",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-740099",
+    "policy_number": "POL-66204867",
+    "claimant": "Saumya Palan",
+    "aadhaar_id": "321412172183",
+    "date": "04/02/2026",
+    "total_amount": 249000.0,
+    "amount_in_words": "Two Lakh Forty Nine Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0050_hard_neg_mixed_fonts.pdf",
+  "png_path": "data\\training\\clean\\clean_0050_hard_neg_mixed_fonts.png",
+  "json_path": "data\\training\\clean\\clean_0050_hard_neg_mixed_fonts.json"
+}

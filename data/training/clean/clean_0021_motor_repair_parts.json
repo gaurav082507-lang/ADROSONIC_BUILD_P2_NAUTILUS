@@ -1,0 +1,22 @@
+{
+  "sample_id": "clean_0021_motor_repair_parts",
+  "template": "motor_repair_parts",
+  "split": "val",
+  "seed": 1021,
+  "created_at": "2026-10-03T12:35:32.387596",
+  "fields": {
+    "document_type": "Motor Repair Estimate",
+    "estimate_number": "REP-EST-76567",
+    "vehicle_reg": "MH 12 IA 5023",
+    "policy_number": "POL-MOT-43831441",
+    "date": "26/04/2026",
+    "subtotal": 48900.0,
+    "tax_amount": 8802.0,
+    "total_amount": 57702.0,
+    "amount_in_words": "Fifty Seven Thousand Seven Hundred Two Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0021_motor_repair_parts.pdf",
+  "png_path": "data\\training\\clean\\clean_0021_motor_repair_parts.png",
+  "json_path": "data\\training\\clean\\clean_0021_motor_repair_parts.json"
+}

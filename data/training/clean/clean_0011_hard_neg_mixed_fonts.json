@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0011_hard_neg_mixed_fonts",
+  "template": "hard_neg_mixed_fonts",
+  "split": "train",
+  "seed": 1011,
+  "created_at": "2026-10-03T12:35:31.685976",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-365932",
+    "policy_number": "POL-14129639",
+    "claimant": "Azaan Sachdeva",
+    "aadhaar_id": "432538041684",
+    "date": "21/02/2026",
+    "total_amount": 193000.0,
+    "amount_in_words": "One Lakh Ninety Three Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0011_hard_neg_mixed_fonts.pdf",
+  "png_path": "data\\training\\clean\\clean_0011_hard_neg_mixed_fonts.png",
+  "json_path": "data\\training\\clean\\clean_0011_hard_neg_mixed_fonts.json"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 106,
+    "claim_id": "claim_demo_01",
+    "result_id": "92e3ea2e-c4d6-432f-b29d-803ade4dc41b",
+    "type": "invoice",
+    "kind": "invoice",
+    "value_hash": "dba73bd30e398cf47acf8587d4133930893b978d3627c4c92e4759cb695ecfd9",
+    "display_masked": "INV-2024-8842",
+    "created_at": "2026-10-03T21:59:38.598711"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "job_id": "f10c6a08-0280-48c6-9e83-dee96c396b3b",
+  "status": "done",
+  "mode": "image",
+  "steps": [
+    {
+      "name": "preprocess",
+      "status": "ok",
+      "duration_ms": 6
+    },
+    {
+      "name": "metadata",
+      "status": "ok",
+      "duration_ms": 58
+    },
+    {
+      "name": "ai_detector",
+      "status": "ok",
+      "duration_ms": 439
+    },
+    {
+      "name": "ela",
+      "status": "ok",
+      "duration_ms": 24
+    },
+    {
+      "name": "noise",
+      "status": "ok",
+      "duration_ms": 11
+    },
+    {
+      "name": "localization",
+      "status": "ok",
+      "duration_ms": 19
+    }
+  ],
+  "result_id": "70fcf0bf-9428-475b-96ac-38c6ca6d4ca9",
+  "error": null
+}

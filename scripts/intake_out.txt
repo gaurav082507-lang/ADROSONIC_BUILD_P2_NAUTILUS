@@ -1,0 +1,28 @@
+INTAKE LOG for claim c_897f86d3:
+TEXT FIELD: policy_id -> POL-MOT-1001
+TEXT FIELD: claim_type -> motor
+TEXT FIELD: peril -> collision
+TEXT FIELD: incident_date -> 2026-10-04
+TEXT FIELD: claimed_amount -> 5000
+TEXT FIELD: damaged_items -> []
+TEXT FIELD: description_text -> Window broken by storm
+TEXT FIELD: description_lang -> en
+TEXT FIELD: consent -> true
+TEXT FIELD: evidence -> UploadFile(filename='genuine_car.jpg', size=117032, headers=Headers({'content-disposition': 'form-data; name="evidence"; filename="genuine_car.jpg"', 'content-type': 'image/jpeg'}))
+TEXT FIELD: evidence -> UploadFile(filename='ai_car.jpg', size=15944, headers=Headers({'content-disposition': 'form-data; name="evidence"; filename="ai_car.jpg"', 'content-type': 'image/jpeg'}))
+TEXT FIELD: evidence -> UploadFile(filename='tampered_invoice.jpg', size=43795, headers=Headers({'content-disposition': 'form-data; name="evidence"; filename="tampered_invoice.jpg"', 'content-type': 'image/jpeg'}))
+TEXT FIELD: slot_names -> ["vehicle_full","damage_closeup","repair_estimate"]
+TEXT FIELD: capture_sources -> ["upload","upload","upload"]
+TEXT FIELD: evidence_metadata -> [{"filename":"genuine_car.jpg","slot":"vehicle_full","capture_source":"upload"},{"filename":"ai_car.jpg","slot":"damage_closeup","capture_source":"upload"},{"filename":"tampered_invoice.jpg","slot":"r
+TEXT FIELD: id_photo -> UploadFile(filename='selfie.jpg', size=725822, headers=Headers({'content-disposition': 'form-data; name="id_photo"; filename="selfie.jpg"', 'content-type': 'image/jpeg'}))
+TEXT FIELD: id_capture_source -> upload
+PARSED slot_names: ['vehicle_full', 'damage_closeup', 'repair_estimate']
+PARSED capture_sources: ['upload', 'upload', 'upload']
+PARSED evidence_metadata: {'genuine_car.jpg': {'filename': 'genuine_car.jpg', 'slot': 'vehicle_full', 'capture_source': 'upload'}, '0': {'filename': 'genuine_car.jpg', 'slot': 'vehicle_full', 'capture_source': 'upload'}, 'ai_car.jpg': {'filename': 'ai_car.jpg', 'slot': 'damage_closeup', 'capture_source': 'upload'}, '1': {'filename': 'ai_car.jpg', 'slot': 'damage_closeup', 'capture_source': 'upload'}, 'tampered_invoice.jpg': {'filename': 'tampered_invoice.jpg', 'slot': 'repair_estimate', 'capture_source': 'upload'}, '2': {'filename': 'tampered_invoice.jpg', 'slot': 'repair_estimate', 'capture_source': 'upload'}}
+DEBUG: collected_evidence len=3, evidence len=3
+ORCHESTRATOR LOG for d9568c51-9cf5-47d6-bf7d-5b651a554bc5 (claim mode):
+images_list count: 2
+document present?: True
+id_photo present?: True
+selfie present?: False
+voice present?: False

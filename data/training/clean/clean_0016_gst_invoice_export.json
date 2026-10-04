@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0016_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1016,
+  "created_at": "2026-10-03T12:35:32.015782",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-7397",
+    "date": "20/02/2026",
+    "due_date": "18/03/2026",
+    "seller": "Ramakrishnan, Palla and Garg Pvt Ltd",
+    "buyer": "Ijaya Tailor",
+    "subtotal": 353097.87,
+    "tax_rate": 0.18,
+    "tax_amount": 63557.62,
+    "total_amount": 416655.49,
+    "amount_in_words": "Four Lakh Sixteen Thousand Six Hundred Fifty Five Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 2,
+      "rate": 9039.41,
+      "amount": 18078.82
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 8,
+      "rate": 1356.93,
+      "amount": 10855.44
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 9,
+      "rate": 22748.33,
+      "amount": 204734.97
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 8,
+      "rate": 14928.58,
+      "amount": 119428.64
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0016_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0016_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0016_gst_invoice_export.json"
+}

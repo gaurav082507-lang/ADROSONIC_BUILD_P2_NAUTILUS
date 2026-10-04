@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0042_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1042,
+  "created_at": "2026-10-03T12:35:33.687154",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-3394",
+    "date": "06/01/2026",
+    "due_date": "28/01/2026",
+    "seller": "Pant Inc Pvt Ltd",
+    "buyer": "Chandani Suri",
+    "subtotal": 273239.68,
+    "tax_rate": 0.18,
+    "tax_amount": 49183.14,
+    "total_amount": 322422.82,
+    "amount_in_words": "Three Lakh Twenty Two Thousand Four Hundred Twenty Three Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 8,
+      "rate": 10116.44,
+      "amount": 80931.52
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 5,
+      "rate": 19103.68,
+      "amount": 95518.4
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 8,
+      "rate": 12098.72,
+      "amount": 96789.76
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0042_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0042_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0042_gst_invoice_export.json"
+}

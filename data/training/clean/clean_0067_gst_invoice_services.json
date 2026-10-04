@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0067_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1067,
+  "created_at": "2026-10-03T12:35:35.170299",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-5653",
+    "date": "07/10/2025",
+    "due_date": "22/10/2025",
+    "seller": "Rama-Gill Pvt Ltd",
+    "buyer": "Ekaja Tandon",
+    "subtotal": 209250.5,
+    "tax_rate": 0.18,
+    "tax_amount": 37665.09,
+    "total_amount": 246915.59,
+    "amount_in_words": "Two Lakh Forty Six Thousand Nine Hundred Sixteen Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 8,
+      "rate": 12268.65,
+      "amount": 98149.2
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 3,
+      "rate": 21285.9,
+      "amount": 63857.7
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 4,
+      "rate": 11810.9,
+      "amount": 47243.6
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0067_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0067_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0067_gst_invoice_services.json"
+}

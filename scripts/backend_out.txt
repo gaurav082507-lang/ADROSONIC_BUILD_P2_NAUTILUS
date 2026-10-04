@@ -1,0 +1,5 @@
+_impl_backend.cpp:345 cv::dnn::dnn5_v20260605::Net::Impl::setPreferableTarget Targets are not supported by the new graph engine for now
+{"time":"2026-10-04 07:38:58,170", "level":"INFO", "logger":"lucen_ai.models", "message":"SFace engine loaded successfully."}
+{"time":"2026-10-04 07:38:58,170", "level":"INFO", "logger":"lucen_ai", "message":"MOCK_ANALYSIS=OFF � real pipeline active"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

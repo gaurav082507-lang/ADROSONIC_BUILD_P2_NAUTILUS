@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0087_claim_form_motor",
+  "template": "claim_form_motor",
+  "split": "train",
+  "seed": 1087,
+  "created_at": "2026-10-03T12:35:36.398635",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-920720",
+    "policy_number": "POL-13026798",
+    "claimant": "Chandani Radhakrishnan",
+    "aadhaar_id": "664474161475",
+    "date": "18/12/2025",
+    "total_amount": 75000.0,
+    "amount_in_words": "Seventy Five Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0087_claim_form_motor.pdf",
+  "png_path": "data\\training\\clean\\clean_0087_claim_form_motor.png",
+  "json_path": "data\\training\\clean\\clean_0087_claim_form_motor.json"
+}

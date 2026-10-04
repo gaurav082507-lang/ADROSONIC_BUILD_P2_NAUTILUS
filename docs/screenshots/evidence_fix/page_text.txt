@@ -1,0 +1,15 @@
+
+    Lucen AIForensic claim intelligenceDashboardQueueAnalyzeHistoryAnalyticsNetworkPSPriya SharmaInvestigatorLog outInvestigator console8162ae62-594f-4b1f-8a89-72db5e66ca4eClaim intelligenceHIGH fraud likelihood (90%). The line items add up to INR 10,000.00 but the stated total is INR 88,500.00. The image shows patterns typical of AI-generated pictures (71% likelihood after calibration). This photo was previously submitted by a different claimant in claim claim_demo_01 (100% similar). This photo was previously submitted by a different claimant in claim claim_demo_02 (100% similar). Stated amount in words parses to INR 28,320.00, which differs from the numeric digits INR 88,500.00. Analysis confidence is low due to degraded input quality or limited checks. Recommended action: Escalate immediately to Special Investigation Unit (SIU) for detailed fraud investigation.PDFJSONDeleteOverall fraud likelihoodHIGHlow confidenceRiskHIGH90%Escalate to Special Investigation Unit (SIU) for detailed forensic document inspection and claimant interview.Some checks were limited; see Checks run.Image66%Document92%Identity5%Claim checks100%VoiceNot analysedShort side < 512 px (480 px).Duplicate evidence match100% similarity · earlier claim —ImageDocumentIdentityVoiceClaim checksNetworkStory reviewTimelineLocationEvidenceWhy this scoreChecks runClaim Amount Mismatch (CLM-X-02)flaggedThe document total (INR 88,500.00) differs from the amount claimed (INR 5,000.00).Invoice/Bill Dated Before Incident (CLM-X-08)flaggedThe repair invoice / bill is dated 15 Jul 2024, before the incident on 04 Oct 2026.Audit log04 Oct 2026 · submitted (— → submitted) · Lucen Claimant04 Oct 2026 · analysis_completed (submitted → under_review) · systemRelated entitiesinvoice · Investigator decisionGenerate an editable bilingual decision from the backend.Open decisionLIVE
+    
+      window.addEventListener('error', function (event) {
+        var box=document.getElementById('boot-error');
+        if(box){box.style.display='block';box.textContent='Lucen AI failed to start.\n\n'+(event.error?.stack || event.message || 'Unknown runtime error');}
+      });
+      window.addEventListener('unhandledrejection', function (event) {
+        var box=document.getElementById('boot-error');
+        if(box){box.style.display='block';box.textContent='Lucen AI failed to start.\n\n'+(event.reason?.stack || String(event.reason));}
+      });
+    
+    
+  
+

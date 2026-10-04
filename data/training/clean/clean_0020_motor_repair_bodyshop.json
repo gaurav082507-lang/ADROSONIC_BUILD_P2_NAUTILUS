@@ -1,0 +1,22 @@
+{
+  "sample_id": "clean_0020_motor_repair_bodyshop",
+  "template": "motor_repair_bodyshop",
+  "split": "train",
+  "seed": 1020,
+  "created_at": "2026-10-03T12:35:32.319237",
+  "fields": {
+    "document_type": "Motor Repair Estimate",
+    "estimate_number": "REP-EST-13229",
+    "vehicle_reg": "MH 30 LL 7642",
+    "policy_number": "POL-MOT-88162960",
+    "date": "14/11/2025",
+    "subtotal": 48900.0,
+    "tax_amount": 8802.0,
+    "total_amount": 57702.0,
+    "amount_in_words": "Fifty Seven Thousand Seven Hundred Two Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0020_motor_repair_bodyshop.pdf",
+  "png_path": "data\\training\\clean\\clean_0020_motor_repair_bodyshop.png",
+  "json_path": "data\\training\\clean\\clean_0020_motor_repair_bodyshop.json"
+}

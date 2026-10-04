@@ -1,0 +1,25 @@
+{
+  "recipe": "style_change",
+  "held_out": false,
+  "before_text": "1,10,340.42",
+  "after_text": "1,10,340.42 (bold_red)",
+  "region": {
+    "x": 868,
+    "y": 736,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4196,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0005_style_change",
+  "clean_id": "clean_0005_hospital_bill_surgery",
+  "template": "hospital_bill_surgery",
+  "split": "val",
+  "png_path": "data\\training\\tampered\\tampered_0005_style_change.png",
+  "mask_path": "data\\training\\tampered\\tampered_0005_style_change_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0005_style_change.json"
+}

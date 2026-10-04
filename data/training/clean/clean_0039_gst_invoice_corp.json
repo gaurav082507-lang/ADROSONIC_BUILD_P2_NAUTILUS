@@ -1,0 +1,39 @@
+{
+  "sample_id": "clean_0039_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1039,
+  "created_at": "2026-10-03T12:35:33.513145",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-4057",
+    "date": "21/06/2026",
+    "due_date": "27/07/2026",
+    "seller": "Grover, Gupta and Chaudhary Pvt Ltd",
+    "buyer": "Viraj Raval",
+    "subtotal": 167924.32,
+    "tax_rate": 0.18,
+    "tax_amount": 30226.38,
+    "total_amount": 198150.7,
+    "amount_in_words": "One Lakh Ninety Eight Thousand One Hundred Fifty One Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 1,
+      "rate": 6204.51,
+      "amount": 6204.51
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 7,
+      "rate": 23102.83,
+      "amount": 161719.81
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0039_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0039_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0039_gst_invoice_corp.json"
+}

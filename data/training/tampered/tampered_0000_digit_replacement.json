@@ -1,0 +1,25 @@
+{
+  "recipe": "digit_replacement",
+  "held_out": false,
+  "before_text": "3,49,541.00",
+  "after_text": "8,95,655.79",
+  "region": {
+    "x": 893,
+    "y": 985,
+    "w": 248,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.5616,
+    0.1998,
+    0.0348
+  ],
+  "sample_id": "tampered_0000_digit_replacement",
+  "clean_id": "clean_0000_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0000_digit_replacement.png",
+  "mask_path": "data\\training\\tampered\\tampered_0000_digit_replacement_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0000_digit_replacement.json"
+}

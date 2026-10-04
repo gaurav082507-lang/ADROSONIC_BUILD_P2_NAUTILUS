@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0074_claim_form_motor",
+  "template": "claim_form_motor",
+  "split": "train",
+  "seed": 1074,
+  "created_at": "2026-10-03T12:35:35.606508",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-770137",
+    "policy_number": "POL-61209260",
+    "claimant": "Edhitha Goyal",
+    "aadhaar_id": "428368389047",
+    "date": "12/08/2026",
+    "total_amount": 37000.0,
+    "amount_in_words": "Thirty Seven Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0074_claim_form_motor.pdf",
+  "png_path": "data\\training\\clean\\clean_0074_claim_form_motor.png",
+  "json_path": "data\\training\\clean\\clean_0074_claim_form_motor.json"
+}

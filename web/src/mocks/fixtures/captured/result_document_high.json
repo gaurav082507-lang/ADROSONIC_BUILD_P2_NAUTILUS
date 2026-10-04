@@ -1,0 +1,659 @@
+{
+  "id": "bbc89397-6b6e-40cd-aa44-03b2755dcddd",
+  "claim_id": null,
+  "mode": "document",
+  "created_at": "2026-10-03T20:18:45.528971",
+  "image": null,
+  "document": {
+    "pipeline": "document",
+    "risk": 0.9501,
+    "authenticity": 0.0499,
+    "band": "HIGH",
+    "confidence": "high",
+    "evidence_ids": [
+      "DOC-META-01",
+      "DOC-META-02",
+      "DOC-META-03",
+      "DOC-LOGIC-01",
+      "DOC-LOGIC-07",
+      "DOC-FONT-01",
+      "DOC-CNN-01"
+    ]
+  },
+  "identity": null,
+  "claim": null,
+  "overall": {
+    "risk": 0.9501,
+    "band": "HIGH",
+    "confidence": "high",
+    "summary": "HIGH fraud likelihood (95%). The line items add up to INR 24,000.00 but the stated total is INR 88,500.00. Stated amount in words parses to INR 28,320.00, which differs from the numeric digits INR 88,500.00. The value '88,500.00' uses a different font (Times-Bold) from the other amounts in the same column (Helvetica). The PDF was modified 1493.5 hours after it was created, using Canva PDF Generator (Online Tool). The PDF file contains 2 appended revision segments, indicating post-save modifications. Recommended action: Escalate immediately to Special Investigation Unit (SIU) for detailed fraud investigation."
+  },
+  "evidence": [
+    {
+      "id": "DOC-LOGIC-01",
+      "kind": "risk",
+      "raw_score": 0.9186440677966101,
+      "calibrated_score": 0.9186440677966101,
+      "weight": 0.8,
+      "effective_weight": 0.8,
+      "severity": "high",
+      "title": "Line Items Sum Mismatch",
+      "reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.66,
+        "y": 0.2869,
+        "w": 0.2667,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.66,
+          0.2869,
+          0.2667,
+          0.0181
+        ],
+        [
+          0.0733,
+          0.2011,
+          0.8534,
+          0.0147
+        ],
+        [
+          0.0733,
+          0.2225,
+          0.8534,
+          0.0147
+        ]
+      ],
+      "details": {
+        "expected": 24000.0,
+        "found": 88500.0,
+        "diff": 64500.0,
+        "items_count": 2,
+        "contribution": 0.5156
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.5156,
+      "contribution_pct": 54.3,
+      "rank": 1,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-LOGIC-07",
+      "kind": "risk",
+      "raw_score": 0.85,
+      "calibrated_score": 0.85,
+      "weight": 0.7,
+      "effective_weight": 0.7,
+      "severity": "high",
+      "title": "Amount in Words Mismatch",
+      "reason": "Stated amount in words parses to INR 28,320.00, but digit total states INR 88,500.00.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.66,
+        "y": 0.2869,
+        "w": 0.2667,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.66,
+          0.2869,
+          0.2667,
+          0.0181
+        ]
+      ],
+      "details": {
+        "words_text": "Twenty-Eight Thousand Three Hundred Twenty Rupees Only",
+        "parsed_from_words": 28320.0,
+        "numeric_digits": 88500.0,
+        "diff": 60180.0,
+        "contribution": 0.2732
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.2732,
+      "contribution_pct": 28.8,
+      "rank": 2,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-FONT-01",
+      "kind": "risk",
+      "raw_score": 0.75,
+      "calibrated_score": 0.75,
+      "weight": 0.4,
+      "effective_weight": 0.4,
+      "severity": "high",
+      "title": "Font Mismatch in Field Group",
+      "reason": "The value '88,500.00' uses font 'Times-Bold', differing from the column's dominant font 'Helvetica'.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.8528,
+        "y": 0.2869,
+        "w": 0.0739,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.8528,
+          0.2869,
+          0.0739,
+          0.0181
+        ]
+      ],
+      "details": {
+        "text": "88,500.00",
+        "font_a": "Times-Bold",
+        "font_b": "Helvetica",
+        "page": 1,
+        "contribution": 0.0797
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.0797,
+      "contribution_pct": 8.4,
+      "rank": 3,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-02",
+      "kind": "risk",
+      "raw_score": 0.7,
+      "calibrated_score": 0.7,
+      "weight": 0.2,
+      "effective_weight": 0.2,
+      "severity": "high",
+      "title": "Modified Long After Creation",
+      "reason": "The PDF was modified 1493.5 hours after it was created.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "delta": "1493.5 hours",
+        "diff_seconds": 5376600.0,
+        "producer": "Canva PDF Generator (Online Tool)",
+        "contribution": 0.0303
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0303,
+      "contribution_pct": 3.2,
+      "rank": 4,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-03",
+      "kind": "risk",
+      "raw_score": 0.65,
+      "calibrated_score": 0.65,
+      "weight": 0.2,
+      "effective_weight": 0.2,
+      "severity": "high",
+      "title": "Appended Revisions Detected",
+      "reason": "The PDF file contains 2 revision segments appended after its first save.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "eof_count": 2,
+        "contribution": 0.0278
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0278,
+      "contribution_pct": 2.9,
+      "rank": 5,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-01",
+      "kind": "risk",
+      "raw_score": 0.75,
+      "calibrated_score": 0.75,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "high",
+      "title": "Consumer/Online Editor Producer",
+      "reason": "The PDF was created or modified using a consumer tool (Canva).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "matched_tool": "canva",
+        "producer": "Canva PDF Generator (Online Tool)",
+        "creator": "iLovePDF Online Editor",
+        "contribution": 0.0236
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0236,
+      "contribution_pct": 2.5,
+      "rank": 6,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-CNN-01",
+      "kind": "warning",
+      "raw_score": 0.991,
+      "calibrated_score": 0.991,
+      "weight": 0.45,
+      "effective_weight": 0.45,
+      "severity": "high",
+      "title": "Tamper CNN Anomaly",
+      "reason": "Unconfirmed compression pattern – no supporting field evidence",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.6696,
+        "y": 0.0,
+        "w": 0.3102,
+        "h": 0.1842
+      },
+      "bboxes": [
+        [
+          0.6696,
+          0.0,
+          0.3102,
+          0.1842
+        ],
+        [
+          0.357,
+          0.1083,
+          0.1579,
+          0.0741
+        ],
+        [
+          0.0,
+          0.1465,
+          0.0548,
+          0.0747
+        ]
+      ],
+      "details": {
+        "page": 1,
+        "score": 0.991,
+        "temperature": 2.0468750000000027,
+        "artifact": "page_1_tamper.png",
+        "corroborated": false,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "forensics",
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "OVERRIDE-O2",
+      "kind": "info",
+      "raw_score": 0.85,
+      "calibrated_score": 0.85,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "high",
+      "title": "Rule O2 Applied",
+      "reason": "Rule O2 applied: mathematical mismatch confirmed by tamper detection.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "rule": "O2",
+        "floor": 0.85
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": null,
+      "contribution_pct": null,
+      "rank": null,
+      "pipeline_input": null,
+      "page": 1
+    }
+  ],
+  "detector_status": [
+    {
+      "detector": "document_kind",
+      "status": "ok",
+      "duration_ms": 4,
+      "error": null
+    },
+    {
+      "detector": "pdf_parser",
+      "status": "ok",
+      "duration_ms": 5,
+      "error": null
+    },
+    {
+      "detector": "document_ocr",
+      "status": "ok",
+      "duration_ms": 3698,
+      "error": null
+    },
+    {
+      "detector": "document_fields",
+      "status": "ok",
+      "duration_ms": 6,
+      "error": null
+    },
+    {
+      "detector": "document_rules",
+      "status": "ok",
+      "duration_ms": 1,
+      "error": null
+    },
+    {
+      "detector": "document_fonts",
+      "status": "ok",
+      "duration_ms": 1,
+      "error": null
+    },
+    {
+      "detector": "tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1790,
+      "error": null
+    },
+    {
+      "detector": "document_anomaly",
+      "status": "ok",
+      "duration_ms": 98,
+      "error": null
+    },
+    {
+      "detector": "visual_ela",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    }
+  ],
+  "quality_warnings": [],
+  "artifacts": {
+    "preview_document": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/preview_doc.pdf?exp=1791145118&sig=ef61e3c4214a0ca2c61654a5f585f74db57d28acf6594bab22201b972b70015a",
+    "page_1": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1.png?exp=1791145125&sig=4b6040c2170ad439796900e4cd50c44a62e645cd93f7b053563f7162d2c980b2",
+    "page_1_boxes": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1_boxes.png?exp=1791145125&sig=5e62aeb958d664f9566858856a5bfaed3ee0338d3c06e8ac5ca4f41c748431c2",
+    "pages": [
+      {
+        "page": 1,
+        "width_pt": 595.0,
+        "height_pt": 842.0,
+        "image_url": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1.png?exp=1791145125&sig=4b6040c2170ad439796900e4cd50c44a62e645cd93f7b053563f7162d2c980b2",
+        "annotated_url": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1_boxes.png?exp=1791145125&sig=5e62aeb958d664f9566858856a5bfaed3ee0338d3c06e8ac5ca4f41c748431c2",
+        "tamper_heatmap_url": "/api/v1/artifacts/bbc89397-6b6e-40cd-aa44-03b2755dcddd/page_1_tamper.png?exp=1791145125&sig=77e28d01850a9e861a4b43afb2b819a617f441b00628348c8917380a0717c14e"
+      }
+    ]
+  },
+  "versions": {
+    "detector": "Ateeqq/ai-vs-human-image-detector",
+    "face_engine": "sface",
+    "calibration_date": "2026-10-02",
+    "git_commit": "e8d47bf",
+    "engine": "lucen-2.0"
+  },
+  "location": null,
+  "voice": null,
+  "voice_details": null,
+  "liveness": null,
+  "aadhaar_qr": null,
+  "story": null,
+  "links": null,
+  "decision": null,
+  "image_results": null,
+  "why_this_score": {
+    "image": null,
+    "document": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "DOC-META-01",
+          "title": "Consumer/Online Editor Producer",
+          "w": 0.15,
+          "p": 0.75,
+          "push": 0.1125,
+          "contribution_pct": 2.5
+        },
+        {
+          "evidence_id": "DOC-META-02",
+          "title": "Modified Long After Creation",
+          "w": 0.2,
+          "p": 0.7,
+          "push": 0.14,
+          "contribution_pct": 3.2
+        },
+        {
+          "evidence_id": "DOC-META-03",
+          "title": "Appended Revisions Detected",
+          "w": 0.2,
+          "p": 0.65,
+          "push": 0.13,
+          "contribution_pct": 2.9
+        },
+        {
+          "evidence_id": "DOC-LOGIC-01",
+          "title": "Line Items Sum Mismatch",
+          "w": 0.8,
+          "p": 0.9186440677966101,
+          "push": 0.7349,
+          "contribution_pct": 54.3
+        },
+        {
+          "evidence_id": "DOC-LOGIC-07",
+          "title": "Amount in Words Mismatch",
+          "w": 0.7,
+          "p": 0.85,
+          "push": 0.595,
+          "contribution_pct": 28.8
+        },
+        {
+          "evidence_id": "DOC-FONT-01",
+          "title": "Font Mismatch in Field Group",
+          "w": 0.4,
+          "p": 0.75,
+          "push": 0.3,
+          "contribution_pct": 8.4
+        }
+      ],
+      "formula": "1 - (1 - 0.113) * (1 - 0.140) * (1 - 0.130) * (1 - 0.735) * (1 - 0.595) * (1 - 0.300) = 0.950",
+      "overrides_applied": [
+        "Rule O2 applied: mathematical mismatch confirmed by tamper detection."
+      ],
+      "quality_gates_applied": []
+    },
+    "identity": null,
+    "voice": null,
+    "claim": null,
+    "overall": {
+      "formula": "Single active pipeline (document) = 0.950",
+      "pipeline_risks": {
+        "document": 0.9501
+      },
+      "overrides_applied": [
+        "Rule O2 applied: mathematical mismatch confirmed by tamper detection."
+      ]
+    },
+    "items": [
+      {
+        "evidence_id": "DOC-LOGIC-01",
+        "title": "Line Items Sum Mismatch",
+        "w": 0.8,
+        "p": 0.9186440677966101,
+        "push": 0.7349,
+        "contribution_pct": 54.3
+      },
+      {
+        "evidence_id": "DOC-LOGIC-07",
+        "title": "Amount in Words Mismatch",
+        "w": 0.7,
+        "p": 0.85,
+        "push": 0.595,
+        "contribution_pct": 28.8
+      },
+      {
+        "evidence_id": "DOC-FONT-01",
+        "title": "Font Mismatch in Field Group",
+        "w": 0.4,
+        "p": 0.75,
+        "push": 0.3,
+        "contribution_pct": 8.4
+      },
+      {
+        "evidence_id": "DOC-META-02",
+        "title": "Modified Long After Creation",
+        "w": 0.2,
+        "p": 0.7,
+        "push": 0.14,
+        "contribution_pct": 3.2
+      },
+      {
+        "evidence_id": "DOC-META-03",
+        "title": "Appended Revisions Detected",
+        "w": 0.2,
+        "p": 0.65,
+        "push": 0.13,
+        "contribution_pct": 2.9
+      },
+      {
+        "evidence_id": "DOC-META-01",
+        "title": "Consumer/Online Editor Producer",
+        "w": 0.15,
+        "p": 0.75,
+        "push": 0.1125,
+        "contribution_pct": 2.5
+      }
+    ]
+  },
+  "why_this_score_items": [
+    {
+      "evidence_id": "DOC-LOGIC-01",
+      "title": "Line Items Sum Mismatch",
+      "w": 0.8,
+      "p": 0.9186440677966101,
+      "push": 0.7349,
+      "contribution_pct": 54.3
+    },
+    {
+      "evidence_id": "DOC-LOGIC-07",
+      "title": "Amount in Words Mismatch",
+      "w": 0.7,
+      "p": 0.85,
+      "push": 0.595,
+      "contribution_pct": 28.8
+    },
+    {
+      "evidence_id": "DOC-FONT-01",
+      "title": "Font Mismatch in Field Group",
+      "w": 0.4,
+      "p": 0.75,
+      "push": 0.3,
+      "contribution_pct": 8.4
+    },
+    {
+      "evidence_id": "DOC-META-02",
+      "title": "Modified Long After Creation",
+      "w": 0.2,
+      "p": 0.7,
+      "push": 0.14,
+      "contribution_pct": 3.2
+    },
+    {
+      "evidence_id": "DOC-META-03",
+      "title": "Appended Revisions Detected",
+      "w": 0.2,
+      "p": 0.65,
+      "push": 0.13,
+      "contribution_pct": 2.9
+    },
+    {
+      "evidence_id": "DOC-META-01",
+      "title": "Consumer/Online Editor Producer",
+      "w": 0.15,
+      "p": 0.75,
+      "push": 0.1125,
+      "contribution_pct": 2.5
+    }
+  ],
+  "checks_run": [
+    {
+      "detector": "document_kind",
+      "status": "ok",
+      "duration_ms": 4,
+      "reason": null
+    },
+    {
+      "detector": "pdf_parser",
+      "status": "ok",
+      "duration_ms": 5,
+      "reason": null
+    },
+    {
+      "detector": "document_ocr",
+      "status": "ok",
+      "duration_ms": 3698,
+      "reason": null
+    },
+    {
+      "detector": "document_fields",
+      "status": "ok",
+      "duration_ms": 6,
+      "reason": null
+    },
+    {
+      "detector": "document_rules",
+      "status": "ok",
+      "duration_ms": 1,
+      "reason": null
+    },
+    {
+      "detector": "document_fonts",
+      "status": "ok",
+      "duration_ms": 1,
+      "reason": null
+    },
+    {
+      "detector": "tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1790,
+      "reason": null
+    },
+    {
+      "detector": "document_anomaly",
+      "status": "ok",
+      "duration_ms": 98,
+      "reason": null
+    },
+    {
+      "detector": "visual_ela",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    }
+  ],
+  "top_reasons": [
+    "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00.",
+    "Stated amount in words parses to INR 28,320.00, but digit total states INR 88,500.00.",
+    "The value '88,500.00' uses font 'Times-Bold', differing from the column's dominant font 'Helvetica'.",
+    "The PDF was modified 1493.5 hours after it was created.",
+    "The PDF file contains 2 revision segments appended after its first save."
+  ],
+  "recommended_action": "Escalate to Special Investigation Unit (SIU) for detailed forensic document inspection and claimant interview.",
+  "summary_source": "template"
+}

@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0091_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1091,
+  "created_at": "2026-10-03T12:35:36.623228",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-1579",
+    "date": "18/02/2026",
+    "due_date": "16/03/2026",
+    "seller": "Magar Ltd Pvt Ltd",
+    "buyer": "Ishanvi Halder",
+    "subtotal": 395616.75,
+    "tax_rate": 0.18,
+    "tax_amount": 71211.01,
+    "total_amount": 466827.76,
+    "amount_in_words": "Four Lakh Sixty Six Thousand Eight Hundred Twenty Eight Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 10,
+      "rate": 14645.33,
+      "amount": 146453.3
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 4,
+      "rate": 17926.74,
+      "amount": 71706.96
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 10,
+      "rate": 5962.93,
+      "amount": 59629.3
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 9,
+      "rate": 13091.91,
+      "amount": 117827.19
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0091_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0091_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0091_gst_invoice_corp.json"
+}

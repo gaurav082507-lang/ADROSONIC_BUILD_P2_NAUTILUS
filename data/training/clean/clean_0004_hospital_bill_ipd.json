@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0004_hospital_bill_ipd",
+  "template": "hospital_bill_ipd",
+  "split": "train",
+  "seed": 1004,
+  "created_at": "2026-10-03T12:35:31.248457",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-211502",
+    "patient_name": "Shaurya Om",
+    "uhid": "UHID-9537301",
+    "admission_date": "14/03/2026",
+    "discharge_date": "21/03/2026",
+    "hospital_name": "Zacharia Ltd Multi-Speciality Hospital",
+    "subtotal": 116776.07,
+    "total_amount": 116776.07,
+    "amount_in_words": "One Lakh Sixteen Thousand Seven Hundred Seventy Six Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0004_hospital_bill_ipd.pdf",
+  "png_path": "data\\training\\clean\\clean_0004_hospital_bill_ipd.png",
+  "json_path": "data\\training\\clean\\clean_0004_hospital_bill_ipd.json"
+}

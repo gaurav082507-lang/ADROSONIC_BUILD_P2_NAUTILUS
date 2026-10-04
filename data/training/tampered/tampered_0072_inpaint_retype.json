@@ -1,0 +1,25 @@
+{
+  "recipe": "inpaint_retype",
+  "held_out": false,
+  "before_text": "57,702.00",
+  "after_text": "1,37,646.39",
+  "region": {
+    "x": 868,
+    "y": 837,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4772,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0072_inpaint_retype",
+  "clean_id": "clean_0072_motor_repair_bodyshop",
+  "template": "motor_repair_bodyshop",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0072_inpaint_retype.png",
+  "mask_path": "data\\training\\tampered\\tampered_0072_inpaint_retype_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0072_inpaint_retype.json"
+}

@@ -1,0 +1,25 @@
+{
+  "recipe": "overlay_text",
+  "held_out": false,
+  "before_text": "2,79,456.11",
+  "after_text": "INR 8,76,845.60",
+  "region": {
+    "x": 806,
+    "y": 789,
+    "w": 310,
+    "h": 70
+  },
+  "normalized_bbox": [
+    0.6495,
+    0.4498,
+    0.2498,
+    0.0399
+  ],
+  "sample_id": "tampered_0092_overlay_text",
+  "clean_id": "clean_0092_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0092_overlay_text.png",
+  "mask_path": "data\\training\\tampered\\tampered_0092_overlay_text_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0092_overlay_text.json"
+}

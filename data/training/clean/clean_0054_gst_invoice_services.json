@@ -1,0 +1,39 @@
+{
+  "sample_id": "clean_0054_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1054,
+  "created_at": "2026-10-03T12:35:34.396557",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-9580",
+    "date": "19/11/2025",
+    "due_date": "07/12/2025",
+    "seller": "Aggarwal, Kota and Gera Pvt Ltd",
+    "buyer": "Shivani Mani",
+    "subtotal": 182871.04,
+    "tax_rate": 0.18,
+    "tax_amount": 32916.79,
+    "total_amount": 215787.83,
+    "amount_in_words": "Two Lakh Fifteen Thousand Seven Hundred Eighty Eight Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 4,
+      "rate": 4717.88,
+      "amount": 18871.52
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 8,
+      "rate": 20499.94,
+      "amount": 163999.52
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0054_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0054_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0054_gst_invoice_services.json"
+}

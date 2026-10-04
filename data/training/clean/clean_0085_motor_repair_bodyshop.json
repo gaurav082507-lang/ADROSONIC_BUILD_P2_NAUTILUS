@@ -1,0 +1,22 @@
+{
+  "sample_id": "clean_0085_motor_repair_bodyshop",
+  "template": "motor_repair_bodyshop",
+  "split": "train",
+  "seed": 1085,
+  "created_at": "2026-10-03T12:35:36.279381",
+  "fields": {
+    "document_type": "Motor Repair Estimate",
+    "estimate_number": "REP-EST-97686",
+    "vehicle_reg": "MH 44 GV 9848",
+    "policy_number": "POL-MOT-50592091",
+    "date": "08/06/2026",
+    "subtotal": 48900.0,
+    "tax_amount": 8802.0,
+    "total_amount": 57702.0,
+    "amount_in_words": "Fifty Seven Thousand Seven Hundred Two Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0085_motor_repair_bodyshop.pdf",
+  "png_path": "data\\training\\clean\\clean_0085_motor_repair_bodyshop.png",
+  "json_path": "data\\training\\clean\\clean_0085_motor_repair_bodyshop.json"
+}

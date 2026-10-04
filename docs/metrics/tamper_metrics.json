@@ -1,0 +1,44 @@
+{
+  "model": "timm/efficientnet_b0",
+  "mode": "quick",
+  "epochs": "2+2",
+  "temperature": 2.0469,
+  "patch_metrics": {
+    "roc_auc": 0.942,
+    "precision": 0.6932,
+    "recall": 0.8363,
+    "f1": 0.7581,
+    "ece_before": 0.06,
+    "ece_after": 0.0586
+  },
+  "page_metrics": {
+    "roc_auc": 0.8659,
+    "confusion_matrix": [
+      [
+        0,
+        33
+      ],
+      [
+        0,
+        27
+      ]
+    ],
+    "per_recipe_recall": {
+      "clean": 0.0,
+      "copy_move": 0.6,
+      "logic_edit": 1.0,
+      "style_change": 1.0,
+      "inpaint_retype": 1.0,
+      "splice": 0.75,
+      "overlay_text": 1.0,
+      "digit_replacement": 1.0
+    },
+    "held_out_recipe_recall": 0.75
+  },
+  "robustness": {
+    "extra_jpeg_q50_auc_drop": -0.042,
+    "gaussian_blur_auc_drop": -0.035,
+    "additive_noise_auc_drop": -0.028,
+    "downscale_auc_drop": -0.045
+  }
+}

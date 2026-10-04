@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0078_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1078,
+  "created_at": "2026-10-03T12:35:35.849399",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-3171",
+    "date": "07/11/2025",
+    "due_date": "25/11/2025",
+    "seller": "Saxena Group Pvt Ltd",
+    "buyer": "Chandresh Kumer",
+    "subtotal": 115529.73,
+    "tax_rate": 0.18,
+    "tax_amount": 20795.35,
+    "total_amount": 136325.08,
+    "amount_in_words": "One Lakh Thirty Six Thousand Three Hundred Twenty Five Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 5,
+      "rate": 12719.69,
+      "amount": 63598.45
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 2,
+      "rate": 10762.34,
+      "amount": 21524.68
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 5,
+      "rate": 6081.32,
+      "amount": 30406.6
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0078_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0078_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0078_gst_invoice_corp.json"
+}

@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0015_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1015,
+  "created_at": "2026-10-03T12:35:31.947597",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-5930",
+    "date": "11/11/2025",
+    "due_date": "29/11/2025",
+    "seller": "Sur-Viswanathan Pvt Ltd",
+    "buyer": "Ati Sarin",
+    "subtotal": 361278.72,
+    "tax_rate": 0.18,
+    "tax_amount": 65030.17,
+    "total_amount": 426308.89,
+    "amount_in_words": "Four Lakh Twenty Six Thousand Three Hundred Nine Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 7,
+      "rate": 14935.31,
+      "amount": 104547.17
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 5,
+      "rate": 12213.85,
+      "amount": 61069.25
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 10,
+      "rate": 19566.23,
+      "amount": 195662.3
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0015_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0015_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0015_gst_invoice_services.json"
+}

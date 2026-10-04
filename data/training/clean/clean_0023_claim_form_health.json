@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0023_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "seed": 1023,
+  "created_at": "2026-10-03T12:35:32.510301",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-852983",
+    "policy_number": "POL-70643222",
+    "claimant": "Vanya Dass",
+    "aadhaar_id": "763747753063",
+    "date": "09/04/2026",
+    "total_amount": 104000.0,
+    "amount_in_words": "One Lakh Four Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0023_claim_form_health.pdf",
+  "png_path": "data\\training\\clean\\clean_0023_claim_form_health.png",
+  "json_path": "data\\training\\clean\\clean_0023_claim_form_health.json"
+}

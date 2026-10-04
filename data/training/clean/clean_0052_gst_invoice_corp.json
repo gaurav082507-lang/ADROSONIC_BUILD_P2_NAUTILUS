@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0052_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1052,
+  "created_at": "2026-10-03T12:35:34.275061",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-3466",
+    "date": "01/10/2026",
+    "due_date": "15/11/2026",
+    "seller": "Das LLC Pvt Ltd",
+    "buyer": "Vedhika Shah",
+    "subtotal": 265478.13,
+    "tax_rate": 0.18,
+    "tax_amount": 47786.06,
+    "total_amount": 313264.19,
+    "amount_in_words": "Three Lakh Thirteen Thousand Two Hundred Sixty Four Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 8,
+      "rate": 5536.95,
+      "amount": 44295.6
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 1,
+      "rate": 12373.56,
+      "amount": 12373.56
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 8,
+      "rate": 6672.35,
+      "amount": 53378.8
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 7,
+      "rate": 22204.31,
+      "amount": 155430.17
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0052_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0052_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0052_gst_invoice_corp.json"
+}

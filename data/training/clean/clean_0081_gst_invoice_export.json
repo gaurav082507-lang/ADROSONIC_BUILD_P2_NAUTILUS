@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0081_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1081,
+  "created_at": "2026-10-03T12:35:36.023388",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-5891",
+    "date": "04/04/2026",
+    "due_date": "04/05/2026",
+    "seller": "Thaker-Bhavsar Pvt Ltd",
+    "buyer": "Vinaya Natarajan",
+    "subtotal": 207029.27,
+    "tax_rate": 0.18,
+    "tax_amount": 37265.27,
+    "total_amount": 244294.54,
+    "amount_in_words": "Two Lakh Forty Four Thousand Two Hundred Ninety Five Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 6,
+      "rate": 9012.96,
+      "amount": 54077.76
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 4,
+      "rate": 4666.28,
+      "amount": 18665.12
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 1,
+      "rate": 24335.09,
+      "amount": 24335.09
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 10,
+      "rate": 10995.13,
+      "amount": 109951.3
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0081_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0081_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0081_gst_invoice_export.json"
+}

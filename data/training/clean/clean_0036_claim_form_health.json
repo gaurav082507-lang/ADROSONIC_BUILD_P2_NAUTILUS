@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0036_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "seed": 1036,
+  "created_at": "2026-10-03T12:35:33.332498",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-829408",
+    "policy_number": "POL-98923016",
+    "claimant": "Dhruv Barad",
+    "aadhaar_id": "323131129067",
+    "date": "12/03/2026",
+    "total_amount": 209000.0,
+    "amount_in_words": "Two Lakh Nine Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0036_claim_form_health.pdf",
+  "png_path": "data\\training\\clean\\clean_0036_claim_form_health.png",
+  "json_path": "data\\training\\clean\\clean_0036_claim_form_health.json"
+}

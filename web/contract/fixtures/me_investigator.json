@@ -1,0 +1,9 @@
+{
+  "user": {
+    "id": "user_investigator",
+    "name": "Pooja Mehta",
+    "email": "investigator@demo.in",
+    "role": "investigator",
+    "preferred_lang": "en"
+  }
+}

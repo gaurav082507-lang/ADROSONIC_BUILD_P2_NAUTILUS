@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0041_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1041,
+  "created_at": "2026-10-03T12:35:33.629772",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-3626",
+    "date": "23/03/2026",
+    "due_date": "21/04/2026",
+    "seller": "Setty Group Pvt Ltd",
+    "buyer": "Siddharth Chahal",
+    "subtotal": 245688.03,
+    "tax_rate": 0.18,
+    "tax_amount": 44223.85,
+    "total_amount": 289911.88,
+    "amount_in_words": "Two Lakh Eighty Nine Thousand Nine Hundred Twelve Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 2,
+      "rate": 5568.59,
+      "amount": 11137.18
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 2,
+      "rate": 18765.25,
+      "amount": 37530.5
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 9,
+      "rate": 21891.15,
+      "amount": 197020.35
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0041_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0041_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0041_gst_invoice_services.json"
+}

@@ -1,0 +1,25 @@
+{
+  "recipe": "inpaint_retype",
+  "held_out": false,
+  "before_text": "1,07,134.14",
+  "after_text": "2,20,649.58",
+  "region": {
+    "x": 868,
+    "y": 875,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4989,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0058_inpaint_retype",
+  "clean_id": "clean_0058_hospital_bill_daycare",
+  "template": "hospital_bill_daycare",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0058_inpaint_retype.png",
+  "mask_path": "data\\training\\tampered\\tampered_0058_inpaint_retype_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0058_inpaint_retype.json"
+}

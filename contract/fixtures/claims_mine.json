@@ -1,0 +1,26 @@
+[
+  {
+    "claim_id": "claim_demo_01",
+    "policy_label": "KA-01-MJ-5521 (Hyundai Creta)",
+    "claim_type": "motor",
+    "submitted_at": "2026-10-03T21:59:29.929545",
+    "status": "approved",
+    "last_update": "2026-10-03T21:59:29.929545"
+  },
+  {
+    "claim_id": "claim_demo_02",
+    "policy_label": "KA-01-MJ-5521 (Hyundai Creta)",
+    "claim_type": "motor",
+    "submitted_at": "2026-10-03T21:59:29.929545",
+    "status": "under_review",
+    "last_update": "2026-10-03T21:59:29.929545"
+  },
+  {
+    "claim_id": "claim_demo_03",
+    "policy_label": "42 Indiranagar 100ft Rd, Bengaluru",
+    "claim_type": "property",
+    "submitted_at": "2026-10-03T21:59:29.929545",
+    "status": "needs_evidence",
+    "last_update": "2026-10-03T21:59:29.929545"
+  }
+]

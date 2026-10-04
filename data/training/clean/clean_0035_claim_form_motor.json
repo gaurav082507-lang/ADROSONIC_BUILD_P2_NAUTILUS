@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0035_claim_form_motor",
+  "template": "claim_form_motor",
+  "split": "train",
+  "seed": 1035,
+  "created_at": "2026-10-03T12:35:33.275253",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-781903",
+    "policy_number": "POL-69397232",
+    "claimant": "Logan Lall",
+    "aadhaar_id": "549606120915",
+    "date": "24/07/2026",
+    "total_amount": 65000.0,
+    "amount_in_words": "Sixty Five Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0035_claim_form_motor.pdf",
+  "png_path": "data\\training\\clean\\clean_0035_claim_form_motor.png",
+  "json_path": "data\\training\\clean\\clean_0035_claim_form_motor.json"
+}

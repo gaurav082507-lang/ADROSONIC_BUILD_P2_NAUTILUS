@@ -1,0 +1,798 @@
+{
+  "id": "7a768d59-95d3-483f-be35-617e1a77f298",
+  "claim_id": null,
+  "mode": "claim",
+  "created_at": "2026-10-03T20:19:02.049105",
+  "image": {
+    "pipeline": "image",
+    "risk": 0.1309,
+    "authenticity": 0.8691,
+    "band": "LOW",
+    "confidence": "high",
+    "evidence_ids": [
+      "IMG-EXIF-01",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ]
+  },
+  "document": {
+    "pipeline": "document",
+    "risk": 0.0,
+    "authenticity": 1.0,
+    "band": "LOW",
+    "confidence": "high",
+    "evidence_ids": [
+      "DOC-CNN-01"
+    ]
+  },
+  "identity": null,
+  "claim": {
+    "pipeline": "claim",
+    "risk": 0.63,
+    "authenticity": 0.37,
+    "band": "MEDIUM",
+    "confidence": "high",
+    "evidence_ids": [
+      "DOC-DUP-01"
+    ]
+  },
+  "overall": {
+    "risk": 0.5171,
+    "band": "MEDIUM",
+    "confidence": "high",
+    "summary": "MEDIUM fraud likelihood (52%). The invoice number INV-2024-8842 from  was previously submitted in claim CLM-CLEAN-01. Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. The file lacks expected camera metadata. Recommended action: Route to specialist for manual forensic review."
+  },
+  "evidence": [
+    {
+      "id": "DOC-DUP-01",
+      "kind": "risk",
+      "raw_score": 0.9,
+      "calibrated_score": 0.9,
+      "weight": 0.7,
+      "effective_weight": 0.7,
+      "severity": "high",
+      "title": "Duplicate Invoice/Receipt Across Claims",
+      "reason": "The invoice number INV-2024-8842 from vendor was previously submitted in claim CLM-CLEAN-01.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "invoice_number": "INV-2024-8842",
+        "issuer": "",
+        "other_id": "CLM-CLEAN-01",
+        "contribution": 0.63
+      },
+      "artifact": null,
+      "pipeline": "claim",
+      "source": "rules",
+      "contribution": 0.63,
+      "contribution_pct": 100.0,
+      "rank": 1,
+      "pipeline_input": null,
+      "page": 1
+    },
+    {
+      "id": "IMG-NOISE-01",
+      "kind": "risk",
+      "raw_score": 0.568,
+      "calibrated_score": 0.568,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "medium",
+      "title": "Inconsistent Noise",
+      "reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "noise_dispersion": 0.8957,
+        "blocks_analyzed": 108,
+        "flat_blocks_excluded": 0,
+        "fft_periodicity_ratio": 5.4,
+        "contribution": 0.0836
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0836,
+      "contribution_pct": 63.9,
+      "rank": 2,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-01",
+      "kind": "risk",
+      "raw_score": 0.5,
+      "calibrated_score": 0.5,
+      "weight": 0.1,
+      "effective_weight": 0.1,
+      "severity": "low",
+      "title": "Missing Camera EXIF",
+      "reason": "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "present_tags": [],
+        "contribution": 0.0473
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0473,
+      "contribution_pct": 36.1,
+      "rank": 3,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "IMG-AI-01",
+      "kind": "risk",
+      "raw_score": 0.0002,
+      "calibrated_score": 0.0002,
+      "weight": 0.65,
+      "effective_weight": 0.65,
+      "severity": "low",
+      "title": "AI Generated",
+      "reason": "The image shows patterns typical of AI-generated pictures (0% likelihood after calibration).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "p_ai_raw": 0.0002,
+        "raw_logits": [
+          -2.6094,
+          6.0042
+        ],
+        "p_ai_tta_q85": 0.0002,
+        "p_ai_crop": null,
+        "tta_disagreement": false,
+        "crop_evaluated": false,
+        "temperature": 1.0,
+        "uncalibrated": false,
+        "model": "Ateeqq/ai-vs-human-image-detector",
+        "p": 0.0002,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": 4,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "IMG-ELA-01",
+      "kind": "info",
+      "raw_score": 0.4856,
+      "calibrated_score": 0.4856,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "ELA Compression Anomaly",
+      "reason": "One region of the photo was compressed differently from the rest (supporting context — low discriminative AUC).",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.349,
+        "y": 0.0,
+        "w": 0.255,
+        "h": 0.108
+      },
+      "bboxes": null,
+      "details": {
+        "anomaly_fraction": 0.0738,
+        "anomalous_pixels": 35408,
+        "threshold": 38.5,
+        "largest_region_area": 4954,
+        "auc": 0.4667,
+        "auc_rule": "AUC < 0.60 → info-only, not scored",
+        "contribution": 0.0
+      },
+      "artifact": "ela_heatmap.png",
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-CNN-01",
+      "kind": "warning",
+      "raw_score": 0.74,
+      "calibrated_score": 0.74,
+      "weight": 0.45,
+      "effective_weight": 0.45,
+      "severity": "high",
+      "title": "Tamper CNN Anomaly",
+      "reason": "Unconfirmed compression pattern – no supporting field evidence",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.6696,
+        "y": 0.0382,
+        "w": 0.3102,
+        "h": 0.1448
+      },
+      "bboxes": [
+        [
+          0.6696,
+          0.0382,
+          0.3102,
+          0.1448
+        ],
+        [
+          0.3094,
+          0.0747,
+          0.2522,
+          0.1078
+        ],
+        [
+          0.0,
+          0.1465,
+          0.0508,
+          0.0713
+        ]
+      ],
+      "details": {
+        "page": 1,
+        "score": 0.74,
+        "temperature": 2.0468750000000027,
+        "artifact": "page_1_tamper.png",
+        "corroborated": false,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "forensics",
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "doc",
+      "page": 1
+    }
+  ],
+  "detector_status": [
+    {
+      "detector": "img_1:preprocess",
+      "status": "ok",
+      "duration_ms": 25,
+      "error": null
+    },
+    {
+      "detector": "img_1:metadata",
+      "status": "ok",
+      "duration_ms": 485,
+      "error": null
+    },
+    {
+      "detector": "img_1:ai_detector",
+      "status": "ok",
+      "duration_ms": 2229,
+      "error": null
+    },
+    {
+      "detector": "img_1:ela",
+      "status": "ok",
+      "duration_ms": 118,
+      "error": null
+    },
+    {
+      "detector": "img_1:noise",
+      "status": "ok",
+      "duration_ms": 34,
+      "error": null
+    },
+    {
+      "detector": "img_1:localization",
+      "status": "ok",
+      "duration_ms": 106,
+      "error": null
+    },
+    {
+      "detector": "doc:document_kind",
+      "status": "ok",
+      "duration_ms": 50,
+      "error": null
+    },
+    {
+      "detector": "doc:pdf_parser",
+      "status": "ok",
+      "duration_ms": 58,
+      "error": null
+    },
+    {
+      "detector": "doc:document_ocr",
+      "status": "ok",
+      "duration_ms": 4081,
+      "error": null
+    },
+    {
+      "detector": "doc:document_fields",
+      "status": "ok",
+      "duration_ms": 5,
+      "error": null
+    },
+    {
+      "detector": "doc:document_rules",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "doc:document_fonts",
+      "status": "ok",
+      "duration_ms": 2,
+      "error": null
+    },
+    {
+      "detector": "doc:tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1549,
+      "error": null
+    },
+    {
+      "detector": "doc:document_anomaly",
+      "status": "ok",
+      "duration_ms": 16,
+      "error": null
+    },
+    {
+      "detector": "doc:visual_ela",
+      "status": "ok",
+      "duration_ms": 1,
+      "error": null
+    },
+    {
+      "detector": "claim:check_photo_incident_date",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_photo_gps_location",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_amount_match",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_chronology",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_bill_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_policy_validity",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_vehicle_number",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_id_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_duplicate_document",
+      "status": "ok",
+      "duration_ms": 6,
+      "error": null
+    },
+    {
+      "detector": "claim:check_duplicate_images",
+      "status": "ok",
+      "duration_ms": 217,
+      "error": null
+    },
+    {
+      "detector": "claim:network_cross_check",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:story_review",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    }
+  ],
+  "quality_warnings": [],
+  "artifacts": {
+    "preview_img_1": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/preview_img_1.jpg?exp=1791145134&sig=184fdbfaf6058b85e7cf65fe296c620772ad66ccd7deb3a2800f27720a7bc078",
+    "preview_image": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/preview_img_1.jpg?exp=1791145134&sig=184fdbfaf6058b85e7cf65fe296c620772ad66ccd7deb3a2800f27720a7bc078",
+    "preview_document": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/preview_doc.pdf?exp=1791145134&sig=d669bc298c107faeba603a98dca54251ea847d107469ff481c86cefb173faebf",
+    "ela_heatmap": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/ela_heatmap.png?exp=1791145141&sig=88837c18a0ef4719bff855971e1d877194a1dddde6835afa7d5e8c318d28f382",
+    "overlay": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/overlay.png?exp=1791145141&sig=63cf4496f624b7d4c750e20f99e70727b516a1e3c354e6e6682008e6e89aaf49",
+    "image_heatmap": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/image_heatmap.png?exp=1791145141&sig=beb22c66afbfe9b80cf10e32230fbe9c317cd1718fc13a7eb742d5312686c13e",
+    "page_1": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/page_1.png?exp=1791145141&sig=9c0a13e3a6cac57d65629a98de11aa7785763480ae7688627e9d465f8e383562",
+    "page_1_boxes": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/page_1_boxes.png?exp=1791145141&sig=5753bb8f249afeffb5ded805d2f553024e6f1cb3512cce3bee2296b84c63ff63",
+    "location": {
+      "claimed": {
+        "lat": null,
+        "lng": null,
+        "text": ""
+      },
+      "photos": [],
+      "max_distance_km": 0.0
+    },
+    "pages": [
+      {
+        "page": 1,
+        "width_pt": 595.0,
+        "height_pt": 842.0,
+        "image_url": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/page_1.png?exp=1791145141&sig=9c0a13e3a6cac57d65629a98de11aa7785763480ae7688627e9d465f8e383562",
+        "annotated_url": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/page_1_boxes.png?exp=1791145141&sig=5753bb8f249afeffb5ded805d2f553024e6f1cb3512cce3bee2296b84c63ff63",
+        "tamper_heatmap_url": "/api/v1/artifacts/7a768d59-95d3-483f-be35-617e1a77f298/page_1_tamper.png?exp=1791145141&sig=65c86c743a2dbd38d77b0a5f3969cd02fc8bf3e12741db5f888e136b16872071"
+      }
+    ]
+  },
+  "versions": {
+    "detector": "Ateeqq/ai-vs-human-image-detector",
+    "face_engine": "sface",
+    "calibration_date": "2026-10-02",
+    "git_commit": "e8d47bf",
+    "engine": "lucen-2.0"
+  },
+  "location": {
+    "claimed": {
+      "lat": null,
+      "lng": null,
+      "text": ""
+    },
+    "photos": [],
+    "max_distance_km": 0.0
+  },
+  "voice": null,
+  "voice_details": null,
+  "liveness": null,
+  "aadhaar_qr": null,
+  "story": null,
+  "links": null,
+  "decision": null,
+  "image_results": [
+    {
+      "pipeline": "img_1",
+      "risk": 0.1309,
+      "authenticity": 0.8691,
+      "band": "LOW",
+      "confidence": "high",
+      "evidence_ids": [
+        "IMG-EXIF-01",
+        "IMG-AI-01",
+        "IMG-ELA-01",
+        "IMG-NOISE-01"
+      ]
+    }
+  ],
+  "why_this_score": {
+    "image": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "IMG-EXIF-01",
+          "title": "Missing Camera EXIF",
+          "w": 0.1,
+          "p": 0.5,
+          "push": 0.05,
+          "contribution_pct": 36.1
+        },
+        {
+          "evidence_id": "IMG-AI-01",
+          "title": "AI Generated",
+          "w": 0.65,
+          "p": 0.0002,
+          "push": 0.0001,
+          "contribution_pct": 0.0
+        },
+        {
+          "evidence_id": "IMG-NOISE-01",
+          "title": "Inconsistent Noise",
+          "w": 0.15,
+          "p": 0.568,
+          "push": 0.0852,
+          "contribution_pct": 63.9
+        }
+      ],
+      "formula": "1 - (1 - 0.050) * (1 - 0.085) = 0.131",
+      "overrides_applied": [],
+      "quality_gates_applied": []
+    },
+    "document": {
+      "evidence_contributions": [],
+      "formula": "No participating risk signals = 0.000",
+      "overrides_applied": [],
+      "quality_gates_applied": []
+    },
+    "identity": null,
+    "voice": null,
+    "claim": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "DOC-DUP-01",
+          "title": "Duplicate Invoice/Receipt Across Claims",
+          "w": 0.7,
+          "p": 0.9,
+          "push": 0.63,
+          "contribution_pct": 100.0
+        }
+      ],
+      "formula": "1 - (1 - 0.630) = 0.630",
+      "overrides_applied": [],
+      "quality_gates_applied": []
+    },
+    "overall": {
+      "formula": "0.7 * max(0.630) + 0.3 * mean(0.254) = 0.7*0.630 + 0.3*0.254 = 0.517",
+      "pipeline_risks": {
+        "document": 0.0,
+        "image": 0.1309,
+        "claim": 0.63
+      },
+      "overrides_applied": []
+    },
+    "items": [
+      {
+        "evidence_id": "DOC-DUP-01",
+        "title": "Duplicate Invoice/Receipt Across Claims",
+        "w": 0.7,
+        "p": 0.9,
+        "push": 0.63,
+        "contribution_pct": 100.0
+      },
+      {
+        "evidence_id": "IMG-NOISE-01",
+        "title": "Inconsistent Noise",
+        "w": 0.15,
+        "p": 0.568,
+        "push": 0.0852,
+        "contribution_pct": 63.9
+      },
+      {
+        "evidence_id": "IMG-EXIF-01",
+        "title": "Missing Camera EXIF",
+        "w": 0.1,
+        "p": 0.5,
+        "push": 0.05,
+        "contribution_pct": 36.1
+      },
+      {
+        "evidence_id": "IMG-AI-01",
+        "title": "AI Generated",
+        "w": 0.65,
+        "p": 0.0002,
+        "push": 0.0001,
+        "contribution_pct": 0.0
+      }
+    ]
+  },
+  "why_this_score_items": [
+    {
+      "evidence_id": "DOC-DUP-01",
+      "title": "Duplicate Invoice/Receipt Across Claims",
+      "w": 0.7,
+      "p": 0.9,
+      "push": 0.63,
+      "contribution_pct": 100.0
+    },
+    {
+      "evidence_id": "IMG-NOISE-01",
+      "title": "Inconsistent Noise",
+      "w": 0.15,
+      "p": 0.568,
+      "push": 0.0852,
+      "contribution_pct": 63.9
+    },
+    {
+      "evidence_id": "IMG-EXIF-01",
+      "title": "Missing Camera EXIF",
+      "w": 0.1,
+      "p": 0.5,
+      "push": 0.05,
+      "contribution_pct": 36.1
+    },
+    {
+      "evidence_id": "IMG-AI-01",
+      "title": "AI Generated",
+      "w": 0.65,
+      "p": 0.0002,
+      "push": 0.0001,
+      "contribution_pct": 0.0
+    }
+  ],
+  "checks_run": [
+    {
+      "detector": "img_1:preprocess",
+      "status": "ok",
+      "duration_ms": 25,
+      "reason": null
+    },
+    {
+      "detector": "img_1:metadata",
+      "status": "ok",
+      "duration_ms": 485,
+      "reason": null
+    },
+    {
+      "detector": "img_1:ai_detector",
+      "status": "ok",
+      "duration_ms": 2229,
+      "reason": null
+    },
+    {
+      "detector": "img_1:ela",
+      "status": "ok",
+      "duration_ms": 118,
+      "reason": null
+    },
+    {
+      "detector": "img_1:noise",
+      "status": "ok",
+      "duration_ms": 34,
+      "reason": null
+    },
+    {
+      "detector": "img_1:localization",
+      "status": "ok",
+      "duration_ms": 106,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_kind",
+      "status": "ok",
+      "duration_ms": 50,
+      "reason": null
+    },
+    {
+      "detector": "doc:pdf_parser",
+      "status": "ok",
+      "duration_ms": 58,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_ocr",
+      "status": "ok",
+      "duration_ms": 4081,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_fields",
+      "status": "ok",
+      "duration_ms": 5,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_rules",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_fonts",
+      "status": "ok",
+      "duration_ms": 2,
+      "reason": null
+    },
+    {
+      "detector": "doc:tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1549,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_anomaly",
+      "status": "ok",
+      "duration_ms": 16,
+      "reason": null
+    },
+    {
+      "detector": "doc:visual_ela",
+      "status": "ok",
+      "duration_ms": 1,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_photo_incident_date",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_photo_gps_location",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_amount_match",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_chronology",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_bill_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_policy_validity",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_vehicle_number",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_id_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_duplicate_document",
+      "status": "ok",
+      "duration_ms": 6,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_duplicate_images",
+      "status": "ok",
+      "duration_ms": 217,
+      "reason": null
+    },
+    {
+      "detector": "claim:network_cross_check",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:story_review",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    }
+  ],
+  "top_reasons": [
+    "The invoice number INV-2024-8842 from vendor was previously submitted in claim CLM-CLEAN-01.",
+    "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+    "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+    "The image shows patterns typical of AI-generated pictures (0% likelihood after calibration)."
+  ],
+  "recommended_action": "Route to senior claims adjuster for manual document review and verification of original invoice.",
+  "summary_source": "template"
+}

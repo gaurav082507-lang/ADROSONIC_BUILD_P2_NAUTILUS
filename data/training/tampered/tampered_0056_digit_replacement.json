@@ -1,0 +1,25 @@
+{
+  "recipe": "digit_replacement",
+  "held_out": false,
+  "before_text": "1,18,966.49",
+  "after_text": "3,95,071.69",
+  "region": {
+    "x": 893,
+    "y": 869,
+    "w": 248,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.4954,
+    0.1998,
+    0.0348
+  ],
+  "sample_id": "tampered_0056_digit_replacement",
+  "clean_id": "clean_0056_hospital_bill_ipd",
+  "template": "hospital_bill_ipd",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0056_digit_replacement.png",
+  "mask_path": "data\\training\\tampered\\tampered_0056_digit_replacement_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0056_digit_replacement.json"
+}

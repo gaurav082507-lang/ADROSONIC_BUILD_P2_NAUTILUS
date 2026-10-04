@@ -1,0 +1,25 @@
+{
+  "recipe": "logic_edit",
+  "held_out": false,
+  "before_text": "1,66,000.00",
+  "after_text": "5,47,813.80",
+  "region": {
+    "x": 893,
+    "y": 754,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.4299,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0062_logic_edit",
+  "clean_id": "clean_0062_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0062_logic_edit.png",
+  "mask_path": "data\\training\\tampered\\tampered_0062_logic_edit_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0062_logic_edit.json"
+}

@@ -1,0 +1,480 @@
+{
+  "id": "70fcf0bf-9428-475b-96ac-38c6ca6d4ca9",
+  "claim_id": null,
+  "mode": "image",
+  "created_at": "2026-10-03T20:18:35.869803",
+  "image": {
+    "pipeline": "image",
+    "risk": 0.6552,
+    "authenticity": 0.3448,
+    "band": "HIGH",
+    "confidence": "high",
+    "evidence_ids": [
+      "IMG-QUAL-01",
+      "IMG-EXIF-01",
+      "IMG-EXIF-02a",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ]
+  },
+  "document": null,
+  "identity": null,
+  "claim": null,
+  "overall": {
+    "risk": 0.6552,
+    "band": "HIGH",
+    "confidence": "low",
+    "summary": "HIGH fraud likelihood (66%). The image shows patterns typical of AI-generated pictures (71% likelihood after calibration). The file's metadata names an AI image generator (Midjourney v6.0). Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. Analysis confidence is low due to degraded input quality or limited checks. Recommended action: Escalate immediately to Special Investigation Unit (SIU) for detailed fraud investigation."
+  },
+  "evidence": [
+    {
+      "id": "IMG-AI-01",
+      "kind": "risk",
+      "raw_score": 0.7074,
+      "calibrated_score": 0.7074,
+      "weight": 0.65,
+      "effective_weight": 0.65,
+      "severity": "high",
+      "title": "AI Generated",
+      "reason": "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "p_ai_raw": 0.7074,
+        "raw_logits": [
+          2.5293,
+          1.6467
+        ],
+        "p_ai_tta_q85": 0.1225,
+        "p_ai_crop": null,
+        "tta_disagreement": true,
+        "crop_evaluated": false,
+        "temperature": 1.0,
+        "uncalibrated": false,
+        "model": "Ateeqq/ai-vs-human-image-detector",
+        "p": 0.7074,
+        "contribution": 0.4081
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.4081,
+      "contribution_pct": 62.3,
+      "rank": 1,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-02a",
+      "kind": "risk",
+      "raw_score": 0.95,
+      "calibrated_score": 0.95,
+      "weight": 0.3,
+      "effective_weight": 0.3,
+      "severity": "high",
+      "title": "AI Software in EXIF",
+      "reason": "File metadata explicitly names an AI image generator (Midjourney v6.0).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "software": "Midjourney v6.0",
+        "generator": "midjourney",
+        "contribution": 0.1911
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.1911,
+      "contribution_pct": 29.2,
+      "rank": 2,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-NOISE-01",
+      "kind": "risk",
+      "raw_score": 0.4019,
+      "calibrated_score": 0.4019,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "medium",
+      "title": "Inconsistent Noise",
+      "reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "noise_dispersion": 0.5704,
+        "blocks_analyzed": 25,
+        "flat_blocks_excluded": 45,
+        "fft_periodicity_ratio": 30.26,
+        "contribution": 0.0308
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0308,
+      "contribution_pct": 4.7,
+      "rank": 3,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-01",
+      "kind": "risk",
+      "raw_score": 0.5,
+      "calibrated_score": 0.5,
+      "weight": 0.1,
+      "effective_weight": 0.1,
+      "severity": "low",
+      "title": "Missing Camera EXIF",
+      "reason": "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "present_tags": [
+          "Software"
+        ],
+        "contribution": 0.0252
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0252,
+      "contribution_pct": 3.8,
+      "rank": 4,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-QUAL-01",
+      "kind": "info",
+      "raw_score": 0.0,
+      "calibrated_score": 0.0,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "Input Quality Warning",
+      "reason": "Degraded input quality detected: low resolution (640x480 px). Secondary forensic detector weights gated.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "width": 640,
+        "height": 480,
+        "megapixels": 0.31,
+        "jpeg_quality": 94,
+        "sharpness": 372.62,
+        "is_screenshot": false,
+        "mime_type": "image/jpeg",
+        "short_side": 480,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "image",
+      "page": 1
+    },
+    {
+      "id": "IMG-ELA-01",
+      "kind": "info",
+      "raw_score": 0.5174,
+      "calibrated_score": 0.5174,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "ELA Compression Anomaly",
+      "reason": "One region of the photo was compressed differently from the rest (supporting context — low discriminative AUC).",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.486,
+        "y": 0.367,
+        "w": 0.402,
+        "h": 0.26
+      },
+      "bboxes": null,
+      "details": {
+        "anomaly_fraction": 0.0404,
+        "anomalous_pixels": 12407,
+        "threshold": 25.0,
+        "largest_region_area": 5600,
+        "auc": 0.4667,
+        "auc_rule": "AUC < 0.60 → info-only, not scored",
+        "contribution": 0.0
+      },
+      "artifact": "ela_heatmap.png",
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "image",
+      "page": 1
+    }
+  ],
+  "detector_status": [
+    {
+      "detector": "preprocess",
+      "status": "ok",
+      "duration_ms": 6,
+      "error": null
+    },
+    {
+      "detector": "metadata",
+      "status": "ok",
+      "duration_ms": 58,
+      "error": null
+    },
+    {
+      "detector": "ai_detector",
+      "status": "ok",
+      "duration_ms": 439,
+      "error": null
+    },
+    {
+      "detector": "ela",
+      "status": "ok",
+      "duration_ms": 24,
+      "error": null
+    },
+    {
+      "detector": "noise",
+      "status": "ok",
+      "duration_ms": 11,
+      "error": null
+    },
+    {
+      "detector": "localization",
+      "status": "ok",
+      "duration_ms": 19,
+      "error": null
+    }
+  ],
+  "quality_warnings": [
+    {
+      "code": "LOW_RES",
+      "message": "Short side < 512 px (480 px)."
+    }
+  ],
+  "artifacts": {
+    "preview_img_1": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/preview_img_1.jpg?exp=1791145114&sig=8c0b79043098e15f5ec0e5771c726ab62cbec9c6de6c7f74a22052a4a5c7ece5",
+    "preview_image": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/preview_img_1.jpg?exp=1791145114&sig=8c0b79043098e15f5ec0e5771c726ab62cbec9c6de6c7f74a22052a4a5c7ece5",
+    "ela_heatmap": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/ela_heatmap.png?exp=1791145115&sig=9636b82c60ab581eceeb9295ef49da33eaf9cfbd5cb8604807e1cbc7be9616ba",
+    "overlay": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/overlay.png?exp=1791145115&sig=5ca3ccba196d73b941ca4fc97e60b8d3dd7135418ace92699cf80adcd594bea9",
+    "image_heatmap": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/image_heatmap.png?exp=1791145115&sig=d5547f4763c761a9831a4cc0aeab6b8af8e715c4eef0838ebaeea2bf2347304a",
+    "heatmap": "/api/v1/artifacts/70fcf0bf-9428-475b-96ac-38c6ca6d4ca9/heatmap.json?exp=1791145115&sig=966a970db0bacc83d624dfe65f646889a0d3c9be1385669c38e5b4ef5f53e889"
+  },
+  "versions": {
+    "detector": "Ateeqq/ai-vs-human-image-detector",
+    "face_engine": "sface",
+    "calibration_date": "2026-10-02",
+    "git_commit": "e8d47bf",
+    "engine": "lucen-2.0"
+  },
+  "location": null,
+  "voice": null,
+  "voice_details": null,
+  "liveness": null,
+  "aadhaar_qr": null,
+  "story": null,
+  "links": null,
+  "decision": null,
+  "image_results": [
+    {
+      "pipeline": "image",
+      "risk": 0.6552,
+      "authenticity": 0.3448,
+      "band": "HIGH",
+      "confidence": "high",
+      "evidence_ids": [
+        "IMG-QUAL-01",
+        "IMG-EXIF-01",
+        "IMG-EXIF-02a",
+        "IMG-AI-01",
+        "IMG-ELA-01",
+        "IMG-NOISE-01"
+      ]
+    }
+  ],
+  "why_this_score": {
+    "image": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "IMG-EXIF-01",
+          "title": "Missing Camera EXIF",
+          "w": 0.1,
+          "p": 0.5,
+          "push": 0.05,
+          "contribution_pct": 3.8
+        },
+        {
+          "evidence_id": "IMG-EXIF-02a",
+          "title": "AI Software in EXIF",
+          "w": 0.3,
+          "p": 0.95,
+          "push": 0.285,
+          "contribution_pct": 29.2
+        },
+        {
+          "evidence_id": "IMG-AI-01",
+          "title": "AI Generated",
+          "w": 0.65,
+          "p": 0.7074,
+          "push": 0.4598,
+          "contribution_pct": 62.3
+        },
+        {
+          "evidence_id": "IMG-NOISE-01",
+          "title": "Inconsistent Noise",
+          "w": 0.15,
+          "p": 0.4019,
+          "push": 0.0603,
+          "contribution_pct": 4.7
+        }
+      ],
+      "formula": "1 - (1 - 0.050) * (1 - 0.285) * (1 - 0.460) * (1 - 0.060) = 0.655",
+      "overrides_applied": [],
+      "quality_gates_applied": [
+        {
+          "detector": "LOW_RES",
+          "factor": 0.7,
+          "reason": "Short side < 512 px (480 px)."
+        }
+      ]
+    },
+    "document": null,
+    "identity": null,
+    "voice": null,
+    "claim": null,
+    "overall": {
+      "formula": "Single active pipeline (image) = 0.655",
+      "pipeline_risks": {
+        "image": 0.6552
+      },
+      "overrides_applied": []
+    },
+    "items": [
+      {
+        "evidence_id": "IMG-AI-01",
+        "title": "AI Generated",
+        "w": 0.65,
+        "p": 0.7074,
+        "push": 0.4598,
+        "contribution_pct": 62.3
+      },
+      {
+        "evidence_id": "IMG-EXIF-02a",
+        "title": "AI Software in EXIF",
+        "w": 0.3,
+        "p": 0.95,
+        "push": 0.285,
+        "contribution_pct": 29.2
+      },
+      {
+        "evidence_id": "IMG-NOISE-01",
+        "title": "Inconsistent Noise",
+        "w": 0.15,
+        "p": 0.4019,
+        "push": 0.0603,
+        "contribution_pct": 4.7
+      },
+      {
+        "evidence_id": "IMG-EXIF-01",
+        "title": "Missing Camera EXIF",
+        "w": 0.1,
+        "p": 0.5,
+        "push": 0.05,
+        "contribution_pct": 3.8
+      }
+    ]
+  },
+  "why_this_score_items": [
+    {
+      "evidence_id": "IMG-AI-01",
+      "title": "AI Generated",
+      "w": 0.65,
+      "p": 0.7074,
+      "push": 0.4598,
+      "contribution_pct": 62.3
+    },
+    {
+      "evidence_id": "IMG-EXIF-02a",
+      "title": "AI Software in EXIF",
+      "w": 0.3,
+      "p": 0.95,
+      "push": 0.285,
+      "contribution_pct": 29.2
+    },
+    {
+      "evidence_id": "IMG-NOISE-01",
+      "title": "Inconsistent Noise",
+      "w": 0.15,
+      "p": 0.4019,
+      "push": 0.0603,
+      "contribution_pct": 4.7
+    },
+    {
+      "evidence_id": "IMG-EXIF-01",
+      "title": "Missing Camera EXIF",
+      "w": 0.1,
+      "p": 0.5,
+      "push": 0.05,
+      "contribution_pct": 3.8
+    }
+  ],
+  "checks_run": [
+    {
+      "detector": "preprocess",
+      "status": "ok",
+      "duration_ms": 6,
+      "reason": null
+    },
+    {
+      "detector": "metadata",
+      "status": "ok",
+      "duration_ms": 58,
+      "reason": null
+    },
+    {
+      "detector": "ai_detector",
+      "status": "ok",
+      "duration_ms": 439,
+      "reason": null
+    },
+    {
+      "detector": "ela",
+      "status": "ok",
+      "duration_ms": 24,
+      "reason": null
+    },
+    {
+      "detector": "noise",
+      "status": "ok",
+      "duration_ms": 11,
+      "reason": null
+    },
+    {
+      "detector": "localization",
+      "status": "ok",
+      "duration_ms": 19,
+      "reason": null
+    }
+  ],
+  "top_reasons": [
+    "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration).",
+    "File metadata explicitly names an AI image generator (Midjourney v6.0).",
+    "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+    "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps."
+  ],
+  "recommended_action": "Escalate to Special Investigation Unit (SIU) for detailed forensic document inspection and claimant interview.",
+  "summary_source": "template"
+}

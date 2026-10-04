@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --ink: #0b1220;
+  --navy: #0f1b2d;
+  --slate: #f5f7fa;
+  --border: #e3e8ef;
+  --muted: #5b6b82;
+  --yellow: #f5c518;
+  --blue: #3b82f6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--slate);
+  color: var(--ink);
+  font-family: Inter, sans-serif;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+.grid-blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 8px rgba(15, 27, 45, 0.05),
+    0 12px 28px rgba(15, 27, 45, 0.04);
+}
+.risk-high {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+.risk-medium {
+  color: #b45309;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+.risk-low {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+.focus-ring:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

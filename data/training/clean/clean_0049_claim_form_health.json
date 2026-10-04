@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0049_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "seed": 1049,
+  "created_at": "2026-10-03T12:35:34.099788",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-803286",
+    "policy_number": "POL-88592507",
+    "claimant": "David Khanna",
+    "aadhaar_id": "840775876798",
+    "date": "23/06/2026",
+    "total_amount": 228000.0,
+    "amount_in_words": "Two Lakh Twenty Eight Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0049_claim_form_health.pdf",
+  "png_path": "data\\training\\clean\\clean_0049_claim_form_health.png",
+  "json_path": "data\\training\\clean\\clean_0049_claim_form_health.json"
+}

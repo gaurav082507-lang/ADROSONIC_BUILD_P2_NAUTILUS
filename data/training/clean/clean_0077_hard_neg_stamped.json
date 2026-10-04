@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0077_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "seed": 1077,
+  "created_at": "2026-10-03T12:35:35.789678",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-153203",
+    "policy_number": "POL-39396632",
+    "claimant": "Theodore Om",
+    "aadhaar_id": "687096951000",
+    "date": "20/06/2026",
+    "total_amount": 247000.0,
+    "amount_in_words": "Two Lakh Forty Seven Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0077_hard_neg_stamped.pdf",
+  "png_path": "data\\training\\clean\\clean_0077_hard_neg_stamped.png",
+  "json_path": "data\\training\\clean\\clean_0077_hard_neg_stamped.json"
+}

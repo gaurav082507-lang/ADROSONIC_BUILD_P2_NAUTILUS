@@ -1,0 +1,31 @@
+{
+  "claim_id": "claim_demo_01",
+  "status": "approved",
+  "timeline": [
+    {
+      "name": "Submitted",
+      "status": "done",
+      "date": "2026-10-03T21:59:29.929545"
+    },
+    {
+      "name": "Under Review",
+      "status": "done",
+      "date": "2026-10-03T21:59:29.929545"
+    },
+    {
+      "name": "Decision",
+      "status": "done",
+      "date": "2026-10-03T21:59:29.929545"
+    }
+  ],
+  "decision": {
+    "outcome": "Approved",
+    "reason_category_label": "Additional information needed",
+    "claimant_message": "Your claim is being processed according to standard policy terms.",
+    "next_steps": [
+      "Contact customer support"
+    ],
+    "can_resubmit": false,
+    "slots_to_resubmit": []
+  }
+}

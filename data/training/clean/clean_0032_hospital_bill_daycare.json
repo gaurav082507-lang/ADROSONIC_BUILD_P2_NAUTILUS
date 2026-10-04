@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0032_hospital_bill_daycare",
+  "template": "hospital_bill_daycare",
+  "split": "test",
+  "seed": 1032,
+  "created_at": "2026-10-03T12:35:33.097285",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-780822",
+    "patient_name": "Tara Mander",
+    "uhid": "UHID-8110677",
+    "admission_date": "01/03/2026",
+    "discharge_date": "07/03/2026",
+    "hospital_name": "Samra, Dutta and Nazareth Multi-Speciality Hospital",
+    "subtotal": 108107.03,
+    "total_amount": 108107.03,
+    "amount_in_words": "One Lakh Eight Thousand One Hundred Seven Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0032_hospital_bill_daycare.pdf",
+  "png_path": "data\\training\\clean\\clean_0032_hospital_bill_daycare.png",
+  "json_path": "data\\training\\clean\\clean_0032_hospital_bill_daycare.json"
+}

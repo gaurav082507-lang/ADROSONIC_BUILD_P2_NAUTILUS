@@ -1,0 +1,113 @@
+[
+  {
+    "sample": "01_ai_generated_car_damage.jpg",
+    "wall_time_s": 1.23,
+    "step_timings_ms": {
+      "preprocess": 28,
+      "metadata": 41,
+      "ai_detector": 426,
+      "ela": 33,
+      "noise": 11,
+      "localization": 20
+    },
+    "risk": 0.6906,
+    "band": "HIGH",
+    "confidence": "low",
+    "summary": "HIGH fraud likelihood (69%). The image shows patterns typical of AI-generated pictures (48% likelihood after calibration). The file's metadata names an AI image generator (Midjourney v6.0). One region of the photo was compressed differently from the rest, which often means it was edited after capture. Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. The file lacks expected camera metadata. Analysis confidence is low due to degraded input quality or limited checks. Recommended action: Escalate to the fraud investigation team before any payout.",
+    "evidence_ids": [
+      "IMG-QUAL-01",
+      "IMG-EXIF-01",
+      "IMG-EXIF-02a",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ],
+    "artifacts": {
+      "ela_heatmap": "/api/v1/artifacts/511cd1f1-5dad-4cc7-befe-5d7d1db63e92/ela_heatmap.png",
+      "overlay": "/api/v1/artifacts/511cd1f1-5dad-4cc7-befe-5d7d1db63e92/overlay.png",
+      "image_heatmap": "/api/v1/artifacts/511cd1f1-5dad-4cc7-befe-5d7d1db63e92/image_heatmap.png"
+    }
+  },
+  {
+    "sample": "02_genuine_phone_photo.jpg",
+    "wall_time_s": 1.107,
+    "step_timings_ms": {
+      "preprocess": 18,
+      "metadata": 3,
+      "ai_detector": 470,
+      "ela": 56,
+      "noise": 12,
+      "localization": 39
+    },
+    "risk": 0.4799,
+    "band": "MEDIUM",
+    "confidence": "high",
+    "summary": "MEDIUM fraud likelihood (48%). The image shows patterns typical of AI-generated pictures (64% likelihood after calibration). Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. One region of the photo was compressed differently from the rest, which often means it was edited after capture. Recommended action: Route to manual review. Check the highlighted items.",
+    "evidence_ids": [
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ],
+    "artifacts": {
+      "ela_heatmap": "/api/v1/artifacts/c10d168e-16b9-4f28-af38-7a1215721273/ela_heatmap.png",
+      "overlay": "/api/v1/artifacts/c10d168e-16b9-4f28-af38-7a1215721273/overlay.png",
+      "image_heatmap": "/api/v1/artifacts/c10d168e-16b9-4f28-af38-7a1215721273/image_heatmap.png"
+    }
+  },
+  {
+    "sample": "03_edited_spliced_photo.jpg",
+    "wall_time_s": 1.125,
+    "step_timings_ms": {
+      "preprocess": 17,
+      "metadata": 2,
+      "ai_detector": 458,
+      "ela": 52,
+      "noise": 12,
+      "localization": 42
+    },
+    "risk": 0.7487,
+    "band": "HIGH",
+    "confidence": "high",
+    "summary": "HIGH fraud likelihood (75%). The image shows patterns typical of AI-generated pictures (86% likelihood after calibration). File metadata indicates post-capture editing software (Adobe Photoshop 2024). Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. The file lacks expected camera metadata. One region of the photo was compressed differently from the rest, which often means it was edited after capture. Recommended action: Escalate to the fraud investigation team before any payout.",
+    "evidence_ids": [
+      "IMG-EXIF-01",
+      "IMG-EXIF-02b",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ],
+    "artifacts": {
+      "ela_heatmap": "/api/v1/artifacts/f739ed2b-c6b6-4015-ac9d-d94ca85c21ee/ela_heatmap.png",
+      "overlay": "/api/v1/artifacts/f739ed2b-c6b6-4015-ac9d-d94ca85c21ee/overlay.png",
+      "image_heatmap": "/api/v1/artifacts/f739ed2b-c6b6-4015-ac9d-d94ca85c21ee/image_heatmap.png"
+    }
+  },
+  {
+    "sample": "04_low_res_compressed.jpg",
+    "wall_time_s": 1.017,
+    "step_timings_ms": {
+      "preprocess": 2,
+      "metadata": 2,
+      "ai_detector": 441,
+      "ela": 9,
+      "noise": 3,
+      "localization": 7
+    },
+    "risk": 0.5689,
+    "band": "MEDIUM",
+    "confidence": "medium",
+    "summary": "MEDIUM fraud likelihood (57%). The image shows patterns typical of AI-generated pictures (78% likelihood after calibration). The file lacks expected camera metadata. Noise patterns in the image are inconsistent, suggesting parts were generated or spliced. Some secondary forensic checks were inconclusive or limited. Recommended action: Route to manual review. Check the highlighted items.",
+    "evidence_ids": [
+      "IMG-QUAL-01",
+      "IMG-EXIF-01",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ],
+    "artifacts": {
+      "ela_heatmap": "/api/v1/artifacts/43cc75a5-215d-45d0-a8c7-a587c8333f82/ela_heatmap.png",
+      "overlay": "/api/v1/artifacts/43cc75a5-215d-45d0-a8c7-a587c8333f82/overlay.png",
+      "image_heatmap": "/api/v1/artifacts/43cc75a5-215d-45d0-a8c7-a587c8333f82/image_heatmap.png"
+    }
+  }
+]

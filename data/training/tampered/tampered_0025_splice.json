@@ -1,0 +1,25 @@
+{
+  "recipe": "splice",
+  "held_out": true,
+  "before_text": "original_content",
+  "after_text": "spliced_foreign_block",
+  "region": {
+    "x": 769,
+    "y": 771,
+    "w": 347,
+    "h": 87
+  },
+  "normalized_bbox": [
+    0.6197,
+    0.4396,
+    0.2796,
+    0.0496
+  ],
+  "sample_id": "tampered_0025_splice",
+  "clean_id": "clean_0025_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0025_splice.png",
+  "mask_path": "data\\training\\tampered\\tampered_0025_splice_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0025_splice.json"
+}

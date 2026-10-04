@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0064_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "seed": 1064,
+  "created_at": "2026-10-03T12:35:34.986602",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-754933",
+    "policy_number": "POL-17571860",
+    "claimant": "Jeevika Kade",
+    "aadhaar_id": "945912567530",
+    "date": "06/01/2026",
+    "total_amount": 78000.0,
+    "amount_in_words": "Seventy Eight Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0064_hard_neg_stamped.pdf",
+  "png_path": "data\\training\\clean\\clean_0064_hard_neg_stamped.png",
+  "json_path": "data\\training\\clean\\clean_0064_hard_neg_stamped.json"
+}

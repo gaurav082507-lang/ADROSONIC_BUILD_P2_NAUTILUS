@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0006_hospital_bill_daycare",
+  "template": "hospital_bill_daycare",
+  "split": "test",
+  "seed": 1006,
+  "created_at": "2026-10-03T12:35:31.379247",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-158557",
+    "patient_name": "Samesh Naidu",
+    "uhid": "UHID-8444574",
+    "admission_date": "13/02/2026",
+    "discharge_date": "16/02/2026",
+    "hospital_name": "Karnik Group Multi-Speciality Hospital",
+    "subtotal": 119227.82,
+    "total_amount": 119227.82,
+    "amount_in_words": "One Lakh Nineteen Thousand Two Hundred Twenty Eight Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0006_hospital_bill_daycare.pdf",
+  "png_path": "data\\training\\clean\\clean_0006_hospital_bill_daycare.png",
+  "json_path": "data\\training\\clean\\clean_0006_hospital_bill_daycare.json"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 341,
+    "claim_id": "claim_demo_01",
+    "result_id": "92e3ea2e-c4d6-432f-b29d-803ade4dc41b",
+    "actor": "Pooja Mehta",
+    "action": "fast_track",
+    "from_status": "submitted",
+    "to_status": "approved",
+    "reason_category": "other",
+    "claimant_message": "",
+    "internal_note": "Fast-tracked one-click approval by investigator.",
+    "slots_to_resubmit": [],
+    "created_at": "2026-10-03T21:59:29.929545"
+  }
+]

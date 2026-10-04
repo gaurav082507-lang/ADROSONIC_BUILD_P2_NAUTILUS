@@ -1,0 +1,25 @@
+{
+  "recipe": "splice",
+  "held_out": true,
+  "before_text": "original_content",
+  "after_text": "spliced_foreign_block",
+  "region": {
+    "x": 769,
+    "y": 771,
+    "w": 347,
+    "h": 87
+  },
+  "normalized_bbox": [
+    0.6197,
+    0.4396,
+    0.2796,
+    0.0496
+  ],
+  "sample_id": "tampered_0067_splice",
+  "clean_id": "clean_0067_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "png_path": "data\\training\\tampered\\tampered_0067_splice.png",
+  "mask_path": "data\\training\\tampered\\tampered_0067_splice_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0067_splice.json"
+}

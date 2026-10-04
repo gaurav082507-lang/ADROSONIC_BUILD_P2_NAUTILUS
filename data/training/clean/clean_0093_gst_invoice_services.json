@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0093_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1093,
+  "created_at": "2026-10-03T12:35:36.741893",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-7425",
+    "date": "10/02/2026",
+    "due_date": "07/03/2026",
+    "seller": "Ramanathan, Prasad and Dugar Pvt Ltd",
+    "buyer": "Aarnav Sura",
+    "subtotal": 371769.34,
+    "tax_rate": 0.18,
+    "tax_amount": 66918.48,
+    "total_amount": 438687.82,
+    "amount_in_words": "Four Lakh Thirty Eight Thousand Six Hundred Eighty Eight Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 1,
+      "rate": 12454.83,
+      "amount": 12454.83
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 10,
+      "rate": 14034.46,
+      "amount": 140344.6
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 3,
+      "rate": 15181.35,
+      "amount": 45544.05
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 9,
+      "rate": 19269.54,
+      "amount": 173425.86
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0093_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0093_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0093_gst_invoice_services.json"
+}

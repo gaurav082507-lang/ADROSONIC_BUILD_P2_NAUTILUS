@@ -1,0 +1,33 @@
+export const errorMessages: Record<string, string> = {
+  UNSUPPORTED_FILE_TYPE: 'Only JPG, PNG, WebP and PDF are supported.',
+  FILE_TOO_LARGE: 'This file is over 15 MB.',
+  TOO_MANY_PAGES: 'Only the first 10 pages will be analysed.',
+  TOO_MANY_FILES: 'Up to 6 photos per claim.',
+  CORRUPT_FILE: 'This file could not be opened.',
+  NO_INPUT: 'Add at least one input before continuing.',
+  CONSENT_REQUIRED: 'Consent is required before submitting the claim.',
+  POLICY_INVALID: 'Choose a valid policy.',
+  FAST_TRACK_NOT_ALLOWED: 'This claim is not eligible for fast-track.',
+  JOB_NOT_FOUND: 'This analysis job could not be found.',
+  RESULT_NOT_FOUND: 'This result could not be found.',
+  NOT_AUTHENTICATED: 'Please sign in again.',
+  FORBIDDEN_ROLE: "You don't have access to this page.",
+  RATE_LIMITED: 'Too many requests. Please try again shortly.',
+  JOB_TIMEOUT: 'Analysis took too long. Try again.',
+  INTERNAL_ERROR: 'Something went wrong.',
+  NETWORK_DOWN: 'Backend unreachable. Check the backend and retry.',
+  VOICE_CONSENT_REQUIRED: 'Please agree to voice processing, or remove the recording.',
+  INVALID_AUDIO_FORMAT: 'This recording format is not supported. Please record again.',
+  AUDIO_TOO_LONG: 'Recordings can be up to 90 seconds.',
+  AUDIO_TOO_LARGE: 'This recording is too large (max 10 MB).',
+  NOTE_REQUIRED: 'A note is required for this status.',
+  TRANSCRIPTION_UNAVAILABLE: 'Speech-to-text is unavailable right now. Please type instead.',
+  LIVENESS_FAILED: 'We could not verify the live check. Please try again in good light.',
+  SESSION_EXPIRED: 'The live check expired. Please start it again.',
+  INVALID_CREDENTIALS: 'Email or password is incorrect.',
+  HTTP_422: 'Some information is missing or invalid.',
+  CONTRACT_MISMATCH:
+    'The backend response does not match the current contract. Check the integration contract.',
+};
+export const friendlyError = (code: string, message?: string) =>
+  errorMessages[code] || message || 'Something went wrong.';

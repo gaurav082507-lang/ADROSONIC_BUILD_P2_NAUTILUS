@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0031_hospital_bill_surgery",
+  "template": "hospital_bill_surgery",
+  "split": "val",
+  "seed": 1031,
+  "created_at": "2026-10-03T12:35:33.037225",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-698164",
+    "patient_name": "Chakradhar Pradhan",
+    "uhid": "UHID-1662961",
+    "admission_date": "01/07/2026",
+    "discharge_date": "07/07/2026",
+    "hospital_name": "Baral, Banerjee and Murthy Multi-Speciality Hospital",
+    "subtotal": 109740.01,
+    "total_amount": 109740.01,
+    "amount_in_words": "One Lakh Nine Thousand Seven Hundred Forty Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0031_hospital_bill_surgery.pdf",
+  "png_path": "data\\training\\clean\\clean_0031_hospital_bill_surgery.png",
+  "json_path": "data\\training\\clean\\clean_0031_hospital_bill_surgery.json"
+}

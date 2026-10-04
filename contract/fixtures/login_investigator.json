@@ -1,0 +1,10 @@
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyX2ludmVzdGlnYXRvciIsInJvbGUiOiJpbnZlc3RpZ2F0b3IiLCJlbWFpbCI6ImludmVzdGlnYXRvckBkZW1vLmluIiwiZXhwIjoxNzkxMDk0MDg3fQ.6yKS-mCZlNUe_kGbeQn8iuLe66xWpgM9qvpON2hMbZU",
+  "user": {
+    "id": "user_investigator",
+    "name": "Pooja Mehta",
+    "email": "investigator@demo.in",
+    "role": "investigator",
+    "preferred_lang": "en"
+  }
+}

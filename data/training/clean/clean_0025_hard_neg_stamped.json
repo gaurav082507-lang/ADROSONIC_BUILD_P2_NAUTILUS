@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0025_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "seed": 1025,
+  "created_at": "2026-10-03T12:35:32.641175",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-160091",
+    "policy_number": "POL-15950394",
+    "claimant": "Chaitanya Jha",
+    "aadhaar_id": "681260665287",
+    "date": "22/12/2025",
+    "total_amount": 83000.0,
+    "amount_in_words": "Eighty Three Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0025_hard_neg_stamped.pdf",
+  "png_path": "data\\training\\clean\\clean_0025_hard_neg_stamped.png",
+  "json_path": "data\\training\\clean\\clean_0025_hard_neg_stamped.json"
+}

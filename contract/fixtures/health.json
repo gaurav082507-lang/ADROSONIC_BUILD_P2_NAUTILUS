@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "models": {
+    "ai_detector": true,
+    "tamper_cnn": true,
+    "anomaly": true,
+    "ocr": true,
+    "face_engine": true
+  },
+  "face_engine": "sface",
+  "db_path": "C:\\Users\\gaura\\Desktop\\LUCENAI\\data\\runtime\\lucen.db",
+  "db_claims_count": 7,
+  "db_results_count": 13,
+  "mock_analysis": "0",
+  "demo_mode": "0",
+  "seeding_on_startup": false
+}

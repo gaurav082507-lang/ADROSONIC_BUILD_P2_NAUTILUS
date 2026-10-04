@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0022_claim_form_motor",
+  "template": "claim_form_motor",
+  "split": "train",
+  "seed": 1022,
+  "created_at": "2026-10-03T12:35:32.451140",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-532146",
+    "policy_number": "POL-89958439",
+    "claimant": "Jalsa Chadha",
+    "aadhaar_id": "301408748706",
+    "date": "22/11/2025",
+    "total_amount": 233000.0,
+    "amount_in_words": "Two Lakh Thirty Three Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0022_claim_form_motor.pdf",
+  "png_path": "data\\training\\clean\\clean_0022_claim_form_motor.png",
+  "json_path": "data\\training\\clean\\clean_0022_claim_form_motor.json"
+}

@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0080_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1080,
+  "created_at": "2026-10-03T12:35:35.965122",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-9069",
+    "date": "07/08/2026",
+    "due_date": "16/09/2026",
+    "seller": "Magar-Biswas Pvt Ltd",
+    "buyer": "Lajita Hayre",
+    "subtotal": 195024.12,
+    "tax_rate": 0.18,
+    "tax_amount": 35104.34,
+    "total_amount": 230128.46,
+    "amount_in_words": "Two Lakh Thirty Thousand One Hundred Twenty Eight Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 4,
+      "rate": 9996.22,
+      "amount": 39984.88
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 6,
+      "rate": 8177.61,
+      "amount": 49065.66
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 3,
+      "rate": 24414.9,
+      "amount": 73244.7
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 4,
+      "rate": 8182.22,
+      "amount": 32728.88
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0080_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0080_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0080_gst_invoice_services.json"
+}

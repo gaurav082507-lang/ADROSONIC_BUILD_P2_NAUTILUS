@@ -1,0 +1,39 @@
+{
+  "sample_id": "clean_0027_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "seed": 1027,
+  "created_at": "2026-10-03T12:35:32.776704",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-2914",
+    "date": "09/10/2025",
+    "due_date": "24/10/2025",
+    "seller": "Butala PLC Pvt Ltd",
+    "buyer": "Theodore Agate",
+    "subtotal": 203080.12,
+    "tax_rate": 0.18,
+    "tax_amount": 36554.42,
+    "total_amount": 239634.54,
+    "amount_in_words": "Two Lakh Thirty Nine Thousand Six Hundred Thirty Five Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 4,
+      "rate": 568.88,
+      "amount": 2275.52
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 10,
+      "rate": 20080.46,
+      "amount": 200804.6
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0027_gst_invoice_retail.pdf",
+  "png_path": "data\\training\\clean\\clean_0027_gst_invoice_retail.png",
+  "json_path": "data\\training\\clean\\clean_0027_gst_invoice_retail.json"
+}

@@ -1,0 +1,14 @@
+{
+  "job_id": "f10c6a08-0280-48c6-9e83-dee96c396b3b",
+  "status": "running",
+  "mode": "image",
+  "steps": [
+    {
+      "name": "preprocess",
+      "status": "running",
+      "duration_ms": null
+    }
+  ],
+  "result_id": null,
+  "error": null
+}

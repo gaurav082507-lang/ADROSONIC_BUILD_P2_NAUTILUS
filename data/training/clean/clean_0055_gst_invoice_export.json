@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0055_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1055,
+  "created_at": "2026-10-03T12:35:34.452728",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-2539",
+    "date": "04/11/2025",
+    "due_date": "21/11/2025",
+    "seller": "Pall PLC Pvt Ltd",
+    "buyer": "Rajeshri Sathe",
+    "subtotal": 297930.1,
+    "tax_rate": 0.18,
+    "tax_amount": 53627.42,
+    "total_amount": 351557.52,
+    "amount_in_words": "Three Lakh Fifty One Thousand Five Hundred Fifty Eight Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 8,
+      "rate": 18676.16,
+      "amount": 149409.28
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 7,
+      "rate": 18186.3,
+      "amount": 127304.1
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 7,
+      "rate": 3030.96,
+      "amount": 21216.72
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0055_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0055_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0055_gst_invoice_export.json"
+}

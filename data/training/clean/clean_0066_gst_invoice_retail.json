@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0066_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "seed": 1066,
+  "created_at": "2026-10-03T12:35:35.108625",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-8335",
+    "date": "11/09/2026",
+    "due_date": "24/10/2026",
+    "seller": "Vyas-Shanker Pvt Ltd",
+    "buyer": "Yasti Mannan",
+    "subtotal": 559179.68,
+    "tax_rate": 0.18,
+    "tax_amount": 100652.34,
+    "total_amount": 659832.02,
+    "amount_in_words": "Six Lakh Fifty Nine Thousand Eight Hundred Thirty Two Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 9,
+      "rate": 23949.21,
+      "amount": 215542.89
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 5,
+      "rate": 23812.06,
+      "amount": 119060.3
+    },
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 9,
+      "rate": 20384.81,
+      "amount": 183463.29
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 10,
+      "rate": 4111.32,
+      "amount": 41113.2
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0066_gst_invoice_retail.pdf",
+  "png_path": "data\\training\\clean\\clean_0066_gst_invoice_retail.png",
+  "json_path": "data\\training\\clean\\clean_0066_gst_invoice_retail.json"
+}

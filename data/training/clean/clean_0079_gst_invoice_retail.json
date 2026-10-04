@@ -1,0 +1,39 @@
+{
+  "sample_id": "clean_0079_gst_invoice_retail",
+  "template": "gst_invoice_retail",
+  "split": "train",
+  "seed": 1079,
+  "created_at": "2026-10-03T12:35:35.905269",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-8848",
+    "date": "28/04/2026",
+    "due_date": "30/05/2026",
+    "seller": "Srinivas, Behl and Garg Pvt Ltd",
+    "buyer": "Vidhi Sandhu",
+    "subtotal": 261088.3,
+    "tax_rate": 0.18,
+    "tax_amount": 46995.89,
+    "total_amount": 308084.19,
+    "amount_in_words": "Three Lakh Eight Thousand Eighty Four Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 10,
+      "rate": 21606.03,
+      "amount": 216060.3
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 10,
+      "rate": 4502.8,
+      "amount": 45028.0
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0079_gst_invoice_retail.pdf",
+  "png_path": "data\\training\\clean\\clean_0079_gst_invoice_retail.png",
+  "json_path": "data\\training\\clean\\clean_0079_gst_invoice_retail.json"
+}

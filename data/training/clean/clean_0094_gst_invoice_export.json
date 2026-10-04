@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0094_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1094,
+  "created_at": "2026-10-03T12:35:36.806356",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-9854",
+    "date": "01/05/2026",
+    "due_date": "02/06/2026",
+    "seller": "Zachariah, Pillai and Sridhar Pvt Ltd",
+    "buyer": "Vidhi Nagar",
+    "subtotal": 149011.77,
+    "tax_rate": 0.18,
+    "tax_amount": 26822.12,
+    "total_amount": 175833.89,
+    "amount_in_words": "One Lakh Seventy Five Thousand Eight Hundred Thirty Four Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 8,
+      "rate": 8316.89,
+      "amount": 66535.12
+    },
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 7,
+      "rate": 904.91,
+      "amount": 6334.37
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 6,
+      "rate": 12690.38,
+      "amount": 76142.28
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0094_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0094_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0094_gst_invoice_export.json"
+}

@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0026_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1026,
+  "created_at": "2026-10-03T12:35:32.706805",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2025-8765",
+    "date": "11/10/2025",
+    "due_date": "26/10/2025",
+    "seller": "Lata-Rama Pvt Ltd",
+    "buyer": "Timothy Sagar",
+    "subtotal": 468369.92,
+    "tax_rate": 0.18,
+    "tax_amount": 84306.59,
+    "total_amount": 552676.51,
+    "amount_in_words": "Five Lakh Fifty Two Thousand Six Hundred Seventy Seven Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Pneumatic Control System",
+      "hsn": "8412",
+      "qty": 10,
+      "rate": 20600.38,
+      "amount": 206003.8
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 8,
+      "rate": 18181.67,
+      "amount": 145453.36
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 6,
+      "rate": 19485.46,
+      "amount": 116912.76
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0026_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0026_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0026_gst_invoice_corp.json"
+}

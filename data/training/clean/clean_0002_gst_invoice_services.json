@@ -1,0 +1,39 @@
+{
+  "sample_id": "clean_0002_gst_invoice_services",
+  "template": "gst_invoice_services",
+  "split": "val",
+  "seed": 1002,
+  "created_at": "2026-10-03T12:35:31.126431",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-7901",
+    "date": "22/04/2026",
+    "due_date": "23/05/2026",
+    "seller": "Sama, Kant and Dhawan Pvt Ltd",
+    "buyer": "Arunima Sule",
+    "subtotal": 218959.65,
+    "tax_rate": 0.18,
+    "tax_amount": 39412.74,
+    "total_amount": 258372.39,
+    "amount_in_words": "Two Lakh Fifty Eight Thousand Three Hundred Seventy Two Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 5,
+      "rate": 12356.97,
+      "amount": 61784.85
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 10,
+      "rate": 15717.48,
+      "amount": 157174.8
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0002_gst_invoice_services.pdf",
+  "png_path": "data\\training\\clean\\clean_0002_gst_invoice_services.png",
+  "json_path": "data\\training\\clean\\clean_0002_gst_invoice_services.json"
+}

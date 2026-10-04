@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0090_hard_neg_stamped",
+  "template": "hard_neg_stamped",
+  "split": "test",
+  "seed": 1090,
+  "created_at": "2026-10-03T12:35:36.567894",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-257064",
+    "policy_number": "POL-62679290",
+    "claimant": "Manya Patil",
+    "aadhaar_id": "311725332594",
+    "date": "26/03/2026",
+    "total_amount": 151000.0,
+    "amount_in_words": "One Lakh Fifty One Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0090_hard_neg_stamped.pdf",
+  "png_path": "data\\training\\clean\\clean_0090_hard_neg_stamped.png",
+  "json_path": "data\\training\\clean\\clean_0090_hard_neg_stamped.json"
+}

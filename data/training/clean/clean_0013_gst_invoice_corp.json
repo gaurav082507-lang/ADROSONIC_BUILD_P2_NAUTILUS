@@ -1,0 +1,46 @@
+{
+  "sample_id": "clean_0013_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "seed": 1013,
+  "created_at": "2026-10-03T12:35:31.823781",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-9058",
+    "date": "18/09/2026",
+    "due_date": "31/10/2026",
+    "seller": "Kumer-Gour Pvt Ltd",
+    "buyer": "Leena Bhakta",
+    "subtotal": 164525.55,
+    "tax_rate": 0.18,
+    "tax_amount": 29614.6,
+    "total_amount": 194140.15,
+    "amount_in_words": "One Lakh Ninety Four Thousand One Hundred Forty Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 7,
+      "rate": 21704.16,
+      "amount": 151929.12
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 1,
+      "rate": 9924.58,
+      "amount": 9924.58
+    },
+    {
+      "item": "Industrial Spare Gears",
+      "hsn": "8483",
+      "qty": 5,
+      "rate": 534.37,
+      "amount": 2671.85
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0013_gst_invoice_corp.pdf",
+  "png_path": "data\\training\\clean\\clean_0013_gst_invoice_corp.png",
+  "json_path": "data\\training\\clean\\clean_0013_gst_invoice_corp.json"
+}

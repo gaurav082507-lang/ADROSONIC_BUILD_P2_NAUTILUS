@@ -1,0 +1,11 @@
+{
+  "status": "ok",
+  "models": {
+    "ai_detector": true,
+    "tamper_cnn": true,
+    "anomaly": true,
+    "ocr": true,
+    "face_engine": true
+  },
+  "face_engine": "sface"
+}

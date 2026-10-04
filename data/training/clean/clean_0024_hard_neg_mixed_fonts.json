@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0024_hard_neg_mixed_fonts",
+  "template": "hard_neg_mixed_fonts",
+  "split": "train",
+  "seed": 1024,
+  "created_at": "2026-10-03T12:35:32.570930",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-120063",
+    "policy_number": "POL-74894119",
+    "claimant": "Veda Ramachandran",
+    "aadhaar_id": "751898089398",
+    "date": "07/08/2026",
+    "total_amount": 107000.0,
+    "amount_in_words": "One Lakh Seven Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0024_hard_neg_mixed_fonts.pdf",
+  "png_path": "data\\training\\clean\\clean_0024_hard_neg_mixed_fonts.png",
+  "json_path": "data\\training\\clean\\clean_0024_hard_neg_mixed_fonts.json"
+}

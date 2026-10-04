@@ -1,0 +1,53 @@
+{
+  "sample_id": "clean_0029_gst_invoice_export",
+  "template": "gst_invoice_export",
+  "split": "test",
+  "seed": 1029,
+  "created_at": "2026-10-03T12:35:32.910167",
+  "fields": {
+    "document_type": "GST Tax Invoice",
+    "invoice_number": "INV-2026-6053",
+    "date": "24/05/2026",
+    "due_date": "27/06/2026",
+    "seller": "Vohra-Gaba Pvt Ltd",
+    "buyer": "Aarini Purohit",
+    "subtotal": 530606.59,
+    "tax_rate": 0.18,
+    "tax_amount": 95509.19,
+    "total_amount": 626115.78,
+    "amount_in_words": "Six Lakh Twenty Six Thousand One Hundred Sixteen Rupees Only"
+  },
+  "line_items": [
+    {
+      "item": "Electrical Relay Module",
+      "hsn": "8536",
+      "qty": 9,
+      "rate": 14215.81,
+      "amount": 127942.29
+    },
+    {
+      "item": "High Pressure Rubber Hose",
+      "hsn": "4009",
+      "qty": 9,
+      "rate": 20009.08,
+      "amount": 180081.72
+    },
+    {
+      "item": "Hydraulic Valve Assembly",
+      "hsn": "8481",
+      "qty": 5,
+      "rate": 19204.4,
+      "amount": 96022.0
+    },
+    {
+      "item": "Lubricant Grease 50L Drum",
+      "hsn": "2710",
+      "qty": 6,
+      "rate": 21093.43,
+      "amount": 126560.58
+    }
+  ],
+  "pdf_path": "data\\training\\clean\\clean_0029_gst_invoice_export.pdf",
+  "png_path": "data\\training\\clean\\clean_0029_gst_invoice_export.png",
+  "json_path": "data\\training\\clean\\clean_0029_gst_invoice_export.json"
+}

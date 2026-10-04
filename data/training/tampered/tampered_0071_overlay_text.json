@@ -1,0 +1,25 @@
+{
+  "recipe": "overlay_text",
+  "held_out": false,
+  "before_text": "1,11,646.33",
+  "after_text": "INR 2,01,322.02",
+  "region": {
+    "x": 806,
+    "y": 789,
+    "w": 310,
+    "h": 70
+  },
+  "normalized_bbox": [
+    0.6495,
+    0.4498,
+    0.2498,
+    0.0399
+  ],
+  "sample_id": "tampered_0071_overlay_text",
+  "clean_id": "clean_0071_hospital_bill_daycare",
+  "template": "hospital_bill_daycare",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0071_overlay_text.png",
+  "mask_path": "data\\training\\tampered\\tampered_0071_overlay_text_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0071_overlay_text.json"
+}

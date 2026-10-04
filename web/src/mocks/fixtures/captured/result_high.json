@@ -1,0 +1,1301 @@
+{
+  "id": "1ab02024-e510-4ea9-913f-9d8c7696ad81",
+  "claim_id": null,
+  "mode": "claim",
+  "created_at": "2026-10-03T20:18:53.936866",
+  "image": {
+    "pipeline": "image",
+    "risk": 0.6552,
+    "authenticity": 0.3448,
+    "band": "HIGH",
+    "confidence": "high",
+    "evidence_ids": [
+      "IMG-QUAL-01",
+      "IMG-EXIF-01",
+      "IMG-EXIF-02a",
+      "IMG-AI-01",
+      "IMG-ELA-01",
+      "IMG-NOISE-01"
+    ]
+  },
+  "document": {
+    "pipeline": "document",
+    "risk": 0.9501,
+    "authenticity": 0.0499,
+    "band": "HIGH",
+    "confidence": "high",
+    "evidence_ids": [
+      "DOC-META-01",
+      "DOC-META-02",
+      "DOC-META-03",
+      "DOC-LOGIC-01",
+      "DOC-LOGIC-07",
+      "DOC-FONT-01",
+      "DOC-CNN-01"
+    ]
+  },
+  "identity": null,
+  "claim": {
+    "pipeline": "claim",
+    "risk": 0.63,
+    "authenticity": 0.37,
+    "band": "MEDIUM",
+    "confidence": "high",
+    "evidence_ids": [
+      "DOC-DUP-01"
+    ]
+  },
+  "overall": {
+    "risk": 0.8886,
+    "band": "HIGH",
+    "confidence": "low",
+    "summary": "HIGH fraud likelihood (89%). The invoice number INV-2024-9912 from  was previously submitted in claim full_claim_live_eval. The line items add up to INR 24,000.00 but the stated total is INR 88,500.00. Stated amount in words parses to INR 28,320.00, which differs from the numeric digits INR 88,500.00. The file's metadata names an AI image generator (Midjourney v6.0). Analysis confidence is low due to degraded input quality or limited checks. Recommended action: Escalate immediately to Special Investigation Unit (SIU) for detailed fraud investigation."
+  },
+  "evidence": [
+    {
+      "id": "DOC-DUP-01",
+      "kind": "risk",
+      "raw_score": 0.9,
+      "calibrated_score": 0.9,
+      "weight": 0.7,
+      "effective_weight": 0.7,
+      "severity": "high",
+      "title": "Duplicate Invoice/Receipt Across Claims",
+      "reason": "The invoice number INV-2024-9912 from vendor was previously submitted in claim full_claim_live_eval.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "invoice_number": "INV-2024-9912",
+        "issuer": "",
+        "other_id": "full_claim_live_eval",
+        "contribution": 0.63
+      },
+      "artifact": null,
+      "pipeline": "claim",
+      "source": "rules",
+      "contribution": 0.63,
+      "contribution_pct": 100.0,
+      "rank": 1,
+      "pipeline_input": null,
+      "page": 1
+    },
+    {
+      "id": "DOC-LOGIC-01",
+      "kind": "risk",
+      "raw_score": 0.9186440677966101,
+      "calibrated_score": 0.9186440677966101,
+      "weight": 0.8,
+      "effective_weight": 0.8,
+      "severity": "high",
+      "title": "Line Items Sum Mismatch",
+      "reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.66,
+        "y": 0.2869,
+        "w": 0.2667,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.66,
+          0.2869,
+          0.2667,
+          0.0181
+        ],
+        [
+          0.0733,
+          0.2011,
+          0.8534,
+          0.0147
+        ],
+        [
+          0.0733,
+          0.2225,
+          0.8534,
+          0.0147
+        ]
+      ],
+      "details": {
+        "expected": 24000.0,
+        "found": 88500.0,
+        "diff": 64500.0,
+        "items_count": 2,
+        "contribution": 0.5156
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.5156,
+      "contribution_pct": 54.3,
+      "rank": 2,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "IMG-AI-01",
+      "kind": "risk",
+      "raw_score": 0.7074,
+      "calibrated_score": 0.7074,
+      "weight": 0.65,
+      "effective_weight": 0.65,
+      "severity": "high",
+      "title": "AI Generated",
+      "reason": "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "p_ai_raw": 0.7074,
+        "raw_logits": [
+          2.5293,
+          1.6467
+        ],
+        "p_ai_tta_q85": 0.1225,
+        "p_ai_crop": null,
+        "tta_disagreement": true,
+        "crop_evaluated": false,
+        "temperature": 1.0,
+        "uncalibrated": false,
+        "model": "Ateeqq/ai-vs-human-image-detector",
+        "p": 0.7074,
+        "contribution": 0.4081
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.4081,
+      "contribution_pct": 62.3,
+      "rank": 3,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-LOGIC-07",
+      "kind": "risk",
+      "raw_score": 0.85,
+      "calibrated_score": 0.85,
+      "weight": 0.7,
+      "effective_weight": 0.7,
+      "severity": "high",
+      "title": "Amount in Words Mismatch",
+      "reason": "Stated amount in words parses to INR 28,320.00, but digit total states INR 88,500.00.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.66,
+        "y": 0.2869,
+        "w": 0.2667,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.66,
+          0.2869,
+          0.2667,
+          0.0181
+        ]
+      ],
+      "details": {
+        "words_text": "Twenty-Eight Thousand Three Hundred Twenty Rupees Only",
+        "parsed_from_words": 28320.0,
+        "numeric_digits": 88500.0,
+        "diff": 60180.0,
+        "contribution": 0.2732
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.2732,
+      "contribution_pct": 28.8,
+      "rank": 4,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-02a",
+      "kind": "risk",
+      "raw_score": 0.95,
+      "calibrated_score": 0.95,
+      "weight": 0.3,
+      "effective_weight": 0.3,
+      "severity": "high",
+      "title": "AI Software in EXIF",
+      "reason": "File metadata explicitly names an AI image generator (Midjourney v6.0).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "software": "Midjourney v6.0",
+        "generator": "midjourney",
+        "contribution": 0.1911
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.1911,
+      "contribution_pct": 29.2,
+      "rank": 5,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-FONT-01",
+      "kind": "risk",
+      "raw_score": 0.75,
+      "calibrated_score": 0.75,
+      "weight": 0.4,
+      "effective_weight": 0.4,
+      "severity": "high",
+      "title": "Font Mismatch in Field Group",
+      "reason": "The value '88,500.00' uses font 'Times-Bold', differing from the column's dominant font 'Helvetica'.",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.8528,
+        "y": 0.2869,
+        "w": 0.0739,
+        "h": 0.0181
+      },
+      "bboxes": [
+        [
+          0.8528,
+          0.2869,
+          0.0739,
+          0.0181
+        ]
+      ],
+      "details": {
+        "text": "88,500.00",
+        "font_a": "Times-Bold",
+        "font_b": "Helvetica",
+        "page": 1,
+        "contribution": 0.0797
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "rules",
+      "contribution": 0.0797,
+      "contribution_pct": 8.4,
+      "rank": 6,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "IMG-NOISE-01",
+      "kind": "risk",
+      "raw_score": 0.4019,
+      "calibrated_score": 0.4019,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "medium",
+      "title": "Inconsistent Noise",
+      "reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "noise_dispersion": 0.5704,
+        "blocks_analyzed": 25,
+        "flat_blocks_excluded": 45,
+        "fft_periodicity_ratio": 30.26,
+        "contribution": 0.0308
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0308,
+      "contribution_pct": 4.7,
+      "rank": 7,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-02",
+      "kind": "risk",
+      "raw_score": 0.7,
+      "calibrated_score": 0.7,
+      "weight": 0.2,
+      "effective_weight": 0.2,
+      "severity": "high",
+      "title": "Modified Long After Creation",
+      "reason": "The PDF was modified 1493.5 hours after it was created.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "delta": "1493.5 hours",
+        "diff_seconds": 5376600.0,
+        "producer": "Canva PDF Generator (Online Tool)",
+        "contribution": 0.0303
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0303,
+      "contribution_pct": 3.2,
+      "rank": 8,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-03",
+      "kind": "risk",
+      "raw_score": 0.65,
+      "calibrated_score": 0.65,
+      "weight": 0.2,
+      "effective_weight": 0.2,
+      "severity": "high",
+      "title": "Appended Revisions Detected",
+      "reason": "The PDF file contains 2 revision segments appended after its first save.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "eof_count": 2,
+        "contribution": 0.0278
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0278,
+      "contribution_pct": 2.9,
+      "rank": 9,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "IMG-EXIF-01",
+      "kind": "risk",
+      "raw_score": 0.5,
+      "calibrated_score": 0.5,
+      "weight": 0.1,
+      "effective_weight": 0.1,
+      "severity": "low",
+      "title": "Missing Camera EXIF",
+      "reason": "The file lacks expected camera device metadata (Make/Model). Commonly stripped by messaging apps.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "present_tags": [
+          "Software"
+        ],
+        "contribution": 0.0252
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0252,
+      "contribution_pct": 3.8,
+      "rank": 10,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-META-01",
+      "kind": "risk",
+      "raw_score": 0.75,
+      "calibrated_score": 0.75,
+      "weight": 0.15,
+      "effective_weight": 0.15,
+      "severity": "high",
+      "title": "Consumer/Online Editor Producer",
+      "reason": "The PDF was created or modified using a consumer tool (Canva).",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "matched_tool": "canva",
+        "producer": "Canva PDF Generator (Online Tool)",
+        "creator": "iLovePDF Online Editor",
+        "contribution": 0.0236
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "metadata",
+      "contribution": 0.0236,
+      "contribution_pct": 2.5,
+      "rank": 11,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "IMG-QUAL-01",
+      "kind": "info",
+      "raw_score": 0.0,
+      "calibrated_score": 0.0,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "Input Quality Warning",
+      "reason": "Degraded input quality detected: low resolution (640x480 px). Secondary forensic detector weights gated.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "width": 640,
+        "height": 480,
+        "megapixels": 0.31,
+        "jpeg_quality": 94,
+        "sharpness": 372.62,
+        "is_screenshot": false,
+        "mime_type": "image/jpeg",
+        "short_side": 480,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "IMG-ELA-01",
+      "kind": "info",
+      "raw_score": 0.5174,
+      "calibrated_score": 0.5174,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "low",
+      "title": "ELA Compression Anomaly",
+      "reason": "One region of the photo was compressed differently from the rest (supporting context — low discriminative AUC).",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.486,
+        "y": 0.367,
+        "w": 0.402,
+        "h": 0.26
+      },
+      "bboxes": null,
+      "details": {
+        "anomaly_fraction": 0.0404,
+        "anomalous_pixels": 12407,
+        "threshold": 25.0,
+        "largest_region_area": 5600,
+        "auc": 0.4667,
+        "auc_rule": "AUC < 0.60 → info-only, not scored",
+        "contribution": 0.0
+      },
+      "artifact": "ela_heatmap.png",
+      "pipeline": null,
+      "source": null,
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "img_1",
+      "page": 1
+    },
+    {
+      "id": "DOC-CNN-01",
+      "kind": "warning",
+      "raw_score": 0.991,
+      "calibrated_score": 0.991,
+      "weight": 0.45,
+      "effective_weight": 0.45,
+      "severity": "high",
+      "title": "Tamper CNN Anomaly",
+      "reason": "Unconfirmed compression pattern – no supporting field evidence",
+      "field": null,
+      "bbox": {
+        "page": 1,
+        "x": 0.6696,
+        "y": 0.0,
+        "w": 0.3102,
+        "h": 0.1842
+      },
+      "bboxes": [
+        [
+          0.6696,
+          0.0,
+          0.3102,
+          0.1842
+        ],
+        [
+          0.357,
+          0.1083,
+          0.1579,
+          0.0741
+        ],
+        [
+          0.0,
+          0.1465,
+          0.0548,
+          0.0747
+        ]
+      ],
+      "details": {
+        "page": 1,
+        "score": 0.991,
+        "temperature": 2.0468750000000027,
+        "artifact": "page_1_tamper.png",
+        "corroborated": false,
+        "contribution": 0.0
+      },
+      "artifact": null,
+      "pipeline": "document",
+      "source": "forensics",
+      "contribution": 0.0,
+      "contribution_pct": 0.0,
+      "rank": null,
+      "pipeline_input": "doc",
+      "page": 1
+    },
+    {
+      "id": "OVERRIDE-O2",
+      "kind": "info",
+      "raw_score": 0.85,
+      "calibrated_score": 0.85,
+      "weight": 0.0,
+      "effective_weight": 0.0,
+      "severity": "high",
+      "title": "Rule O2 Applied",
+      "reason": "Rule O2 applied: mathematical mismatch confirmed by tamper detection.",
+      "field": null,
+      "bbox": null,
+      "bboxes": null,
+      "details": {
+        "rule": "O2",
+        "floor": 0.85
+      },
+      "artifact": null,
+      "pipeline": null,
+      "source": null,
+      "contribution": null,
+      "contribution_pct": null,
+      "rank": null,
+      "pipeline_input": null,
+      "page": 1
+    }
+  ],
+  "detector_status": [
+    {
+      "detector": "img_1:preprocess",
+      "status": "ok",
+      "duration_ms": 26,
+      "error": null
+    },
+    {
+      "detector": "img_1:metadata",
+      "status": "ok",
+      "duration_ms": 539,
+      "error": null
+    },
+    {
+      "detector": "img_1:ai_detector",
+      "status": "ok",
+      "duration_ms": 2190,
+      "error": null
+    },
+    {
+      "detector": "img_1:ela",
+      "status": "ok",
+      "duration_ms": 45,
+      "error": null
+    },
+    {
+      "detector": "img_1:noise",
+      "status": "ok",
+      "duration_ms": 26,
+      "error": null
+    },
+    {
+      "detector": "img_1:localization",
+      "status": "ok",
+      "duration_ms": 45,
+      "error": null
+    },
+    {
+      "detector": "doc:document_kind",
+      "status": "ok",
+      "duration_ms": 51,
+      "error": null
+    },
+    {
+      "detector": "doc:pdf_parser",
+      "status": "ok",
+      "duration_ms": 60,
+      "error": null
+    },
+    {
+      "detector": "doc:document_ocr",
+      "status": "ok",
+      "duration_ms": 4353,
+      "error": null
+    },
+    {
+      "detector": "doc:document_fields",
+      "status": "ok",
+      "duration_ms": 4,
+      "error": null
+    },
+    {
+      "detector": "doc:document_rules",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "doc:document_fonts",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "doc:tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1798,
+      "error": null
+    },
+    {
+      "detector": "doc:document_anomaly",
+      "status": "ok",
+      "duration_ms": 29,
+      "error": null
+    },
+    {
+      "detector": "doc:visual_ela",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_photo_incident_date",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_photo_gps_location",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_amount_match",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_chronology",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_bill_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_policy_validity",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_vehicle_number",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_id_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:check_duplicate_document",
+      "status": "ok",
+      "duration_ms": 7,
+      "error": null
+    },
+    {
+      "detector": "claim:check_duplicate_images",
+      "status": "ok",
+      "duration_ms": 255,
+      "error": null
+    },
+    {
+      "detector": "claim:network_cross_check",
+      "status": "ok",
+      "duration_ms": 0,
+      "error": null
+    },
+    {
+      "detector": "claim:story_review",
+      "status": "skipped",
+      "duration_ms": 2,
+      "error": null
+    }
+  ],
+  "quality_warnings": [
+    {
+      "code": "LOW_RES",
+      "message": "Short side < 512 px (480 px)."
+    }
+  ],
+  "artifacts": {
+    "preview_img_1": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/preview_img_1.jpg?exp=1791145126&sig=0dbb77df44b17ddf080340825053cde93fad7497c6fb2a1905c63e24f2245fd3",
+    "preview_image": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/preview_img_1.jpg?exp=1791145126&sig=0dbb77df44b17ddf080340825053cde93fad7497c6fb2a1905c63e24f2245fd3",
+    "preview_document": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/preview_doc.pdf?exp=1791145126&sig=d0a3cff873c68a59a98306abd0770173e25d5cc470f96c4935e21af7c4dcb286",
+    "ela_heatmap": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/ela_heatmap.png?exp=1791145133&sig=5c886754d02bff2adaac79c4a24486c67319fd458c1e7d2fc4bd024062a752c0",
+    "overlay": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/overlay.png?exp=1791145133&sig=620721fa4c0cdbb10072c853597fe8d19ab01868b1774de34ca61978395a0955",
+    "image_heatmap": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/image_heatmap.png?exp=1791145133&sig=cf2ac0ff7d3006a3ef145859cc88c86b4b2fa3e33b554fde46594de58cec2835",
+    "page_1": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/page_1.png?exp=1791145133&sig=b75b1499733a44d3b8ee1de95be1dfda7281aa37994f26752136c3baab3f2476",
+    "page_1_boxes": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/page_1_boxes.png?exp=1791145133&sig=65ef71f7d07c8b7fdf716bbd173e3b1312c1e3ef28be82e00eb33f6e59a237be",
+    "location": {
+      "claimed": {
+        "lat": null,
+        "lng": null,
+        "text": ""
+      },
+      "photos": [],
+      "max_distance_km": 0.0
+    },
+    "pages": [
+      {
+        "page": 1,
+        "width_pt": 595.0,
+        "height_pt": 842.0,
+        "image_url": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/page_1.png?exp=1791145133&sig=b75b1499733a44d3b8ee1de95be1dfda7281aa37994f26752136c3baab3f2476",
+        "annotated_url": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/page_1_boxes.png?exp=1791145133&sig=65ef71f7d07c8b7fdf716bbd173e3b1312c1e3ef28be82e00eb33f6e59a237be",
+        "tamper_heatmap_url": "/api/v1/artifacts/1ab02024-e510-4ea9-913f-9d8c7696ad81/page_1_tamper.png?exp=1791145133&sig=22b268072846401041fbe7d75fb74563167e7444436c007c4c459b1fd9223e5c"
+      }
+    ]
+  },
+  "versions": {
+    "detector": "Ateeqq/ai-vs-human-image-detector",
+    "face_engine": "sface",
+    "calibration_date": "2026-10-02",
+    "git_commit": "e8d47bf",
+    "engine": "lucen-2.0"
+  },
+  "location": {
+    "claimed": {
+      "lat": null,
+      "lng": null,
+      "text": ""
+    },
+    "photos": [],
+    "max_distance_km": 0.0
+  },
+  "voice": null,
+  "voice_details": null,
+  "liveness": null,
+  "aadhaar_qr": null,
+  "story": null,
+  "links": null,
+  "decision": null,
+  "image_results": [
+    {
+      "pipeline": "img_1",
+      "risk": 0.6552,
+      "authenticity": 0.3448,
+      "band": "HIGH",
+      "confidence": "high",
+      "evidence_ids": [
+        "IMG-QUAL-01",
+        "IMG-EXIF-01",
+        "IMG-EXIF-02a",
+        "IMG-AI-01",
+        "IMG-ELA-01",
+        "IMG-NOISE-01"
+      ]
+    }
+  ],
+  "why_this_score": {
+    "image": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "IMG-EXIF-01",
+          "title": "Missing Camera EXIF",
+          "w": 0.1,
+          "p": 0.5,
+          "push": 0.05,
+          "contribution_pct": 3.8
+        },
+        {
+          "evidence_id": "IMG-EXIF-02a",
+          "title": "AI Software in EXIF",
+          "w": 0.3,
+          "p": 0.95,
+          "push": 0.285,
+          "contribution_pct": 29.2
+        },
+        {
+          "evidence_id": "IMG-AI-01",
+          "title": "AI Generated",
+          "w": 0.65,
+          "p": 0.7074,
+          "push": 0.4598,
+          "contribution_pct": 62.3
+        },
+        {
+          "evidence_id": "IMG-NOISE-01",
+          "title": "Inconsistent Noise",
+          "w": 0.15,
+          "p": 0.4019,
+          "push": 0.0603,
+          "contribution_pct": 4.7
+        }
+      ],
+      "formula": "1 - (1 - 0.050) * (1 - 0.285) * (1 - 0.460) * (1 - 0.060) = 0.655",
+      "overrides_applied": [],
+      "quality_gates_applied": [
+        {
+          "detector": "LOW_RES",
+          "factor": 0.7,
+          "reason": "Short side < 512 px (480 px)."
+        }
+      ]
+    },
+    "document": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "DOC-META-01",
+          "title": "Consumer/Online Editor Producer",
+          "w": 0.15,
+          "p": 0.75,
+          "push": 0.1125,
+          "contribution_pct": 2.5
+        },
+        {
+          "evidence_id": "DOC-META-02",
+          "title": "Modified Long After Creation",
+          "w": 0.2,
+          "p": 0.7,
+          "push": 0.14,
+          "contribution_pct": 3.2
+        },
+        {
+          "evidence_id": "DOC-META-03",
+          "title": "Appended Revisions Detected",
+          "w": 0.2,
+          "p": 0.65,
+          "push": 0.13,
+          "contribution_pct": 2.9
+        },
+        {
+          "evidence_id": "DOC-LOGIC-01",
+          "title": "Line Items Sum Mismatch",
+          "w": 0.8,
+          "p": 0.9186440677966101,
+          "push": 0.7349,
+          "contribution_pct": 54.3
+        },
+        {
+          "evidence_id": "DOC-LOGIC-07",
+          "title": "Amount in Words Mismatch",
+          "w": 0.7,
+          "p": 0.85,
+          "push": 0.595,
+          "contribution_pct": 28.8
+        },
+        {
+          "evidence_id": "DOC-FONT-01",
+          "title": "Font Mismatch in Field Group",
+          "w": 0.4,
+          "p": 0.75,
+          "push": 0.3,
+          "contribution_pct": 8.4
+        }
+      ],
+      "formula": "1 - (1 - 0.113) * (1 - 0.140) * (1 - 0.130) * (1 - 0.735) * (1 - 0.595) * (1 - 0.300) = 0.950",
+      "overrides_applied": [
+        "Rule O2 applied: mathematical mismatch confirmed by tamper detection."
+      ],
+      "quality_gates_applied": []
+    },
+    "identity": null,
+    "voice": null,
+    "claim": {
+      "evidence_contributions": [
+        {
+          "evidence_id": "DOC-DUP-01",
+          "title": "Duplicate Invoice/Receipt Across Claims",
+          "w": 0.7,
+          "p": 0.9,
+          "push": 0.63,
+          "contribution_pct": 100.0
+        }
+      ],
+      "formula": "1 - (1 - 0.630) = 0.630",
+      "overrides_applied": [],
+      "quality_gates_applied": []
+    },
+    "overall": {
+      "formula": "0.7 * max(0.950) + 0.3 * mean(0.745) = 0.7*0.950 + 0.3*0.745 = 0.889",
+      "pipeline_risks": {
+        "document": 0.9501,
+        "image": 0.6552,
+        "claim": 0.63
+      },
+      "overrides_applied": [
+        "Rule O2 applied: mathematical mismatch confirmed by tamper detection."
+      ]
+    },
+    "items": [
+      {
+        "evidence_id": "DOC-DUP-01",
+        "title": "Duplicate Invoice/Receipt Across Claims",
+        "w": 0.7,
+        "p": 0.9,
+        "push": 0.63,
+        "contribution_pct": 100.0
+      },
+      {
+        "evidence_id": "IMG-AI-01",
+        "title": "AI Generated",
+        "w": 0.65,
+        "p": 0.7074,
+        "push": 0.4598,
+        "contribution_pct": 62.3
+      },
+      {
+        "evidence_id": "DOC-LOGIC-01",
+        "title": "Line Items Sum Mismatch",
+        "w": 0.8,
+        "p": 0.9186440677966101,
+        "push": 0.7349,
+        "contribution_pct": 54.3
+      },
+      {
+        "evidence_id": "IMG-EXIF-02a",
+        "title": "AI Software in EXIF",
+        "w": 0.3,
+        "p": 0.95,
+        "push": 0.285,
+        "contribution_pct": 29.2
+      },
+      {
+        "evidence_id": "DOC-LOGIC-07",
+        "title": "Amount in Words Mismatch",
+        "w": 0.7,
+        "p": 0.85,
+        "push": 0.595,
+        "contribution_pct": 28.8
+      },
+      {
+        "evidence_id": "DOC-FONT-01",
+        "title": "Font Mismatch in Field Group",
+        "w": 0.4,
+        "p": 0.75,
+        "push": 0.3,
+        "contribution_pct": 8.4
+      },
+      {
+        "evidence_id": "IMG-NOISE-01",
+        "title": "Inconsistent Noise",
+        "w": 0.15,
+        "p": 0.4019,
+        "push": 0.0603,
+        "contribution_pct": 4.7
+      },
+      {
+        "evidence_id": "IMG-EXIF-01",
+        "title": "Missing Camera EXIF",
+        "w": 0.1,
+        "p": 0.5,
+        "push": 0.05,
+        "contribution_pct": 3.8
+      },
+      {
+        "evidence_id": "DOC-META-02",
+        "title": "Modified Long After Creation",
+        "w": 0.2,
+        "p": 0.7,
+        "push": 0.14,
+        "contribution_pct": 3.2
+      },
+      {
+        "evidence_id": "DOC-META-03",
+        "title": "Appended Revisions Detected",
+        "w": 0.2,
+        "p": 0.65,
+        "push": 0.13,
+        "contribution_pct": 2.9
+      },
+      {
+        "evidence_id": "DOC-META-01",
+        "title": "Consumer/Online Editor Producer",
+        "w": 0.15,
+        "p": 0.75,
+        "push": 0.1125,
+        "contribution_pct": 2.5
+      }
+    ]
+  },
+  "why_this_score_items": [
+    {
+      "evidence_id": "DOC-DUP-01",
+      "title": "Duplicate Invoice/Receipt Across Claims",
+      "w": 0.7,
+      "p": 0.9,
+      "push": 0.63,
+      "contribution_pct": 100.0
+    },
+    {
+      "evidence_id": "IMG-AI-01",
+      "title": "AI Generated",
+      "w": 0.65,
+      "p": 0.7074,
+      "push": 0.4598,
+      "contribution_pct": 62.3
+    },
+    {
+      "evidence_id": "DOC-LOGIC-01",
+      "title": "Line Items Sum Mismatch",
+      "w": 0.8,
+      "p": 0.9186440677966101,
+      "push": 0.7349,
+      "contribution_pct": 54.3
+    },
+    {
+      "evidence_id": "IMG-EXIF-02a",
+      "title": "AI Software in EXIF",
+      "w": 0.3,
+      "p": 0.95,
+      "push": 0.285,
+      "contribution_pct": 29.2
+    },
+    {
+      "evidence_id": "DOC-LOGIC-07",
+      "title": "Amount in Words Mismatch",
+      "w": 0.7,
+      "p": 0.85,
+      "push": 0.595,
+      "contribution_pct": 28.8
+    },
+    {
+      "evidence_id": "DOC-FONT-01",
+      "title": "Font Mismatch in Field Group",
+      "w": 0.4,
+      "p": 0.75,
+      "push": 0.3,
+      "contribution_pct": 8.4
+    },
+    {
+      "evidence_id": "IMG-NOISE-01",
+      "title": "Inconsistent Noise",
+      "w": 0.15,
+      "p": 0.4019,
+      "push": 0.0603,
+      "contribution_pct": 4.7
+    },
+    {
+      "evidence_id": "IMG-EXIF-01",
+      "title": "Missing Camera EXIF",
+      "w": 0.1,
+      "p": 0.5,
+      "push": 0.05,
+      "contribution_pct": 3.8
+    },
+    {
+      "evidence_id": "DOC-META-02",
+      "title": "Modified Long After Creation",
+      "w": 0.2,
+      "p": 0.7,
+      "push": 0.14,
+      "contribution_pct": 3.2
+    },
+    {
+      "evidence_id": "DOC-META-03",
+      "title": "Appended Revisions Detected",
+      "w": 0.2,
+      "p": 0.65,
+      "push": 0.13,
+      "contribution_pct": 2.9
+    },
+    {
+      "evidence_id": "DOC-META-01",
+      "title": "Consumer/Online Editor Producer",
+      "w": 0.15,
+      "p": 0.75,
+      "push": 0.1125,
+      "contribution_pct": 2.5
+    }
+  ],
+  "checks_run": [
+    {
+      "detector": "img_1:preprocess",
+      "status": "ok",
+      "duration_ms": 26,
+      "reason": null
+    },
+    {
+      "detector": "img_1:metadata",
+      "status": "ok",
+      "duration_ms": 539,
+      "reason": null
+    },
+    {
+      "detector": "img_1:ai_detector",
+      "status": "ok",
+      "duration_ms": 2190,
+      "reason": null
+    },
+    {
+      "detector": "img_1:ela",
+      "status": "ok",
+      "duration_ms": 45,
+      "reason": null
+    },
+    {
+      "detector": "img_1:noise",
+      "status": "ok",
+      "duration_ms": 26,
+      "reason": null
+    },
+    {
+      "detector": "img_1:localization",
+      "status": "ok",
+      "duration_ms": 45,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_kind",
+      "status": "ok",
+      "duration_ms": 51,
+      "reason": null
+    },
+    {
+      "detector": "doc:pdf_parser",
+      "status": "ok",
+      "duration_ms": 60,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_ocr",
+      "status": "ok",
+      "duration_ms": 4353,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_fields",
+      "status": "ok",
+      "duration_ms": 4,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_rules",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_fonts",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "doc:tamper_cnn",
+      "status": "ok",
+      "duration_ms": 1798,
+      "reason": null
+    },
+    {
+      "detector": "doc:document_anomaly",
+      "status": "ok",
+      "duration_ms": 29,
+      "reason": null
+    },
+    {
+      "detector": "doc:visual_ela",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_photo_incident_date",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_photo_gps_location",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_amount_match",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_chronology",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_bill_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_policy_validity",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_vehicle_number",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_id_name",
+      "status": "skipped",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_duplicate_document",
+      "status": "ok",
+      "duration_ms": 7,
+      "reason": null
+    },
+    {
+      "detector": "claim:check_duplicate_images",
+      "status": "ok",
+      "duration_ms": 255,
+      "reason": null
+    },
+    {
+      "detector": "claim:network_cross_check",
+      "status": "ok",
+      "duration_ms": 0,
+      "reason": null
+    },
+    {
+      "detector": "claim:story_review",
+      "status": "skipped",
+      "duration_ms": 2,
+      "reason": null
+    }
+  ],
+  "top_reasons": [
+    "The invoice number INV-2024-9912 from vendor was previously submitted in claim full_claim_live_eval.",
+    "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00.",
+    "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration).",
+    "Stated amount in words parses to INR 28,320.00, but digit total states INR 88,500.00.",
+    "File metadata explicitly names an AI image generator (Midjourney v6.0)."
+  ],
+  "recommended_action": "Escalate to Special Investigation Unit (SIU) for detailed forensic document inspection and claimant interview.",
+  "summary_source": "template"
+}

@@ -1,0 +1,23 @@
+{
+  "sample_id": "clean_0017_hospital_bill_ipd",
+  "template": "hospital_bill_ipd",
+  "split": "train",
+  "seed": 1017,
+  "created_at": "2026-10-03T12:35:32.087283",
+  "fields": {
+    "document_type": "Hospital Bill",
+    "bill_number": "MED-HB-766055",
+    "patient_name": "Devika Chaudry",
+    "uhid": "UHID-4200714",
+    "admission_date": "06/04/2026",
+    "discharge_date": "11/04/2026",
+    "hospital_name": "Sane, Halder and Chandra Multi-Speciality Hospital",
+    "subtotal": 109642.37,
+    "total_amount": 109642.37,
+    "amount_in_words": "One Lakh Nine Thousand Six Hundred Forty Two Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0017_hospital_bill_ipd.pdf",
+  "png_path": "data\\training\\clean\\clean_0017_hospital_bill_ipd.png",
+  "json_path": "data\\training\\clean\\clean_0017_hospital_bill_ipd.json"
+}

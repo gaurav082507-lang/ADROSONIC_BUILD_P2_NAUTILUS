@@ -1,0 +1,25 @@
+{
+  "recipe": "style_change",
+  "held_out": false,
+  "before_text": "2,05,000.00",
+  "after_text": "2,05,000.00 (bold_red)",
+  "region": {
+    "x": 868,
+    "y": 736,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4196,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0075_style_change",
+  "clean_id": "clean_0075_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0075_style_change.png",
+  "mask_path": "data\\training\\tampered\\tampered_0075_style_change_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0075_style_change.json"
+}

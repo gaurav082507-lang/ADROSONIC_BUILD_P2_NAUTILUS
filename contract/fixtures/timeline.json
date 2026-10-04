@@ -1,0 +1,23 @@
+{
+  "events": [
+    {
+      "timestamp": "2026-10-03T22:08:26+05:30",
+      "at": "2026-10-03T22:08:26.328297",
+      "kind": "analysis_complete",
+      "source": "system",
+      "source_badge": "System Event",
+      "label": "AI forensic analysis completed",
+      "confidence": "exact",
+      "artifact_id": null,
+      "id": "ev_1"
+    }
+  ],
+  "contradictions": [],
+  "undated": [
+    {
+      "artifact_id": "img_1",
+      "label": "Photo img_1 (no EXIF capture date)"
+    }
+  ],
+  "timezone_note": "Timestamps without explicit offset are assumed to be in Indian Standard Time (IST, UTC+05:30)."
+}

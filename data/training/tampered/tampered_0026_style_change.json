@@ -1,0 +1,25 @@
+{
+  "recipe": "style_change",
+  "held_out": false,
+  "before_text": "5,52,676.51",
+  "after_text": "5,52,676.51 (bold_red)",
+  "region": {
+    "x": 868,
+    "y": 736,
+    "w": 273,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.6994,
+    0.4196,
+    0.22,
+    0.0348
+  ],
+  "sample_id": "tampered_0026_style_change",
+  "clean_id": "clean_0026_gst_invoice_corp",
+  "template": "gst_invoice_corp",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0026_style_change.png",
+  "mask_path": "data\\training\\tampered\\tampered_0026_style_change_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0026_style_change.json"
+}

@@ -1,0 +1,25 @@
+{
+  "recipe": "digit_replacement",
+  "held_out": false,
+  "before_text": "1,19,107.89",
+  "after_text": "3,02,366.38",
+  "region": {
+    "x": 893,
+    "y": 897,
+    "w": 248,
+    "h": 61
+  },
+  "normalized_bbox": [
+    0.7196,
+    0.5114,
+    0.1998,
+    0.0348
+  ],
+  "sample_id": "tampered_0084_digit_replacement",
+  "clean_id": "clean_0084_hospital_bill_daycare",
+  "template": "hospital_bill_daycare",
+  "split": "test",
+  "png_path": "data\\training\\tampered\\tampered_0084_digit_replacement.png",
+  "mask_path": "data\\training\\tampered\\tampered_0084_digit_replacement_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0084_digit_replacement.json"
+}

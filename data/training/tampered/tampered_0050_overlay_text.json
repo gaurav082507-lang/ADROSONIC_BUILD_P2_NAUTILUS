@@ -1,0 +1,25 @@
+{
+  "recipe": "overlay_text",
+  "held_out": false,
+  "before_text": "2,49,000.00",
+  "after_text": "INR 6,98,799.80",
+  "region": {
+    "x": 806,
+    "y": 789,
+    "w": 310,
+    "h": 70
+  },
+  "normalized_bbox": [
+    0.6495,
+    0.4498,
+    0.2498,
+    0.0399
+  ],
+  "sample_id": "tampered_0050_overlay_text",
+  "clean_id": "clean_0050_hard_neg_mixed_fonts",
+  "template": "hard_neg_mixed_fonts",
+  "split": "train",
+  "png_path": "data\\training\\tampered\\tampered_0050_overlay_text.png",
+  "mask_path": "data\\training\\tampered\\tampered_0050_overlay_text_mask.png",
+  "json_path": "data\\training\\tampered\\tampered_0050_overlay_text.json"
+}

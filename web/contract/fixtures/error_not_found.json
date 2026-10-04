@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "RESULT_NOT_FOUND",
+    "message": "Analysis result 'does-not-exist' not found.",
+    "details": {
+      "result_id": "does-not-exist"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "items": [
+    {
+      "id": "271ed3b0-90d6-4f6a-8a09-18f0978ce604",
+      "created_at": "2026-10-03T22:08:40.437257",
+      "mode": "claim",
+      "overall_risk": 0.9,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/271ed3b0-90d6-4f6a-8a09-18f0978ce604/preview_img_1.jpg?exp=1791151716&sig=c97a31369a2c57993a600c690029815b0b4ac496c4f5a38fd0e773e5e60b9831",
+      "evidence_count": 9,
+      "top_reason": "This photo was previously submitted by a different claimant (Ravi K.) in claim claim_demo_01 (100% similar, exact)."
+    },
+    {
+      "id": "c6cc55d5-55b1-4fad-9676-b801b7442e71",
+      "created_at": "2026-10-03T22:08:35.004233",
+      "mode": "claim",
+      "overall_risk": 0.9,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/c6cc55d5-55b1-4fad-9676-b801b7442e71/preview_img_1.jpg?exp=1791151707&sig=50c527118dd40d9517e9d5ea82185f14eba2e0a05ba7cbfac913cc80375db0ab",
+      "evidence_count": 8,
+      "top_reason": "This photo was previously submitted by a different claimant (Ravi K.) in claim claim_demo_01 (100% similar, exact)."
+    },
+    {
+      "id": "9fe167ac-5d85-43d1-8143-8e31905e32fa",
+      "created_at": "2026-10-03T22:08:26.328297",
+      "mode": "claim",
+      "overall_risk": 0.92,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/9fe167ac-5d85-43d1-8143-8e31905e32fa/preview_img_1.jpg?exp=1791151698&sig=0201e2dffe0fe35aae5f11227c982c27e239b7ed4147b1fbe75160e23a9d685a",
+      "evidence_count": 17,
+      "top_reason": "This photo was previously submitted by a different claimant (Ravi K.) in claim claim_demo_02 (100% similar, exact)."
+    },
+    {
+      "id": "e14b4a82-4b6a-4050-bee3-6f2ae261a6fe",
+      "created_at": "2026-10-03T22:08:18.359334",
+      "mode": "document",
+      "overall_risk": 0.9501,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/e14b4a82-4b6a-4050-bee3-6f2ae261a6fe/page_1_boxes.png?exp=1791151698&sig=6f92500c9e2ed3fcd4c95f8cad9be7b0b0720d2e3f2486a4d49f3456a7fb8f11",
+      "evidence_count": 8,
+      "top_reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00."
+    },
+    {
+      "id": "b8d82d0f-35d4-4a8e-9bad-ff59e40f9f4e",
+      "created_at": "2026-10-03T22:08:10.773805",
+      "mode": "image",
+      "overall_risk": 0.1309,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/b8d82d0f-35d4-4a8e-9bad-ff59e40f9f4e/preview_img_1.jpg?exp=1791151689&sig=4be71c9e1a2c898e3dc3dc01cf39f283551e1b73052cde76209d9557f50cd11e",
+      "evidence_count": 4,
+      "top_reason": "Noise pattern dispersion across textured image blocks suggests spliced or synthesized regions."
+    },
+    {
+      "id": "9ae58ee2-d5ce-4da1-825e-df0135f6951a",
+      "created_at": "2026-10-03T22:08:08.944834",
+      "mode": "image",
+      "overall_risk": 0.6552,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/9ae58ee2-d5ce-4da1-825e-df0135f6951a/preview_img_1.jpg?exp=1791151688&sig=ab7e6f3bbe8dc922da8470b7ec47dafa6596d552b271f14a23a2b448d7e2f663",
+      "evidence_count": 6,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (71% likelihood after calibration)."
+    },
+    {
+      "id": "7b4784bd-4fa4-43bd-9104-dff6f68155e7",
+      "created_at": "2026-10-03T22:00:25.080318",
+      "mode": "claim",
+      "overall_risk": 0.05,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/7b4784bd-4fa4-43bd-9104-dff6f68155e7/heatmap.json?exp=1791151225&sig=b1b50a623ae7401daba98c6368ad0d6e103241ddb440115933e52659e6c13511",
+      "evidence_count": 0,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    },
+    {
+      "id": "56880b97-2c77-4575-92f9-1c48beecfc83",
+      "created_at": "2026-10-03T22:00:00.773451",
+      "mode": "claim",
+      "overall_risk": 0.7435,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/56880b97-2c77-4575-92f9-1c48beecfc83/preview_img_1.jpg?exp=1791151194&sig=a89d562c8d783a96df1225bcc895be799896ec4f49c94b792fb6285b2a7570bd",
+      "evidence_count": 9,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (100% likelihood after calibration)."
+    },
+    {
+      "id": "4768ad9a-20d9-45ad-b326-d370a954e1c4",
+      "created_at": "2026-10-03T21:59:53.555010",
+      "mode": "claim",
+      "overall_risk": 0.7615,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/4768ad9a-20d9-45ad-b326-d370a954e1c4/preview_img_1.jpg?exp=1791151186&sig=9d99ac3729a0490efe58a8c44e34bffe7361b97ee316929b1dae5a732f453d11",
+      "evidence_count": 9,
+      "top_reason": "The image shows patterns typical of AI-generated pictures (100% likelihood after calibration)."
+    },
+    {
+      "id": "2fc3a960-72c8-4cfc-9c89-314cbfefa959",
+      "created_at": "2026-10-03T21:59:45.795784",
+      "mode": "claim",
+      "overall_risk": 0.8638,
+      "overall_band": "HIGH",
+      "thumbnail_url": "/api/v1/artifacts/2fc3a960-72c8-4cfc-9c89-314cbfefa959/preview_img_1.jpg?exp=1791151178&sig=b971ff1a33776d7277e5f726de4a97decd3ee0df40a6a711ed20ce15c88faefb",
+      "evidence_count": 15,
+      "top_reason": "The line items add up to INR 24,000.00 but the stated total is INR 88,500.00."
+    },
+    {
+      "id": "92e3ea2e-c4d6-432f-b29d-803ade4dc41b",
+      "created_at": "2026-10-03T21:59:38.258805",
+      "mode": "claim",
+      "overall_risk": 0.529,
+      "overall_band": "MEDIUM",
+      "thumbnail_url": "/api/v1/artifacts/92e3ea2e-c4d6-432f-b29d-803ade4dc41b/preview_img_1.jpg?exp=1791151169&sig=d2209a07de99598229d6bfb12e61e7ddabd6d9ff45409cf79ab69862dec679a2",
+      "evidence_count": 7,
+      "top_reason": "The document total (INR 53,100.00) differs from the amount claimed (INR 12,500.00)."
+    },
+    {
+      "id": "res_claim_demo_05",
+      "created_at": "2026-10-03T21:59:29.929545",
+      "mode": "claim",
+      "overall_risk": 0.08,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/res_claim_demo_05/preview_img_1.jpg",
+      "evidence_count": 1,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    },
+    {
+      "id": "res_claim_demo_06",
+      "created_at": "2026-10-03T21:59:29.929545",
+      "mode": "claim",
+      "overall_risk": 0.08,
+      "overall_band": "LOW",
+      "thumbnail_url": "/api/v1/artifacts/res_claim_demo_06/preview_img_1.jpg",
+      "evidence_count": 1,
+      "top_reason": "All automated forensic integrity checks passed with no indicators of manipulation."
+    }
+  ],
+  "total": 13,
+  "page": 1,
+  "page_size": 20
+}

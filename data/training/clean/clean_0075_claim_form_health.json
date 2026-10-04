@@ -1,0 +1,21 @@
+{
+  "sample_id": "clean_0075_claim_form_health",
+  "template": "claim_form_health",
+  "split": "test",
+  "seed": 1075,
+  "created_at": "2026-10-03T12:35:35.664686",
+  "fields": {
+    "document_type": "Claim Form",
+    "claim_number": "CLM-DOC-140791",
+    "policy_number": "POL-39234316",
+    "claimant": "Tejas Bath",
+    "aadhaar_id": "608641883868",
+    "date": "20/03/2026",
+    "total_amount": 205000.0,
+    "amount_in_words": "Two Lakh Five Thousand Rupees Only"
+  },
+  "line_items": [],
+  "pdf_path": "data\\training\\clean\\clean_0075_claim_form_health.pdf",
+  "png_path": "data\\training\\clean\\clean_0075_claim_form_health.png",
+  "json_path": "data\\training\\clean\\clean_0075_claim_form_health.json"
+}
