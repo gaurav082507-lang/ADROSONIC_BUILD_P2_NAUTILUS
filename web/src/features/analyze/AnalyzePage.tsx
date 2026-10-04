@@ -97,7 +97,7 @@ export default function AnalyzePage() {
               setFiles([]);
               setError('');
             }}
-            className={`rounded-md px-4 py-2 text-sm ${mode === x ? 'bg-ink text-white' : 'text-muted'}`}
+            className={`rounded-md px-4 py-2 text-sm ${mode === x ? 'bg-primary-dark text-white' : 'text-muted'}`}
           >
             {x === 'claim' ? 'Full claim' : x[0].toUpperCase() + x.slice(1)}
           </button>
@@ -124,7 +124,7 @@ export default function AnalyzePage() {
         </div>
       )}
       <div className="card mt-5 p-6">
-        <label className="flex min-h-56 cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-border bg-slate-50 p-8 text-center">
+        <label className="flex min-h-56 cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-border bg-bg p-8 text-center">
           <input
             type="file"
             className="sr-only"
@@ -160,7 +160,7 @@ export default function AnalyzePage() {
         {files.length > 0 && (
           <div className="mt-4 space-y-2">
             {files.map((f) => (
-              <div key={`${f.name}-${f.size}`} className="rounded-lg bg-slate-50 p-3 text-sm">
+              <div key={`${f.name}-${f.size}`} className="rounded-lg bg-bg p-3 text-sm">
                 <b>{f.name}</b>
                 <span className="ml-2 text-muted">{f.type}</span>
               </div>
@@ -171,7 +171,7 @@ export default function AnalyzePage() {
         <button
           onClick={submit}
           disabled={busy || !files.length}
-          className="mt-5 w-full rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-white disabled:opacity-30"
+          className="mt-5 w-full rounded-lg bg-primary-dark px-4 py-3 text-sm font-semibold text-white disabled:opacity-30"
         >
           Analyze
         </button>

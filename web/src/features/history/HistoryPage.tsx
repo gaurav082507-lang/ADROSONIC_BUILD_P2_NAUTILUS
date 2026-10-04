@@ -38,7 +38,7 @@ export default function HistoryPage() {
       </div>
       <div className="card mt-6 overflow-hidden">
         <table className="w-full text-left text-sm">
-          <thead className="border-b bg-slate-50 text-xs uppercase text-muted">
+          <thead className="border-b bg-bg text-xs uppercase text-muted">
             <tr>
               <th className="px-5 py-4">Date</th>
               <th>Result</th>

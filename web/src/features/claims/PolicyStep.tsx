@@ -16,7 +16,7 @@ export default function PolicyStep({ policies, selected, onSelect, t }: Props) {
           <button
             key={policy.id}
             onClick={() => onSelect(policy)}
-            className={`w-full rounded-xl border p-4 text-left ${selected === policy.id ? 'border-ink bg-slate-50' : 'border-border'}`}
+            className={`w-full rounded-xl border p-4 text-left ${selected === policy.id ? 'border-ink bg-bg' : 'border-border'}`}
           >
             <div className="font-semibold">{policy.policyNumber}</div>
             <div className="mt-1 text-sm text-muted">

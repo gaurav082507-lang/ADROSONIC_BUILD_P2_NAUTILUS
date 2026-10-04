@@ -19,7 +19,7 @@ export default function TimelineTab({ result }: { result: ResultVM }) {
         <div className="mt-5 space-y-5 border-l pl-6">
           {dated.map((x, i) => (
             <div key={`${x.title}-${i}`} className="relative">
-              <span className="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-ink" />
+              <span className="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-primary-dark" />
               <div className="mono text-xs text-muted">{dateLabel(x.date!)}</div>
               <div className="font-semibold">{x.title}</div>
               {x.detail && <div className="text-sm text-muted">{x.detail}</div>}

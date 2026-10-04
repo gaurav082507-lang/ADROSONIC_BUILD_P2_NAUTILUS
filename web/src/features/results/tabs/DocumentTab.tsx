@@ -29,7 +29,7 @@ export default function DocumentTab({ result }: { result: ResultVM }) {
             Next
           </button>
         </div>
-        <div className="relative mt-5 overflow-auto rounded-xl bg-slate-100">
+        <div className="relative mt-5 overflow-auto rounded-xl bg-nile-soft">
           <img
             src={current.imageUrl}
             alt={`Document page ${current.page}`}

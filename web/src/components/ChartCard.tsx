@@ -34,7 +34,7 @@ export function ChartCard({
         {table ? (
           <div className="max-h-72 overflow-auto">
             <table className="w-full text-left text-sm">
-              <thead className="sticky top-0 bg-slate-50 text-xs uppercase text-muted">
+              <thead className="sticky top-0 bg-bg text-xs uppercase text-muted">
                 <tr>
                   {columns.map((c) => (
                     <th key={c} className="px-2 py-1.5">

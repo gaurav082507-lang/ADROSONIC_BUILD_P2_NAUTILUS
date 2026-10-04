@@ -11,7 +11,7 @@ export function ErrorState({ message, retry }: { message: string; retry: () => v
       <p className="mt-1 text-sm text-red-700">{message}</p>
       <button
         onClick={retry}
-        className="mt-4 rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white"
+        className="mt-4 rounded-lg bg-primary-dark px-4 py-2 text-sm font-semibold text-white"
       >
         Retry
       </button>

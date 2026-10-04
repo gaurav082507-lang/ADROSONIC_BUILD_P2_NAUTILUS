@@ -9,9 +9,9 @@ export function ScoreGauge({ label, risk, band }: { label: string; risk: number;
         <RiskBadge band={band} />
       </div>
       <div className="mt-3 font-display text-4xl font-bold">{pct(risk)}</div>
-      <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
+      <div className="mt-3 h-2 overflow-hidden rounded-full bg-nile-soft">
         <div
-          className="h-full rounded-full bg-ink"
+          className="h-full rounded-full bg-primary-dark"
           style={{ width: `${Math.round(risk * 100)}%` }}
         />
       </div>

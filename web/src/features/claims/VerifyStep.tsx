@@ -187,7 +187,7 @@ export default function VerifyStep({ onComplete, onId, t }: Props) {
     <div>
       <h2 className="font-display text-xl font-semibold">{t.verify}</h2>
       {blocked ? (
-        <div className="mt-5 rounded-xl bg-slate-50 p-5">
+        <div className="mt-5 rounded-xl bg-bg p-5">
           <p className="text-sm font-medium">{t[cameraProblemKey[problem ?? 'unknown']]}</p>
           <p className="mt-1 text-xs text-muted">{t.cameraFallback}</p>
           <label className="mt-4 block rounded-lg border p-4 text-sm">
@@ -206,7 +206,7 @@ export default function VerifyStep({ onComplete, onId, t }: Props) {
         </div>
       ) : (
         <>
-          <div className="relative mt-5 overflow-hidden rounded-2xl bg-ink p-3">
+          <div className="relative mt-5 overflow-hidden rounded-2xl bg-primary-dark p-3">
             <video
               ref={video}
               muted
@@ -218,7 +218,7 @@ export default function VerifyStep({ onComplete, onId, t }: Props) {
             </div>
           </div>
           <div className="mt-4 flex items-center justify-between">
-            <span className="rounded-full bg-slate-100 px-3 py-1 text-sm">
+            <span className="rounded-full bg-nile-soft px-3 py-1 text-sm">
               {String(session?.challenges?.[challengeIndex] ?? t.preparing).replace(/_/g, ' ')}
             </span>
             {session?.spoken_code && (
@@ -230,7 +230,7 @@ export default function VerifyStep({ onComplete, onId, t }: Props) {
               disabled={busy || !session}
               onClick={capture}
               aria-label={t.capture}
-              className="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white"
+              className="rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white"
             >
               {busy ? t.preparing : t.capture}
             </button>

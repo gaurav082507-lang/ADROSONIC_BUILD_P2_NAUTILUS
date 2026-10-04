@@ -1,1 +1,35 @@
-export default {content:['./index.html','./src/**/*.{ts,tsx}'],theme:{extend:{fontFamily:{display:['Space Grotesk','sans-serif'],sans:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']},colors:{ink:'#0B1220',navy:'#0F1B2D',slate50:'#F5F7FA',border:'#E3E8EF',muted:'#5B6B82',yellow:'#F5C518',signal:'#3B82F6'}}},plugins:[]};
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Space Grotesk', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        primary: '#4E8F6B',
+        'primary-hover': '#3D7356',
+        'primary-dark': '#2A5240',
+        nile: '#A7C796',
+        'nile-soft': '#E6F0E1',
+        bg: '#F7FAF6',
+        surface: '#FFFFFF',
+        border: '#D5E3CF',
+        text: '#1F2A24',
+        'text-muted': '#5F6F66',
+        success: '#2E9E5B',
+        warning: '#D99A1E',
+        danger: '#C9483C',
+        info: '#3A7CA5',
+        ink: '#1F2A24', 
+        navy: '#2A5240',
+        slate50: '#F7FAF6',
+        muted: '#5F6F66',
+        yellow: '#D99A1E',
+        signal: '#4E8F6B',
+      },
+    },
+  },
+  plugins: [],
+};

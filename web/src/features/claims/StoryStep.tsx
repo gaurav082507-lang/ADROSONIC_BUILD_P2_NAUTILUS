@@ -7,6 +7,8 @@ import type { LatLngExpression } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 type Props = {
+  claimantName: string;
+  setClaimantName: (value: string) => void;
   description: string;
   setDescription: (value: string) => void;
   amount: string;
@@ -26,7 +28,7 @@ function PinPicker({ onPick }: { onPick: (point: [number, number]) => void }) {
   useMapEvents({ click: (event) => onPick([event.latlng.lat, event.latlng.lng]) });
   return null;
 }
-export default function StoryStep({
+export default function StoryStep({ claimantName, setClaimantName,
   description,
   setDescription,
   amount,
@@ -135,8 +137,19 @@ export default function StoryStep({
   };
   const center: LatLngExpression = location ?? [23.3441, 85.3096];
   return (
-    <div>
-      <h2 className="font-display text-xl font-semibold">{t.story}</h2>
+          <div>
+        <h2 className="font-display text-xl font-semibold mb-4">Claimant Details</h2>
+        <label className="text-sm block mb-6">
+          <span className="mb-2 block font-medium">Claimant Name</span>
+          <input
+            type="text"
+            value={claimantName}
+            onChange={(event) => setClaimantName(event.target.value)}
+            className="w-full rounded-lg border px-3 py-2.5"
+            placeholder="Enter your full name"
+          />
+        </label>
+        <h2 className="font-display text-xl font-semibold">{t.story}</h2>
       <textarea
         value={description}
         onChange={(event) => setDescription(event.target.value)}
@@ -180,7 +193,7 @@ export default function StoryStep({
           {recording ? (
             <button
               onClick={() => recorder.current?.stop()}
-              className="mt-2 rounded-lg bg-ink px-3 py-2 text-sm text-white"
+              className="mt-2 rounded-lg bg-primary-dark px-3 py-2 text-sm text-white"
             >
               {t.stop} · {seconds}s
             </button>
@@ -217,7 +230,7 @@ export default function StoryStep({
                 <button
                   onClick={runTranscription}
                   disabled={transcribe.isPending}
-                  className="rounded-lg bg-ink px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-40"
+                  className="rounded-lg bg-primary-dark px-3 py-1.5 text-xs font-semibold text-white disabled:opacity-40"
                 >
                   {transcribe.isPending ? t.transcribing : t.transcribe}
                 </button>
@@ -231,12 +244,12 @@ export default function StoryStep({
             <div className="mt-3 space-y-2 text-xs">
               <div>
                 <div className="text-muted">{t.transcript}</div>
-                <p className="rounded bg-slate-50 p-2">{heard.transcript}</p>
+                <p className="rounded bg-bg p-2">{heard.transcript}</p>
               </div>
               {heard.translationEn && heard.language !== 'en' && (
                 <div>
                   <div className="text-muted">{t.translation}</div>
-                  <p className="rounded bg-slate-50 p-2">{heard.translationEn}</p>
+                  <p className="rounded bg-bg p-2">{heard.translationEn}</p>
                 </div>
               )}
             </div>
@@ -249,7 +262,7 @@ export default function StoryStep({
         </div>
       </div>
       <div className="mt-5 overflow-hidden rounded-xl border">
-        <div className="border-b bg-slate-50 p-3 text-sm font-medium">
+        <div className="border-b bg-bg p-3 text-sm font-medium">
           {t.location} · {t.locationHint}
         </div>
         <MapContainer center={center} zoom={13} style={{ height: 320 }}>

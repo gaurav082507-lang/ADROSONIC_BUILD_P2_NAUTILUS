@@ -25,7 +25,7 @@ export default function ImageTab({ result }: { result: ResultVM }) {
           <button
             key={value}
             onClick={() => setMode(value)}
-            className={`rounded-lg px-3 py-2 text-sm ${mode === value ? 'bg-ink text-white' : 'bg-slate-100'}`}
+            className={`rounded-lg px-3 py-2 text-sm ${mode === value ? 'bg-primary-dark text-white' : 'bg-nile-soft'}`}
           >
             {value}
           </button>

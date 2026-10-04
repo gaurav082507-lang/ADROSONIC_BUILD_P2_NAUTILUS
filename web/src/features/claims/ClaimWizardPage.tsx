@@ -22,6 +22,7 @@ export default function ClaimWizardPage() {
   const [step, setStep] = useState(0);
   const [policy, setPolicy] = useState<any>();
   const [type, setType] = useState('motor');
+    const [claimantName, setClaimantName] = useState('');
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
   const [consent, setConsent] = useState(false);
@@ -110,6 +111,7 @@ export default function ClaimWizardPage() {
         voiceAudio: voice ?? undefined,
         consentVoiceProcessing: consentVoice,
         descriptionLang: voice ? voiceLang : lang,
+          claimantName: claimantName,
         livenessSessionId: sessionId,
       });
       nav(`/claim/${result.claim_id ?? result.id ?? ''}`);
@@ -120,20 +122,20 @@ export default function ClaimWizardPage() {
     }
   };
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-bg">
       <header className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-5">
           <Logo />
           <div className="flex gap-2">
             <button
               onClick={() => setLang('en')}
-              className={`rounded-lg px-3 py-1.5 text-xs ${lang === 'en' ? 'bg-ink text-white' : 'bg-slate-100'}`}
+              className={`rounded-lg px-3 py-1.5 text-xs ${lang === 'en' ? 'bg-primary-dark text-white' : 'bg-nile-soft'}`}
             >
               English
             </button>
             <button
               onClick={() => setLang('hi')}
-              className={`rounded-lg px-3 py-1.5 text-xs ${lang === 'hi' ? 'bg-ink text-white' : 'bg-slate-100'}`}
+              className={`rounded-lg px-3 py-1.5 text-xs ${lang === 'hi' ? 'bg-primary-dark text-white' : 'bg-nile-soft'}`}
             >
               हिंदी
             </button>
@@ -152,7 +154,7 @@ export default function ClaimWizardPage() {
           {steps.map((s, i) => (
             <div
               key={s}
-              className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-ink' : 'bg-slate-200'}`}
+              className={`h-1.5 flex-1 rounded-full ${i <= step ? 'bg-primary-dark' : 'bg-slate-200'}`}
             />
           ))}
         </div>
@@ -170,6 +172,8 @@ export default function ClaimWizardPage() {
           )}{' '}
           {step === 1 && (
             <StoryStep
+                claimantName={claimantName}
+                setClaimantName={setClaimantName}
               description={description}
               setDescription={setDescription}
               amount={amount}
@@ -232,7 +236,7 @@ export default function ClaimWizardPage() {
             <button
               onClick={next}
               disabled={busy}
-              className="rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-30"
+              className="rounded-lg bg-primary-dark px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-30"
             >
               {busy ? t.submitting : step === 4 ? t.submit : t.next}
             </button>

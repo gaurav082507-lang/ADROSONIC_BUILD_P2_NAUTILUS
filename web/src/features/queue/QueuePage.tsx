@@ -96,7 +96,7 @@ export default function QueuePage() {
       <div className="card mt-6 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="border-b bg-slate-50 text-xs uppercase tracking-wide text-muted">
+            <thead className="border-b bg-bg text-xs uppercase tracking-wide text-muted">
               <tr>
                 <th className="px-5 py-4">Claim</th>
                 <th>Claimant</th>
@@ -129,13 +129,13 @@ export default function QueuePage() {
                       r.status === 'under_review' ? 'bg-yellow-100 text-yellow-800' :
                       r.status === 'approved' ? 'bg-green-100 text-green-800' :
                       r.status === 'rejected' ? 'bg-red-100 text-red-800' :
-                      'bg-slate-100 text-slate-700'
+                      'bg-nile-soft text-slate-700'
                     }`}>{r.status}</span>
                   </td>
                   <td className="space-x-1">
                     <Link
                       to={`/app/results/${r.resultId}`}
-                      className="rounded-lg border px-3 py-1.5 text-xs hover:bg-slate-50"
+                      className="rounded-lg border px-3 py-1.5 text-xs hover:bg-bg"
                     >
                       Open
                     </Link>

@@ -60,7 +60,7 @@ export default function EvidenceStep({ claimType, onChange, t }: Props) {
             <div className="mt-3 flex gap-2">
               <button
                 onClick={() => camera(slot)}
-                className="rounded-lg bg-ink px-3 py-2 text-xs font-semibold text-white"
+                className="rounded-lg bg-primary-dark px-3 py-2 text-xs font-semibold text-white"
               >
                 {t.useCamera}
               </button>

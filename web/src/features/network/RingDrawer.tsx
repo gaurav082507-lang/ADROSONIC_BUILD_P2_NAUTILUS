@@ -67,7 +67,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
           <div className="flex flex-wrap items-center gap-3">
             <RiskBadge band={ring.data.band} />
             <span className="text-sm">Ring score {pct(ring.data.ringScore)}</span>
-            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs">
+            <span className="rounded-full bg-nile-soft px-2 py-0.5 text-xs">
               {ringStatusLabel(ring.data.status)}
             </span>
             <SyntheticBadge show={ring.data.synthetic} />
@@ -97,7 +97,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
                 <Link
                   key={c.claimId}
                   to={`/app/results/${c.claimId}`}
-                  className="flex items-center justify-between rounded-lg border p-3 text-sm hover:bg-slate-50"
+                  className="flex items-center justify-between rounded-lg border p-3 text-sm hover:bg-bg"
                 >
                   <span className="mono">{c.claimId}</span>
                   <span className="flex items-center gap-3">
@@ -132,7 +132,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
                   key={s.value}
                   onClick={() => setStatus(s.value)}
                   aria-pressed={status === s.value}
-                  className={`rounded-lg border px-3 py-1.5 text-sm ${status === s.value ? 'bg-ink text-white' : ''}`}
+                  className={`rounded-lg border px-3 py-1.5 text-sm ${status === s.value ? 'bg-primary-dark text-white' : ''}`}
                 >
                   {s.label}
                 </button>
@@ -151,7 +151,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
             <button
               disabled={!status || update.isPending}
               onClick={save}
-              className="mt-3 rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white disabled:opacity-40"
+              className="mt-3 rounded-lg bg-primary-dark px-4 py-2 text-sm font-semibold text-white disabled:opacity-40"
             >
               Save status
             </button>
@@ -162,7 +162,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
               <h3 className="font-semibold">Audit log</h3>
               <div className="mt-2 space-y-1 text-sm">
                 {ring.data.audit.map((a, i) => (
-                  <div key={i} className="rounded-lg bg-slate-50 p-2">
+                  <div key={i} className="rounded-lg bg-bg p-2">
                     {a.at} · {a.action} · {a.actor}
                     {a.note ? ` · ${a.note}` : ''}
                   </div>
@@ -193,7 +193,7 @@ export default function RingDrawer({ ringId, onClose }: { ringId: string; onClos
 
 function Stat({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="rounded-lg bg-slate-50 p-3">
+    <div className="rounded-lg bg-bg p-3">
       <div className="text-xs text-muted">{label}</div>
       <div className="mt-1 font-semibold">{value}</div>
     </div>

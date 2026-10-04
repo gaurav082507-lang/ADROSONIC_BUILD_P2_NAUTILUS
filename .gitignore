@@ -20,3 +20,4 @@ web/node_modules/
 *.db-wal
 *.db-shm
 .gemini/
+"models/" 

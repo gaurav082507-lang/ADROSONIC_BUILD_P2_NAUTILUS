@@ -28,7 +28,7 @@ export default function IdentityTab({ result }: { result: ResultVM }) {
               ['AI-generated selfie check', id?.aiGeneratedSelfie ?? 'Not analysed'],
               ['Match threshold', 'cosine ≥ 0.363 (SFace)'],
             ].map(([a, b]) => (
-              <div key={a} className="rounded-lg bg-slate-50 p-4">
+              <div key={a} className="rounded-lg bg-bg p-4">
                 <div className="text-xs text-muted">{a}</div>
                 <div className="mt-1 font-semibold">{b}</div>
               </div>

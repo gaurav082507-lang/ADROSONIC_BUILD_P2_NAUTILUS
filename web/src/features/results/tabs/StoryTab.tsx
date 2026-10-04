@@ -6,7 +6,7 @@ export default function StoryTab({ result }: { result: ResultVM }) {
   if (!story) return <Empty label="Story review was not run for this result." />;
   return (
     <div className="space-y-4">
-      <div role="note" className="rounded-lg bg-slate-100 p-3 text-sm text-slate-700">
+      <div role="note" className="rounded-lg bg-nile-soft p-3 text-sm text-slate-700">
         {story.note} · source:{' '}
         {story.source === 'llm' ? 'AI summary (validated)' : 'rule-based checks'}
       </div>

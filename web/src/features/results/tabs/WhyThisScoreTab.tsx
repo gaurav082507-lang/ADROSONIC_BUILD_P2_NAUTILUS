@@ -48,7 +48,7 @@ export default function WhyThisScoreTab({ result }: { result: ResultVM }) {
           <h3 className="font-display font-semibold">Formulas with the real numbers</h3>
           <div className="mt-3 space-y-2">
             {formulas.map((f) => (
-              <div key={f.pipeline} className="rounded-lg bg-slate-50 p-3 text-sm">
+              <div key={f.pipeline} className="rounded-lg bg-bg p-3 text-sm">
                 <span className="font-semibold capitalize">{f.pipeline}: </span>
                 <span className="mono">{f.formula}</span>
               </div>

@@ -705,6 +705,23 @@ def get_claim_network_info(claim_id: str) -> Dict[str, Any]:
             "reason": f"Member of coordinated fraud ring {top_ring['ring_id']} (ring score: {top_ring['ring_score']:.2f}, band: {top_ring['band']})"
         })
 
+    db_ev = conn.execute('''
+        SELECT e.evidence_id, e.title, e.weight, e.raw_score, e.calibrated_score, e.reason
+        FROM evidence e
+        JOIN claims c ON e.result_id = c.result_id
+        WHERE c.id = ? AND (e.evidence_id LIKE '%DUP%' OR e.title LIKE '%Different Claim%')
+    ''', (claim_id,)).fetchall()
+    
+    for row in db_ev:
+        evidence.append({
+            "id": row["evidence_id"],
+            "title": row["title"],
+            "weight": float(row["weight"] or 0),
+            "raw_score": float(row["raw_score"] or 0),
+            "calibrated_score": float(row["calibrated_score"] or 0),
+            "reason": row["reason"]
+        })
+
     conn.close()
     return {
         "rings": rings,

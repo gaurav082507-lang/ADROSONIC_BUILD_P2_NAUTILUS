@@ -94,7 +94,7 @@ function NetworkWorkspace() {
               <button
                 key={r.ringId}
                 onClick={() => setOpenRing(r.ringId)}
-                className="w-full rounded-lg border p-3 text-left hover:bg-slate-50"
+                className="w-full rounded-lg border p-3 text-left hover:bg-bg"
               >
                 <div className="flex items-center justify-between">
                   <span className="mono text-xs">{r.ringId}</span>
@@ -131,7 +131,7 @@ function NetworkWorkspace() {
           </label>
           <button
             onClick={focus}
-            className="h-10 rounded-lg bg-ink px-4 text-sm font-semibold text-white"
+            className="h-10 rounded-lg bg-primary-dark px-4 text-sm font-semibold text-white"
           >
             Focus
           </button>
@@ -179,7 +179,7 @@ function NetworkWorkspace() {
                 role="tab"
                 aria-selected={view === v}
                 onClick={() => setView(v)}
-                className={`rounded-md px-3 py-1.5 capitalize ${view === v ? 'bg-ink text-white' : ''}`}
+                className={`rounded-md px-3 py-1.5 capitalize ${view === v ? 'bg-primary-dark text-white' : ''}`}
               >
                 {v === 'graph' ? 'Graph' : 'Table view'}
               </button>

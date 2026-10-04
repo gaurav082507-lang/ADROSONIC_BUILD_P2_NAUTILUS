@@ -10,7 +10,7 @@ export default function NetworkTables({ graph }: { graph: GraphVM }) {
       <div className="card overflow-x-auto">
         <table className="w-full text-left text-sm" aria-label="Network nodes">
           <caption className="p-4 text-left font-semibold">Nodes ({graph.nodes.length})</caption>
-          <thead className="border-y bg-slate-50 text-xs uppercase text-muted">
+          <thead className="border-y bg-bg text-xs uppercase text-muted">
             <tr>
               <th className="px-4 py-2">Label</th>
               <th>Type</th>
@@ -34,7 +34,7 @@ export default function NetworkTables({ graph }: { graph: GraphVM }) {
       <div className="card overflow-x-auto">
         <table className="w-full text-left text-sm" aria-label="Network links">
           <caption className="p-4 text-left font-semibold">Links ({graph.edges.length})</caption>
-          <thead className="border-y bg-slate-50 text-xs uppercase text-muted">
+          <thead className="border-y bg-bg text-xs uppercase text-muted">
             <tr>
               <th className="px-4 py-2">From</th>
               <th>To</th>

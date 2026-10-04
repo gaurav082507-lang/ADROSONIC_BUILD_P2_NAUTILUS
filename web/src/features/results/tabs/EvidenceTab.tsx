@@ -30,7 +30,7 @@ export default function EvidenceTab({ result }: { result: ResultVM }) {
                     Score
                     <span className="inline-block h-1.5 w-24 overflow-hidden rounded bg-slate-200">
                       <span
-                        className="block h-full bg-ink"
+                        className="block h-full bg-primary-dark"
                         style={{ width: `${Math.round(item.score * 100)}%` }}
                       />
                     </span>
@@ -49,7 +49,7 @@ export default function EvidenceTab({ result }: { result: ResultVM }) {
           <h3 className="font-display font-semibold">Supporting context</h3>
           <div className="mt-3 space-y-2">
             {context.map((item) => (
-              <div key={item.id} className="rounded-lg bg-slate-50 p-3 text-sm">
+              <div key={item.id} className="rounded-lg bg-bg p-3 text-sm">
                 <b>{item.title}</b> <span className="mono text-xs text-muted">{item.id}</span>
                 <div className="text-muted">{item.reason}</div>
               </div>

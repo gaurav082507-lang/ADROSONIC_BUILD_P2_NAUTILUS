@@ -15,13 +15,13 @@ export default function ClaimStatusPage() {
   const [message, setMessage] = useState('');
   if (q.isLoading)
     return (
-      <div className="min-h-screen grid place-items-center bg-slate-50">
+      <div className="min-h-screen grid place-items-center bg-bg">
         <Loading />
       </div>
     );
   if (q.error)
     return (
-      <div className="min-h-screen bg-slate-50 p-6">
+      <div className="min-h-screen bg-bg p-6">
         <ErrorState
           message={friendlyError((q.error as any).code, (q.error as any).message)}
           retry={() => q.refetch()}
@@ -30,7 +30,7 @@ export default function ClaimStatusPage() {
     );
   const d = q.data!;
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-bg">
       <header className="border-b border-border bg-white">
         <div className="mx-auto max-w-3xl px-5 py-5">
           <Logo />
@@ -40,7 +40,7 @@ export default function ClaimStatusPage() {
         <div className="card p-6">
           <div className="text-sm text-muted">{d.id}</div>
           <h1 className="font-display mt-1 text-3xl font-bold">{en.status}</h1>
-          <div className="mt-6 rounded-xl bg-slate-50 p-5">
+          <div className="mt-6 rounded-xl bg-bg p-5">
             <div className="font-semibold capitalize">{d.status.replaceAll('_', ' ')}</div>
             {d.reasonLabel && <div className="mt-1 text-sm font-medium">{d.reasonLabel}</div>}
             {d.message && <p className="mt-2 text-sm text-muted">{d.message}</p>}
@@ -57,7 +57,7 @@ export default function ClaimStatusPage() {
             <div className="mt-4 space-y-5">
               {d.timeline.map((x, i) => (
                 <div key={i} className="relative pl-7">
-                  <span className="absolute left-0 top-1 h-3 w-3 rounded-full bg-ink" />
+                  <span className="absolute left-0 top-1 h-3 w-3 rounded-full bg-primary-dark" />
                   <div className="text-xs text-muted">{x.date ? dateLabel(x.date) : ''}</div>
                   <div className="font-semibold capitalize">{x.status.replaceAll('_', ' ')}</div>
                   <div className="text-sm text-muted">{x.detail}</div>
@@ -106,7 +106,7 @@ export default function ClaimStatusPage() {
                     setBusy(false);
                   }
                 }}
-                className="mt-3 rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-30"
+                className="mt-3 rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-30"
               >
                 Submit
               </button>

@@ -18,11 +18,11 @@ export default function VoiceTab({ result }: { result: ResultVM }) {
           </span>
         </div>
         <div className="mt-3 text-xs uppercase text-muted">Original transcript</div>
-        <p className="mt-1 rounded-lg bg-slate-50 p-3 text-sm">
+        <p className="mt-1 rounded-lg bg-bg p-3 text-sm">
           {v.transcript || 'Transcription unavailable.'}
         </p>
         <div className="mt-4 text-xs uppercase text-muted">English translation</div>
-        <p className="mt-1 rounded-lg bg-slate-50 p-3 text-sm">{v.translationEn || '—'}</p>
+        <p className="mt-1 rounded-lg bg-bg p-3 text-sm">{v.translationEn || '—'}</p>
         {v.status && v.status !== 'analysed' && (
           <p className="mt-3 text-xs text-muted">Status: {v.status}</p>
         )}

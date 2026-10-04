@@ -108,3 +108,83 @@ app.include_router(voice.router, prefix="/api/v1", tags=["Voice"])
 app.include_router(network.router, prefix="/api/v1", tags=["Network"])
 app.include_router(analytics.router, prefix="/api/v1", tags=["Analytics"])
 app.include_router(admin.router, prefix="/api/v1/admin", tags=["Admin"])
+
+@app.get('/api/v1/dashboard/stats')
+async def get_dashboard_stats():
+    from backend.app.db.database import get_connection
+    import sqlite3
+    from collections import defaultdict
+    conn = get_connection()
+    conn.row_factory = sqlite3.Row
+    
+    # KPI metrics
+    claims = conn.execute('''
+        SELECT c.id, c.status, r.overall_band, r.overall_risk, c.created_at, c.claim_type
+        FROM claims c
+        LEFT JOIN results r ON c.result_id = r.id
+    ''').fetchall()
+    
+    total = len(claims)
+    flagged = len([c for c in claims if c['overall_band'] in ('HIGH', 'MEDIUM')])
+    cleared = len([c for c in claims if c['overall_band'] == 'LOW'])
+    pending = len([c for c in claims if c['status'] == 'submitted'])
+    
+    risks = [c['overall_risk'] for c in claims if c['overall_risk'] is not None]
+    avg_risk = sum(risks) / len(risks) * 100 if risks else 0.0
+    
+    # Verdict Donut
+    verdicts = [
+        {"name": "Genuine", "value": cleared},
+        {"name": "Suspicious", "value": len([c for c in claims if c['overall_band'] == 'MEDIUM'])},
+        {"name": "Deepfake-Fraud", "value": len([c for c in claims if c['overall_band'] == 'HIGH'])},
+    ]
+    
+    # Signals
+    signals = conn.execute('''
+        SELECT title as name, COUNT(*) as value
+        FROM evidence
+        WHERE kind = 'risk'
+        GROUP BY title
+        ORDER BY value DESC
+        LIMIT 5
+    ''').fetchall()
+    
+    # Cases Over Time
+    time_map = defaultdict(lambda: {"total": 0, "flagged": 0})
+    for c in claims:
+        dt = (c['created_at'] or '')[:10]
+        if not dt: continue
+        time_map[dt]["total"] += 1
+        if c['overall_band'] in ('HIGH', 'MEDIUM'):
+            time_map[dt]["flagged"] += 1
+    
+    time_data = []
+    for dt in sorted(time_map.keys())[-7:]:
+        time_data.append({"date": dt, "Total Cases": time_map[dt]["total"], "Flagged": time_map[dt]["flagged"]})
+        
+    # Risk Distribution
+    buckets = {"0-20": 0, "20-40": 0, "40-60": 0, "60-80": 0, "80-100": 0}
+    for r in risks:
+        if r < 0.2: buckets["0-20"] += 1
+        elif r < 0.4: buckets["20-40"] += 1
+        elif r < 0.6: buckets["40-60"] += 1
+        elif r < 0.8: buckets["60-80"] += 1
+        else: buckets["80-100"] += 1
+    
+    risk_dist = [{"bucket": k, "cases": v} for k, v in buckets.items()]
+    
+    conn.close()
+    
+    return {
+        "kpis": {
+            "total": total,
+            "flagged": flagged,
+            "cleared": cleared,
+            "pending": pending,
+            "avgRisk": round(avg_risk, 1)
+        },
+        "verdicts": verdicts,
+        "signals": [dict(s) for s in signals],
+        "timeData": time_data,
+        "riskDist": risk_dist
+    }

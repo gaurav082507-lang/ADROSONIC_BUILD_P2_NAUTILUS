@@ -1,87 +1,194 @@
 import { Link } from 'react-router-dom';
-import { useAnalyticsSummary, useHistory, useQueue, useBusinessAnalytics } from '../../api/hooks';
+import { useQuery } from '@tanstack/react-query';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid, Legend } from 'recharts';
+import { useQueue } from '../../api/hooks';
 import { Loading, ErrorState } from '../../components/States';
-import { friendlyError } from '../../lib/errorMessages';
+import { api } from '../../api/client';
 
 export default function DashboardPage() {
-  const q = useQueue({ limit: 50 });
-  const h = useHistory({ page: 1, pageSize: 50 });
-  const analyticsOn = true;
-  const biz = useBusinessAnalytics('30d', analyticsOn);
+  const { data: stats, isLoading: statsLoading, error: statsError } = useQuery({
+    queryKey: ['dashboard', 'stats'],
+    queryFn: async () => {
+      return api.get<any>('/dashboard/stats');
+    },
+    refetchInterval: 30000,
+  });
 
-  if (q.isLoading || h.isLoading || (analyticsOn && biz.isLoading)) return <Loading />;
-  
-  if (q.error)
-    return (
-      <ErrorState
-        message={friendlyError((q.error as any).code, (q.error as any).message)}
-        retry={() => q.refetch()}
-      />
-    );
+  const { data: queueData, isLoading: queueLoading } = useQueue({ limit: 10 });
 
-  const rows = q.data ?? [];
-  const flagged = rows.filter((x) => x.band !== 'LOW');
+  if (statsLoading || queueLoading) return <Loading />;
+  if (statsError) return <ErrorState message="Failed to load dashboard data" retry={() => window.location.reload()} />;
+
+  if (!stats) return <Loading />;
+  const { kpis, verdicts, signals, timeData, riskDist } = stats;
+
+  const COLORS = {
+    Genuine: 'var(--success)',
+    Suspicious: 'var(--warning)',
+    'Deepfake-Fraud': 'var(--danger)'
+  };
 
   return (
-    <div>
+    <div className="pb-10">
       <div className="flex items-end justify-between">
         <div>
-          <div className="text-sm text-muted">Investigator console</div>
-          <h1 className="font-display mt-1 text-3xl font-bold">Good afternoon, Priya.</h1>
-          <p className="mt-2 text-sm text-muted">Based on recent claims.</p>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-nile">Investigator Dashboard</span>
+            <span className="rounded-full bg-nile-soft px-2 py-0.5 text-xs font-medium text-primary-dark border border-nile">Data: test-case runs</span>
+          </div>
+          <h1 className="font-display mt-1 text-3xl font-bold text-primary-dark">Good afternoon, Investigator.</h1>
+          <p className="mt-2 text-sm text-text-muted">Overview of recent AI claims analysis.</p>
         </div>
         <Link
           to="/app/analyze"
-          className="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white"
+          className="rounded-lg bg-primary hover:bg-primary-hover px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors"
         >
           New analysis
         </Link>
       </div>
 
-      <div className="mt-7 grid gap-4 md:grid-cols-4">
-        {biz.data && (
-            [
-              ['Claims processed', biz.data.claims_processed, 'Last 30 days'],
-              ['Fast-track rate', `${biz.data.fast_track_rate}%`, 'Eligible for auto-approval'],
-              ['Fraud prevented', `₹${(biz.data.fraud_prevented_amount / 100000).toFixed(1)}L`, 'Estimated exposure'],
-              ['Open rings', biz.data.open_rings, 'Detected multi-claim fraud'],
-            ]
-        ).map(([label, value, note]) => (
-          <div className="card p-5" key={String(label)}>
-            <div className="text-sm text-muted">{label}</div>
-            <div className="mt-2 font-display text-3xl font-bold">{value}</div>
-            <div className="mt-1 text-xs text-muted">{note}</div>
-          </div>
-        ))}
+      <div className="mt-7 grid gap-4 md:grid-cols-5">
+        <div className="card p-5">
+          <div className="text-sm font-medium text-text-muted">Total Cases</div>
+          <div className="mt-2 font-display text-3xl font-bold text-primary-dark">{kpis.total}</div>
+        </div>
+        <div className="card p-5">
+          <div className="text-sm font-medium text-text-muted">Flagged / High Risk</div>
+          <div className="mt-2 font-display text-3xl font-bold text-danger">{kpis.flagged}</div>
+        </div>
+        <div className="card p-5">
+          <div className="text-sm font-medium text-text-muted">Cleared / Genuine</div>
+          <div className="mt-2 font-display text-3xl font-bold text-success">{kpis.cleared}</div>
+        </div>
+        <div className="card p-5">
+          <div className="text-sm font-medium text-text-muted">Pending Review</div>
+          <div className="mt-2 font-display text-3xl font-bold text-warning">{kpis.pending}</div>
+        </div>
+        <div className="card p-5">
+          <div className="text-sm font-medium text-text-muted">Avg Risk Score</div>
+          <div className="mt-2 font-display text-3xl font-bold text-primary-dark">{kpis.avgRisk}%</div>
+        </div>
       </div>
 
-      <div className="mt-8 grid gap-8 md:grid-cols-2">
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
         <div className="card p-5">
-          <h2 className="font-display font-semibold">Decisions (Last 30d)</h2>
-          <div className="mt-4 h-64 border border-dashed flex items-center justify-center text-sm text-muted">Weekly chart</div>
+          <h2 className="font-display font-semibold text-primary-dark mb-4">Verdict Breakdown</h2>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie data={verdicts} cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value">
+                  {verdicts.map((entry: any, index: number) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[entry.name as keyof typeof COLORS] || 'var(--primary)'} />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
         </div>
+
         <div className="card p-5">
-          <h2 className="font-display font-semibold">Risk by Claim Type</h2>
-          <div className="mt-4 h-64 border border-dashed flex items-center justify-center text-sm text-muted">Claim type risk chart</div>
+          <h2 className="font-display font-semibold text-primary-dark mb-4">Fraud Signals Detected</h2>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={signals} layout="vertical" margin={{ left: 20 }}>
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} />
+                <XAxis type="number" />
+                <YAxis dataKey="name" type="category" width={100} tick={{ fontSize: 11 }} />
+                <Tooltip />
+                <Bar dataKey="value" fill="var(--warning)" radius={[0, 4, 4, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-        <div className="card p-5 md:col-span-2">
-          <h2 className="font-display font-semibold">Detected Fraud Patterns</h2>
-          <div className="mt-4 flex flex-col gap-3">
-             {biz.data?.patterns.map((p: any, i: number) => (
-               <div key={i} className="flex justify-between border-b pb-2">
-                 <span className="text-sm">{p.pattern}</span>
-                 <span className="text-sm font-semibold">{p.count} claims</span>
-               </div>
-             ))}
+
+        <div className="card p-5">
+          <h2 className="font-display font-semibold text-primary-dark mb-4">Cases Over Time</h2>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={timeData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" tick={{ fontSize: 12 }} />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="Total Cases" stroke="var(--primary)" strokeWidth={2} />
+                <Line type="monotone" dataKey="Flagged" stroke="var(--danger)" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        <div className="card p-5">
+          <h2 className="font-display font-semibold text-primary-dark mb-4">Risk Score Distribution</h2>
+          <div className="h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={riskDist}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="bucket" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="cases" fill="var(--nile)" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
-      
-      {biz.data?.assumptions && (
-        <div className="mt-6 text-xs text-muted max-w-3xl">
-          * Assumptions: Manual processing cost = ₹{biz.data.assumptions.avg_manual_investigation_cost}, AI cost = ₹{biz.data.assumptions.ai_processing_cost}. ROI = {(biz.data.roi_multiple)}x.
+
+      <div className="mt-8 card overflow-hidden">
+        <div className="p-5 border-b border-border flex justify-between items-center bg-nile-soft/30">
+          <h2 className="font-display font-semibold text-primary-dark">Recent Cases</h2>
         </div>
-      )}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead className="bg-nile-soft text-primary-dark text-xs uppercase">
+              <tr>
+                <th className="px-5 py-3 font-semibold">Claim ID</th>
+                <th className="px-5 py-3 font-semibold">Claimant</th>
+                <th className="px-5 py-3 font-semibold">Type</th>
+                <th className="px-5 py-3 font-semibold">Date</th>
+                <th className="px-5 py-3 font-semibold">Risk Score</th>
+                <th className="px-5 py-3 font-semibold">Verdict</th>
+                <th className="px-5 py-3 font-semibold">Action</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border bg-surface">
+              {queueData?.length === 0 && (
+                <tr><td colSpan={7} className="px-5 py-8 text-center text-text-muted">No cases yet.</td></tr>
+              )}
+              {queueData?.slice(0, 10).map((c: any) => (
+                <tr key={c.id} className="hover:bg-nile-soft/20 transition-colors">
+                  <td className="px-5 py-3 font-mono text-xs text-text-muted">{c.id}</td>
+                  <td className="px-5 py-3 font-medium">{c.claimantMasked || 'Unknown'}</td>
+                  <td className="px-5 py-3 capitalize">{c.type}</td>
+                  <td className="px-5 py-3 text-text-muted">{new Date(c.submitted).toLocaleDateString()}</td>
+                  <td className="px-5 py-3">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 w-16 overflow-hidden rounded-full bg-border">
+                        <div className="h-full bg-danger" style={{ width: `${(c.risk || 0) * 100}%` }} />
+                      </div>
+                      <span className="text-xs">{((c.risk || 0) * 100).toFixed(0)}%</span>
+                    </div>
+                  </td>
+                  <td className="px-5 py-3">
+                    <span className={`inline-flex rounded-full px-2 py-0.5 text-xs font-semibold ${
+                      c.band === 'HIGH' ? 'bg-danger/10 text-danger' : 
+                      c.band === 'MEDIUM' ? 'bg-warning/10 text-warning' : 
+                      'bg-success/10 text-success'
+                    }`}>
+                      {c.band === 'HIGH' ? 'Deepfake' : c.band === 'MEDIUM' ? 'Suspicious' : 'Genuine'}
+                    </span>
+                  </td>
+                  <td className="px-5 py-3">
+                    <Link to={`/app/claims/${c.id}`} className="text-primary hover:text-primary-hover font-medium">View</Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }

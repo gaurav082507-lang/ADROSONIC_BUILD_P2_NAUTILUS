@@ -55,7 +55,7 @@ export default function DecisionDialog({ id, onClose }: Props) {
           <p className="mt-2 text-sm text-muted">The backend accepted the investigator decision.</p>
           <button
             onClick={onClose}
-            className="mt-5 rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white"
+            className="mt-5 rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white"
           >
             Close
           </button>
@@ -102,12 +102,12 @@ export default function DecisionDialog({ id, onClose }: Props) {
         <button
           disabled={!action || !reason || busy}
           onClick={generate}
-          className="mt-4 rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-40"
+          className="mt-4 rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-40"
         >
           {busy ? 'Generating…' : 'Generate draft'}
         </button>
         {draft && (
-          <div className="mt-5 rounded-xl bg-slate-50 p-4">
+          <div className="mt-5 rounded-xl bg-bg p-4">
             <div className="text-xs font-semibold uppercase text-muted">
               What the claimant will see
             </div>

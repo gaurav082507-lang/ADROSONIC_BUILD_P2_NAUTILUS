@@ -24,7 +24,7 @@ export default function ReviewStep({
   return (
     <div>
       <h2 className="font-display text-xl font-semibold">{t.review}</h2>
-      <div className="mt-5 space-y-3 rounded-xl bg-slate-50 p-5 text-sm">
+      <div className="mt-5 space-y-3 rounded-xl bg-bg p-5 text-sm">
         <div>
           <span className="text-muted">{t.policyLabel}</span>
           <div className="font-semibold">{policy || t.notSelected}</div>

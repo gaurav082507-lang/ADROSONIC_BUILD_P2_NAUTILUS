@@ -44,14 +44,14 @@ export default function LocationTab({ result }: { result: ResultVM }) {
       <div className="card p-5">
         <h3 className="font-display font-semibold">Location evidence</h3>
         <div className="mt-4 space-y-3">
-          <div className="rounded-lg bg-slate-50 p-3 text-sm">
-            Claimed: {center[0].toFixed(5)}, {center[1].toFixed(5)}
+          <div className="rounded-lg bg-bg p-3 text-sm">
+            Claimed: {(center[0] ?? 0).toFixed(5)}, {(center[1] ?? 0).toFixed(5)}
           </div>
           {location.photos.map((photo, index) => (
             <div key={index} className="rounded-lg border p-3 text-sm">
               <div>Photo {index + 1}</div>
               <div className="mt-1 text-muted">
-                {photo.lat.toFixed(5)}, {photo.lng.toFixed(5)} · {photo.distanceKm ?? '—'} km
+                {(photo.lat ?? 0).toFixed(5)}, {(photo.lng ?? 0).toFixed(5)} · {photo.distanceKm ?? '—'} km
               </div>
             </div>
           ))}

@@ -132,6 +132,7 @@ export const raw = {
   claimTimeline: (id: string) => api.get<EvidenceTimelineRaw[]>(`/claims/${id}/evidence-timeline`),
   createClaim: (input: {
     policyId: string;
+    claimantName?: string;
     claimType: string;
     peril: string;
     incidentDate: string;
@@ -153,6 +154,7 @@ export const raw = {
   }) => {
     const f = new FormData();
     f.append('policy_id', input.policyId);
+    if (input.claimantName) f.append('claimant_name', input.claimantName);
     f.append('claim_type', input.claimType);
     f.append('peril', input.peril);
     f.append('incident_date', input.incidentDate);

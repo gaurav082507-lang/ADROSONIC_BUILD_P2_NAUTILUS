@@ -38,13 +38,13 @@ export default function LoginPage() {
     }
   };
   return (
-    <div className="min-h-screen bg-ink grid place-items-center px-6">
+    <div className="min-h-screen bg-primary-dark grid place-items-center px-6">
       <div className="w-full max-w-4xl">
         <Logo dark />
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <button
             onClick={() => choose('claimant')}
-            className={`rounded-2xl border p-7 text-left ${role === 'claimant' ? 'border-yellow-300 bg-white text-ink' : 'border-white/10 bg-white/[.03] text-white'}`}
+            className={`rounded-2xl border p-7 text-left ${role === 'claimant' ? 'border-yellow-300 bg-white text-text' : 'border-white/10 bg-white/[.03] text-white'}`}
           >
             <div className="text-sm opacity-50">CLAIMANT PORTAL</div>
             <div className="mt-2 text-xl font-semibold">I’m filing a claim</div>
@@ -52,7 +52,7 @@ export default function LoginPage() {
           </button>
           <button
             onClick={() => choose('investigator')}
-            className={`rounded-2xl border p-7 text-left ${role === 'investigator' ? 'border-yellow-300 bg-white text-ink' : 'border-white/10 bg-white/[.03] text-white'}`}
+            className={`rounded-2xl border p-7 text-left ${role === 'investigator' ? 'border-yellow-300 bg-white text-text' : 'border-white/10 bg-white/[.03] text-white'}`}
           >
             <div className="text-sm opacity-50">INVESTIGATOR CONSOLE</div>
             <div className="mt-2 text-xl font-semibold">I work at an insurer</div>
@@ -80,7 +80,7 @@ export default function LoginPage() {
             <button
               disabled={busy}
               onClick={submit}
-              className="rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-50"
+              className="rounded-lg bg-primary-dark px-5 py-2.5 text-sm font-semibold text-white disabled:opacity-50"
             >
               {busy ? 'Signing in…' : 'Sign in'}
             </button>

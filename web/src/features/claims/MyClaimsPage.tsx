@@ -9,7 +9,7 @@ export default function MyClaimsPage() {
   if (q.error) return <ErrorState message={en.claimsLoadError} retry={() => q.refetch()} />;
   const rows = q.data ?? [];
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-bg">
       <main className="mx-auto max-w-3xl px-5 py-8">
         <div className="flex items-center justify-between">
           <div>
@@ -18,7 +18,7 @@ export default function MyClaimsPage() {
           </div>
           <Link
             to="/claim/new"
-            className="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white"
+            className="rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white"
           >
             {en.start}
           </Link>

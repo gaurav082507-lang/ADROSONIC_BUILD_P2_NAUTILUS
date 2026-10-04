@@ -44,7 +44,7 @@ export default function NetworkTab({ claimId }: { claimId: string }) {
           {data.sharedIdentifiers.map((s) => (
             <div
               key={`${s.type}-${s.label}`}
-              className="flex justify-between rounded-lg bg-slate-50 p-3 text-sm"
+              className="flex justify-between rounded-lg bg-bg p-3 text-sm"
             >
               <span>{s.label}</span>
               <span className="text-muted">

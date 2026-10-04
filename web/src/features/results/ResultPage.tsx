@@ -216,7 +216,7 @@ export default function ResultPage() {
           <button
             key={item}
             onClick={() => setTab(item)}
-            className={`whitespace-nowrap rounded-md px-3 py-2 text-sm ${tab === item ? 'bg-ink text-white' : 'text-muted'}`}
+            className={`whitespace-nowrap rounded-md px-3 py-2 text-sm ${tab === item ? 'bg-primary-dark text-white' : 'text-muted'}`}
           >
             {item}
           </button>
@@ -228,7 +228,7 @@ export default function ResultPage() {
           <h2 className="font-display font-semibold">Audit log</h2>
           <div className="mt-3 space-y-2 text-sm">
             {(actions.data ?? []).map((item, index) => (
-              <div key={index} className="rounded-lg bg-slate-50 p-3">
+              <div key={index} className="rounded-lg bg-bg p-3">
                 {dateLabel(item.at)} · {item.action} · {item.actor}
                 {item.note ? ` · ${item.note}` : ''}
               </div>
@@ -240,7 +240,7 @@ export default function ResultPage() {
           <h2 className="font-display font-semibold">Related entities</h2>
           <div className="mt-3 space-y-2 text-sm">
             {(entities.data ?? []).map((item: any, index: number) => (
-              <div key={index} className="flex justify-between rounded-lg bg-slate-50 p-3">
+              <div key={index} className="flex justify-between rounded-lg bg-bg p-3">
                 <span>{item.type}</span>
                 <span>
                   {item.value} · {item.matches}
@@ -260,7 +260,7 @@ export default function ResultPage() {
         </div>
         <button
           onClick={() => setDecision(true)}
-          className="rounded-lg bg-ink px-4 py-2.5 text-sm font-semibold text-white"
+          className="rounded-lg bg-primary-dark px-4 py-2.5 text-sm font-semibold text-white"
         >
           Open decision
         </button>
