@@ -56,6 +56,9 @@ def download_file(url: str, dest_path: str, description: str):
         return False
 
 def download_ai_detector():
+    if os.environ.get("LITE_MODE") == "1":
+        logger.info("LITE_MODE=1: Skipping heavy AI Detector download to save memory.")
+        return
     if os.path.exists(AI_DETECTOR_DIR) and len(os.listdir(AI_DETECTOR_DIR)) >= 2:
         logger.info(f"AI detector already present in '{AI_DETECTOR_DIR}'. Skipping.")
         return
@@ -72,6 +75,9 @@ def download_ai_detector():
         logger.error(f"Failed to download AI detector: {e}")
 
 def download_buffalo_l():
+    if os.environ.get("LITE_MODE") == "1":
+        logger.info("LITE_MODE=1: Skipping heavy InsightFace model to save memory.")
+        return
     try:
         import insightface
         from insightface.app import FaceAnalysis

@@ -50,6 +50,12 @@ class ModelRegistry:
 
     def load_ai_detector(self):
         """Loads Ateeqq/ai-vs-human-image-detector once into memory."""
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            logger.info("LITE_MODE=1: Skipping AI Detector loading to save memory.")
+            self.models["ai_detector"] = False
+            return
+            
         try:
             from transformers import AutoModelForImageClassification, AutoImageProcessor
 
