@@ -151,3 +151,9 @@ mediapipe
 insightface
 onnxruntime
 timm
+
+PyJWT
+faiss-cpu
+imagehash
+reportlab
+qrcode
