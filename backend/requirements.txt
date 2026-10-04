@@ -141,3 +141,13 @@ websockets==17.1
 av>=12.0.0
 soundfile>=0.12.0
 respx>=0.21.0
+
+pymupdf
+rapidocr-onnxruntime
+rapidfuzz
+zxing-cpp
+pyzbar
+mediapipe
+insightface
+onnxruntime
+timm
