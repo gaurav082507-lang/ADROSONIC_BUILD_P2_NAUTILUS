@@ -100,6 +100,12 @@ class ModelRegistry:
 
     def load_tamper_cnn(self):
         """Loads trained PyTorch EfficientNet-B0 Tamper CNN weights."""
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            logger.info("LITE_MODE=1: Skipping Tamper CNN loading to save memory.")
+            self.models["tamper_cnn"] = False
+            return
+            
         try:
             import torch
             import timm
@@ -146,6 +152,12 @@ class ModelRegistry:
 
     def load_ocr(self):
         """Initializes RapidOCR ONNX engine."""
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            logger.info("LITE_MODE=1: Skipping RapidOCR loading to save memory.")
+            self.models["ocr"] = False
+            return
+            
         try:
             from rapidocr_onnxruntime import RapidOCR
             logger.info("Initializing RapidOCR engine...")
@@ -159,6 +171,12 @@ class ModelRegistry:
 
     def load_face_engine(self):
         """Loads SFace (OpenCV YuNet + SFace) or ArcFace (InsightFace buffalo_l)."""
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            logger.info("LITE_MODE=1: Skipping Face Engine loading to save memory.")
+            self.models["face_engine"] = False
+            return
+            
         from backend.app.core.config import settings
         self.face_engine_name = settings.FACE_ENGINE
         repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
