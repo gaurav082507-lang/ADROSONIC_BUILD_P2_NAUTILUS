@@ -13,7 +13,6 @@ import math
 import re
 import numpy as np
 import cv2
-from rapidocr_onnxruntime import RapidOCR
 
 from ...schemas.evidence import Evidence
 from ..base import Detector, DetectorOutput, AnalysisContext
@@ -24,9 +23,19 @@ class DocumentOCRDetector(Detector):
 
     def __init__(self):
         super().__init__()
-        self._engine = RapidOCR()
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            self._engine = None
+            return
+        try:
+            from rapidocr_onnxruntime import RapidOCR
+            self._engine = RapidOCR()
+        except Exception:
+            self._engine = None
 
     def run(self, ctx: AnalysisContext) -> DetectorOutput:
+        if self._engine is None:
+            return DetectorOutput(status="failed", evidence=[], details={"error": "RapidOCR engine not loaded."})
         # ctx.runtime_data can store rendered_pages (from pre-step or pipeline)
         # or we render the first page from file_path
         rendered_pages = ctx.runtime_data.get("rendered_pages", [])

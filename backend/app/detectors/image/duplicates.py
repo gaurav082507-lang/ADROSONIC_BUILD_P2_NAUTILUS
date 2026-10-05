@@ -53,6 +53,9 @@ def _get_calibration_thresholds() -> Tuple[int, float]:
 
 def _load_clip():
     global _CLIP_PROCESSOR, _CLIP_MODEL
+    import os
+    if os.environ.get("LITE_MODE") == "1":
+        return None, None
     if _CLIP_MODEL is not None and _CLIP_PROCESSOR is not None:
         return _CLIP_PROCESSOR, _CLIP_MODEL
     try:

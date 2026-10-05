@@ -41,6 +41,9 @@ def _get_eval_counts() -> Tuple[int, int]:
 def _load_model():
     """Lazy loads the HuggingFace audio deepfake classification model."""
     global _feature_extractor, _model, _model_failed, _id2label
+    import os
+    if os.environ.get("LITE_MODE") == "1":
+        return None, None
     if _model_failed:
         return None, None
     if _model is not None and _feature_extractor is not None:
