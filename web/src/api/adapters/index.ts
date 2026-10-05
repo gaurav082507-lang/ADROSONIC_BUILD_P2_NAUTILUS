@@ -79,12 +79,16 @@ const num = (v: unknown): number | undefined =>
     : typeof v === 'string' && v.trim() !== '' && !Number.isNaN(Number(v))
       ? Number(v)
       : undefined;
+const apiBase = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/api\/v1\/?$/, '');
+
 const str = (v: unknown): string | undefined => (typeof v === 'string' && v ? v : undefined);
 const isImgUrl = (u?: string): u is string =>
   Boolean(u) && !u!.split('?')[0].toLowerCase().endsWith('.json');
 const imgStr = (v: unknown): string | undefined => {
   const s = str(v);
-  return isImgUrl(s) ? s : undefined;
+  if (!isImgUrl(s)) return undefined;
+  if (s.startsWith('/api/')) return `${apiBase}${s}`;
+  return s;
 };
 const rec = (v: unknown): Record<string, unknown> =>
   v && typeof v === 'object' && !Array.isArray(v) ? (v as Record<string, unknown>) : {};
