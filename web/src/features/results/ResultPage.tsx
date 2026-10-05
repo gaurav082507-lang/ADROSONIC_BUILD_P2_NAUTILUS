@@ -59,7 +59,7 @@ export default function ResultPage() {
   const remove = useDeleteResult();
   const [tab, setTab] = useState<Tab>('Image');
   const [decision, setDecision] = useState(false);
-  if (resultQuery.isLoading) return <Loading label="Loading forensic result…" />;
+  if (resultQuery.isLoading) return <Loading label="Loading forensic result..." />;
   if (resultQuery.error) {
     if ((resultQuery.error as any).status === 404 || (resultQuery.error as any).status === 0) {
       return <Loading label="Analysis in progress..." />;
@@ -71,6 +71,7 @@ export default function ResultPage() {
       />
     );
   }
+  if (!resultQuery.data) return <Loading label="Loading forensic result..." />;
   const result = resultQuery.data!;
   const downloadReport = async (format: 'pdf' | 'json') => {
     const blob = await raw.report(id, format);
