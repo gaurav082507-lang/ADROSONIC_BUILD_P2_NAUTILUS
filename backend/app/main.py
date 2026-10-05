@@ -38,6 +38,18 @@ async def lifespan(app: FastAPI):
     logger.info("Initializing Lucen AI application...")
     run_migrations()
 
+    # Auto-seed the database if it is empty (useful for Render deployments)
+    try:
+        from .db.database import get_db
+        from .db.seed import seed_demo_users_and_policies
+        with get_db() as conn:
+            user_count = conn.execute("SELECT COUNT(*) FROM users").fetchone()[0]
+            if user_count == 0:
+                logger.info("Database is empty. Seeding demo users and policies...")
+                seed_demo_users_and_policies()
+    except Exception as e:
+        logger.warning(f"Could not auto-seed database: {e}")
+
     # Mark interrupted jobs from prior crashes as failed
     recovered = recover_interrupted_jobs()
     if recovered > 0:
