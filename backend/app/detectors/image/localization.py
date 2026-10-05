@@ -1,6 +1,5 @@
 import os
 import cv2
-import torch
 import numpy as np
 import logging
 from PIL import Image
@@ -99,6 +98,7 @@ class LocalizationDetector:
 
                             pil_occ = Image.fromarray(occluded)
                             inputs = processor(images=pil_occ, return_tensors="pt")
+                            import torch
                             with torch.no_grad():
                                 outputs = model(**inputs)
                                 occ_p = float(torch.softmax(outputs.logits[0], dim=-1)[ai_idx].item())

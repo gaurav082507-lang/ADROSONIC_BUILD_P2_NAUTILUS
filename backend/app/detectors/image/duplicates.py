@@ -14,7 +14,6 @@ from pathlib import Path
 from typing import Optional, List, Dict, Any, Tuple
 from PIL import Image
 import imagehash
-import torch
 
 from ...db.database import get_connection
 from ...db.repository import mask_claimant_name
@@ -80,6 +79,7 @@ def compute_clip_embedding(img: Image.Image) -> Optional[np.ndarray]:
     if proc is None or model is None:
         return None
     try:
+        import torch
         rgb = img.convert("RGB")
         inputs = proc(images=rgb, return_tensors="pt")
         with torch.no_grad():

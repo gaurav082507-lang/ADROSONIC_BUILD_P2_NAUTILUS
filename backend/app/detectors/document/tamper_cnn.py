@@ -9,8 +9,6 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 import cv2
 import numpy as np
-import torch
-import timm
 
 from ...core.model_registry import model_registry
 from ...schemas.evidence import Evidence
@@ -54,6 +52,12 @@ class DocumentTamperCNNDetector(Detector):
         super().__init__()
         self._model = None
         self._temperature = 1.0
+        
+        import os
+        if os.environ.get("LITE_MODE") == "1":
+            return
+            
+        import torch
         self._device = torch.device("cpu")
         self._load_model()
 
@@ -69,6 +73,8 @@ class DocumentTamperCNNDetector(Detector):
             return
 
         try:
+            import torch
+            import timm
             ckpt = torch.load(str(model_path), map_location=self._device)
             m = timm.create_model("efficientnet_b0", pretrained=False, num_classes=1)
             m.load_state_dict(ckpt["state_dict"])

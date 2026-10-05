@@ -12,7 +12,6 @@ import logging
 from pathlib import Path
 from typing import Tuple, Optional, Dict, Any, List
 import numpy as np
-import torch
 
 from ...core.config import settings
 from ...schemas.evidence import Evidence
@@ -100,6 +99,7 @@ def classify_speech(
             if len(chunk) < 1600:  # < 0.1s
                 continue
             inputs = extractor(chunk, sampling_rate=16000, return_tensors="pt")
+            import torch
             with torch.no_grad():
                 logits = model(**inputs).logits.squeeze()
                 probs = torch.softmax(logits, dim=-1)

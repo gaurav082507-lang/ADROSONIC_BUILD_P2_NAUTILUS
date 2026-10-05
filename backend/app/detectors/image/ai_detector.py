@@ -3,7 +3,6 @@ import io
 import json
 import math
 import logging
-import torch
 from PIL import Image
 from typing import Dict, Any, List, Optional, Tuple
 from ..base import DetectorOutput, AnalysisContext
@@ -56,6 +55,7 @@ class AiImageDetector:
 
         # 1. Primary evaluation
         def score_single(pil_image: Image.Image) -> Tuple[float, float, List[float]]:
+            import torch
             inputs = processor(images=pil_image, return_tensors="pt")
             with torch.no_grad():
                 outputs = model(**inputs)
